@@ -6,7 +6,7 @@ The basic structure of a visual is a class that implements `IVisual` wrapped in 
 
 ##Module
 
-To ensure access to all of the correct api interfaces your visual most be created in the `powerbi.extensiblity.visual` namespace.
+To ensure access to all of the correct api interfaces your visual must be created in the `powerbi.extensiblity.visual` namespace.
 
 ```typescript
 module powerbi.extensiblity.visual {
@@ -21,10 +21,6 @@ All visuals start with a class that implements the `IVisual` interface. You can 
 **Note:** your visual class name must match what is defined in your `pbiviz.json` file.
 
 ```typescript
-@VisualPlugin({
-    //declare properties of the visual plugin here (used by host)
-    capabilities: { ... },
-})
 class MyVisual implements IVisual {
     
     constructor(options: VisualConstructorOptions) {
@@ -45,13 +41,6 @@ class MyVisual implements IVisual {
 }
 ```
 
-###@VisualPlugin
-
-The `@VisualPlugin` decorator is used to provide information about your visual to the host. 
-
-* **capabilities** - defines information about the capabilities of your visual including what data is expected, how it should be mapped, properties pane objects, etc... [Learn more about capabilities](Capabilities/readme.md)
-
-
 ###Constructor
 
 `constructor(options: VisualConstructorOptions)`
@@ -71,10 +60,11 @@ All visuals must implement a public update method. It is called whenever there i
 
 **VisualUpdateOptions**
 
-* `viewport: IViewport` - the dimensions of the viewport that the visual should be rendered within
-* `dataViews: DataView[]` - the dataview object (contains all data needed to render your visual)  
-* `type: VisualUpdateType` - flags that indicate the type(s) of this update (Data | Resize | ViewMode | Style | ResizeEnd)
-* `viewMode: ViewMode` - the view mode of the visual (view or edit)
+* `viewport: IViewport` - the dimensions of the viewport that the visual should be rendered within.
+* `dataViews: DataView[]` - the dataview object, which contains all data needed to render your visual.
+    * your visual will typically use the categorical property under DataView.
+* `type: VisualUpdateType` - flags that indicate the type(s) of this update. (Data | Resize | ViewMode | Style | ResizeEnd)
+* `viewMode: ViewMode` - flags that indicate the view mode of the visual. (View | Edit)
 
 ###enumerateObjectInstances `optional`
 
