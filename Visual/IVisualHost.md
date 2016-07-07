@@ -12,7 +12,7 @@ export interface IVisualHost extends extensibility.IVisualHost {
 ```
 
 ###Colors
-`colors: IColorInfo[]` - Colors is an array of default colors that your visual can use.
+`colors: IColorInfo[]` - An array of default colors that your visual can use.
 
 ###Selection Builder
 `createSelectionIdBuilder: () => visuals.ISelectionIdBuilder` - Generates and stores metadata for selectable items in your visual. [Learn more about Selection Builder](../Selection.md)

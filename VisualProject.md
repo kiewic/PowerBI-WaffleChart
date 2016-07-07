@@ -4,10 +4,6 @@ This document contains basic information about the visual project structure
 
 ##File Structure
 
-* **.tmp/**
-    * hidden temp directory used for compiling (do not modify)
-* **.vscode/**
-    * settings for [VS Code](https://code.visualstudio.com/)
 * **assets/**
     * Used to store visual assets (icon, screenshots, etc)
 * **dist/**
@@ -16,8 +12,6 @@ This document contains basic information about the visual project structure
     * Typescript code for your visual goes here
 * **style/**
     * Less styles for your visual go here
-* **typings/**
-    * Used to store TypeScript type definitions
 * **.gitignore**
     * tells git to ignore files that shouldn't be tracked in the repository
 * **capabilities.json**
@@ -28,8 +22,7 @@ This document contains basic information about the visual project structure
     * Main configuration file for your visual
 * **tsconfig.json**
     * Typescript compiler settings [learn more about tsconfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-* **typings.json**
-    * Used by typings to manage TypeScript type definitions [learn more about typings](https://github.com/typings/typings) 
+
     
 ##pbiviz.json
 
