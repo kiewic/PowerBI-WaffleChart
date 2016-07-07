@@ -23,6 +23,12 @@ To confirm it was installed correctly you can run the command without any pareme
 pbiviz
 ```
 
+####Server certificate setup
+
+To enable live preview visual assets need to be served on a trusted https server so before you can start you need to install an ssl certificate which will allow visual asssets to load in your web browser. This is a one time setup.
+
+* [How to install the local SSL certificates](docs/CertificateSetup.md) 
+
 ##Usage
 
-Learn more about using these tools in the [Usage Guide](https://github.com/Microsoft/PowerBI-visuals-docs/tree/master/tools)
+Learn more about using these tools in the [Usage Guide](usage.md)
