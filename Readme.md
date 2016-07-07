@@ -2,11 +2,12 @@
 
 This guide is meant to provide the quickest path to creating your first Power BI visual.
 
-##Developing Visuals
+##Developer Tools
 
-The easiest way to create Power BI visuals is by using the Power BI  Visuals CLI tools which can be easily to installed via NPM.
+The easiest way to create Power BI visuals is by using the Power BI Visuals CLI tools which can be easily to installed via NPM.
 
-[Getting started instructions](tools/README.md)
+ * [Installation Guide](tools/README.md)
+ * [Usage Guide](tools/README.md)
 
 ##API Documentation
 
@@ -15,7 +16,6 @@ The easiest way to create Power BI visuals is by using the Power BI  Visuals CLI
     * [Data Mapping](Capabilities/dataViewMappings.md)
 * [Starting Your First Visual](Visual/readme.md)
 * [Handling Selection](Selection.md)
-* todo...
 * [Glossary](Glossary.md)
 * [Change Log](ChangeLog.md)
 * [Roadmap](Roadmap/README.md)
