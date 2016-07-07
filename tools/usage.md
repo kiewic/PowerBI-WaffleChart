@@ -1,31 +1,14 @@
 #PowerBI Visual Tools (pbiviz) - Usage Guide
 
-Before you can get started you'll need to install the tools. This should only take a few minutes.
+The easiest way to create custom visuals is by using the PowerBI command line tools which can be easily to installed via NPM. The command line tools provide everything you need to develop visuals and test them in live PowerBI reports and dashboards. 
 
-####Dependencies
+**Features:**
 
-Before you can run (or install) the command line tools you must install NodeJS.
-
-* NodeJS 4.0+ Required (5.0 recommended) - [Download NodeJS](https://nodejs.org)
-
-
-####Installation
-
-To install the command line tools simply run the following command
-
-```
-npm install -g powerbi-visuals-tools
-```
-
-To confirm it was installed correctly you can run the command without any parameters which should display the help screen.
-
-```
-pbiviz
-```
-
-Learn more in the [Installation Guide](README.md)
-
------------
+* Visual project generation
+* TypeScript compilation
+* Less compilation
+* Automatic live reload
+* pbiviz packaging (for distribution)
 
 ##Creating a new visual
 
@@ -47,35 +30,23 @@ This command will create a new folder in your current directory and generate a b
 
 You can easily test your visual live in reports and dashboards in the PowerBI service
 
-####Server certificate setup
-
-To enable live preview visual assets need to be served on a trusted https server so before you can start you need to install an ssl certificate which will allow visual asssets to load in your web browser. This is a one time setup.
-
-* [How to install the local SSL certificates](docs/CertificateSetup.md) 
-
 ####Running your visual
 
 To run your visual navigate to the root of your visual project (the directory containing `pbiviz.json`) and type `pbiviz start` to build and serve the visual.
 
-![](docs/images/pbivizStart.png)
+![](images/pbivizStart.png)
 
 This command will compile your [typescript](http://www.typescriptlang.org/) and [less](http://lesscss.org/) files and bundle them for testing. It also launches an https server that will serve your visual for testing in your favorite web browser.
 
-####Enable developer visual
-
-To view/test your visual in PowerBI you need to enable the development visual and then you can add it to any report.
-
-* [How to enable the developer visual in PowerBI](docs/DebugVisualSetup.md)
-
 ####Viewing your visual in PowerBI
 
-![](docs/images/portalEnable4.png) 
+![](images/portalEnable4.png) 
 
 ####Toolbar icons (left to right)
 
 * **Refresh Visual** - Manually the visual (if auto reload is off)
 * **Toggle Auto Reload** - When turned on the visual will automatically update every time you save a file
-* **Log DataView** - Outputs the dataview in it's current state to the browser's console
+* **Show DataViews** - Shows the visual's underlying dataview for debugging 
 * **Get Help** - Links to this documentation
 * **Send Feedback** - We're always trying to improve the experience so let us know about yours 
 
@@ -93,3 +64,31 @@ pbiviz package
 
 This command will create a pbiviz file in the `dist/` directory of your visual project. If there is already a pbiviz file (from previous package operations) it will be overwritten.
 
+-----------
+
+##Troubleshooting 
+
+
+####Pbiviz command not found (or similar errors)
+
+If you run `pbiviz` in your terminal / command line you should see the help screen. If not it is not installed correctly.
+
+More Info: [Installation Guide](README.md)
+
+
+####Cannot find debug visual
+
+The debug visual should be the last icon in the visualizations pane (right side) of the report view. If you don't see it ensure you've enabled it in settings.
+
+**NOTE:** The debug visual is currently only available in the PowerBI Service (not in desktop or mobile). The packaged visuals will still work everywhere.
+
+More Info: [How to enable the developer visual in PowerBI](DebugVisualSetup.md)
+
+
+####Can't contact visual server
+
+Run the visual server by typing `pbiviz start` in terminal / command line from the root of your visual project (see above)
+
+If your server is already running it's likely your SSL certificates weren't installed correctly.
+
+More Info: [How to install the local SSL certificates](CertificateSetup.md)

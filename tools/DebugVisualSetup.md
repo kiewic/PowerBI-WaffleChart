@@ -35,4 +35,4 @@ To enable live preview of your custom visual follow these steps
 
 * Select the visual in the report canvas
 * Bind data like normal
-* Begin developing your visual (make sure you've `pbiviz start` is running)
+* Begin developing your visual (make sure `pbiviz start` is running)
