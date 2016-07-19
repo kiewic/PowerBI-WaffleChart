@@ -112,7 +112,9 @@ Now for the mapping:
 ```
 This is a very simple example, in plain english it reads "Map my 'category' DataRole so that for every field I drag into 'category', its data is mapped to categorical.categories. Also map my 'measure' DataRole to categorical.values."
 Note: a "bind to" relationship expects that the DataRole will have a condition restricting it to a single field. 
+
 **Example2**
+
 In this example, we will use the first two DataRoles from the previous example, additionally defining "grouping" and "measure2".
 ```json
 dataRole:[
