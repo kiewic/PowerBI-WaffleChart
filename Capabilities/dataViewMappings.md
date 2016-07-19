@@ -132,7 +132,7 @@ dataRole:[
         "kind": 0
     },
     {
-        "displayName: "X Axis",
+        "displayName": "X Axis",
         "name": "measure2",
         "kind": 1
     }
