@@ -39,12 +39,12 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
 ```json
 [
     {
-        "displayName": "Category Data",
+        "displayName": "Category",
         "name": "category",
         "kind": 0
     },
     {
-        "displayName": "Measure Data",
+        "displayName": "Y Axis",
         "name": "measure",
         "kind": 1
     }

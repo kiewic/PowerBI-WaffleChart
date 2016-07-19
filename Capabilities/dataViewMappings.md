@@ -5,7 +5,7 @@ A DataViewMapping describes how the data roles relate to each other and allows y
 Each valid mapping will produce a DataView, but currently we only support performing one query per visual so in most situations you will only get one DataView. However, you can provide multiple data mappings with different conditions which allow
 
 ```json
-[
+dataViewMappings: [
     {
         "conditions": [ ... ],
         "requiredProperties": [ ... ],
@@ -25,21 +25,22 @@ Currently, for each field you can specify a min and max value. This represents t
 
 **Example 1**
 
-By default, you can drag multiple fields into each data role. In this example we limited category to 1 and y to 2.
+By default, you can drag multiple fields into each data role. In this example we limit category to 1 data field and measure to 2 data fields.
 
 ```json
 [
-    { "category": { "max": 1 }, "y": { "max": 2 } },
+    { "category": { "max": 1 }, "measure": { "max": 2 } },
 ]
 ```
 
 **Example 2**
 
-In this example, there can be at most 2 y values, but not until there is at least 1 category assigned (min: 1).
+In this example, one of two conditions are required. Either exactly 1 category data field and exactly 2 measures, or exactly 2 categories and exactly one measure.
 
 ```json
 [
-    { "category": { "min": 1, "max": 1 }, "y": { "max": 2 } },
+    { "category": { "min": 1, "max": 1 }, "measure": { "min": 2, "max": 2 } },
+    { "category": { "min": 2, "max": 2 }, "measure": { "min": 1, "max": 1 } }
 ]
 ```
 
@@ -76,29 +77,87 @@ The resulting data view will still contain the other types (table, categorical, 
 
 ###Categorical Data Mapping
 
-Categorical is the most commonly used data mapping.
+Categorical is the most commonly used data mapping. 
 
+**Example 1**
+Here is the definition from our previous example on DataRoles..
+```json
+dataRole:[
+    {
+        "displayName": "Category",
+        "name": "category",
+        "kind": 0
+    },
+    {
+        "displayName": "Y Axis",
+        "name": "measure",
+        "kind": 1
+    }
+]
+```
+Now for the mapping:
 ```json
 {
     "categorical": {
         "categories": {
-            "for": {
-                "in": "category"
-            }
+            "for": { "in": "category" }
         },
         "values": {
             "select": [
-                {
-                    "bind": {
-                        "to": "measure"
-                    }
-                }
+                { "bind": { "to": "measure" } }
             ]
         }
     }
 }
-
 ```
+This is a very simple example, in plain english it reads "Map my 'category' DataRole so that for every field I drag into 'category', its data is mapped to categorical.categories. Also map my 'measure' DataRole to categorical.values."
+Note: a "bind to" relationship expects that the DataRole will have a condition restricting it to a single field. 
+**Example2**
+In this example, we will use the first two DataRoles from the previous example, additionally defining "grouping" and "measure2".
+```json
+dataRole:[
+    {
+        "displayName": "Category",
+        "name": "category",
+        "kind": 0
+    },
+    {
+        "displayName": "Y Axis",
+        "name": "measure",
+        "kind": 1
+    },
+    {
+        "displayName": "Grouping with",
+        "name": "grouping",
+        "kind": 0
+    },
+    {
+        "displayName: "X Axis",
+        "name": "measure2",
+        "kind": 1
+    }
+]
+```
+Now for the mapping: 
+```json
+{
+    "categorical": {
+        "categories": {
+            "for": { "in": "category" }
+        },
+        "values": {
+            "group": {
+                by: "grouping",
+                select:[
+                    "bind": { "to": "measure" },
+                    "bind": { "to": "measure2" }
+                ]
+            }
+        }
+    }
+}
+```
+Here the difference is in how we are mapping categorical.values. We are saying "Map my 'measure' and 'measure2' DataRoles to be grouped by the DataRole 'grouping'." 
 
 ###Table Data Mapping
 
