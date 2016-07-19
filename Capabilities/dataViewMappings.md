@@ -147,8 +147,8 @@ Now for the mapping:
         },
         "values": {
             "group": {
-                by: "grouping",
-                select:[
+                "by": "grouping",
+                "select":[
                     "bind": { "to": "measure" },
                     "bind": { "to": "measure2" }
                 ]
