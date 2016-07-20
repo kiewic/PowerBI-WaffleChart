@@ -1,10 +1,10 @@
-#Handling Selection
+#Handling Visual Selection
 
-Most visuals allow users to select data points or categories by clicking them with the mouse. 
+Visuals can allow the user to select data points or categories by clicking them with the mouse.
 
 For example, in stacked column chart you can select a particular bar.
 
-![Stacked Column Chart Selection](images/stackedColumnSelected.png)
+![Stacked Column Chart Selection](../images/StackedColumnSelected.png)
 
 ##Creating Selection IDs `SelectionIdBuilder`
 
@@ -34,7 +34,7 @@ var categories = categoricalData.values;
 var item = categorical.values[i];
 
 var selector: ISelectionId = this.selectionIdBuilder
-    .withSeries(cats, item)
+    .withSeries(categories, item)
     .withMeasure(item.source.queryName)
     .withCategory(categorical.categories[0], j)
     .createSelectionId();
