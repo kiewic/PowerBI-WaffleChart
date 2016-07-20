@@ -15,7 +15,7 @@ export interface IVisualHost extends extensibility.IVisualHost {
 `colors: IColorInfo[]` - An array of default colors that your visual can use.
 
 ###Selection Builder
-`createSelectionIdBuilder: () => visuals.ISelectionIdBuilder` - Generates and stores metadata for selectable items in your visual. [Learn more about Selection Builder](../Selection.md)
+`createSelectionIdBuilder: () => visuals.ISelectionIdBuilder` - Generates and stores metadata for selectable items in your visual. [Learn more about Selection Builder](Selection.md#creating-selection-ids-selectionidbuilder)
 
 ###Selection Manager
-`createSelectionManager: () => ISelectionManager` - The communication bridge used to notify the visual's host that there has been a change in the selection state. [Learn more about Selection Manager](../Selection.md) 
+`createSelectionManager: () => ISelectionManager` - The communication bridge used to notify the visual's host that there has been a change in the selection state. [Learn more about Selection Manager](Selection.md#managing-selection-selectionmanager) 

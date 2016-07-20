@@ -1,35 +1,34 @@
-#dataViewMappings
+#DataViewMappings
 
 A DataViewMapping describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
 
 Each valid mapping will produce a DataView, but currently we only support performing one query per visual so in most situations you will only get one DataView. However, you can provide multiple data mappings with different conditions which allow
 
 ```json
-dataViewMappings: [
+"dataViewMappings":[
     {
         "conditions": [ ... ],
-        "requiredProperties": [ ... ],
-        "single": { ... },
         "categorical": { ... },
+        "single": { ... },
         "table": { ... },
         "matrix": { ... }
     }
 ]
 ```
 
-###Conditions
+##Conditions
 
 Describes conditions for a particular data mapping. You can provide multiple sets of conditions and if the data matches one of the described sets of conditions the visual will accept the data as valid.
 
-Currently, for each field you can specify a min and max value. This represents the number of fields that can be bound to that data role. Note: if a data role is ommitted in the condition it can have any number of fields.
+Currently, for each field you can specify a min and max value. This represents the number of fields that can be bound to that data role. Note: if a data role is omitted in the condition, it can have any number of fields.
 
 **Example 1**
 
 By default, you can drag multiple fields into each data role. In this example we limit category to 1 data field and measure to 2 data fields.
 
 ```json
-[
-    { "category": { "max": 1 }, "measure": { "max": 2 } },
+"conditions": [
+    { "category": { "max": 1 }, "y": { "max": 2 } },
 ]
 ```
 
@@ -38,19 +37,40 @@ By default, you can drag multiple fields into each data role. In this example we
 In this example, one of two conditions are required. Either exactly 1 category data field and exactly 2 measures, or exactly 2 categories and exactly one measure.
 
 ```json
-[
+"conditions": [
     { "category": { "min": 1, "max": 1 }, "measure": { "min": 2, "max": 2 } },
     { "category": { "min": 2, "max": 2 }, "measure": { "min": 1, "max": 1 } }
 ]
 ```
 
-###Required Properties
+###Categorical Data Mapping
 
-```typescript
-//todo
+Categorical is the most commonly used data mapping.
+
+```json
+
+"categorical": {
+    "categories": {
+        "for": {
+            "in": "category"
+        }
+    },
+    "values": {
+        "select": [
+            {
+                "bind": {
+                    "to": "measure"
+                }
+            }
+        ]
+    }
+}
 ```
 
-###Single Data Mapping
+* **for...in** - For all the items in this data role, include them in the data query.
+* **bind...to** - Produces the same result as for...in, but is optimized for a single data role.
+
+##Single Data Mapping
 
 Single data mapping is the simplest form of data mapping. It accepts a single measure field and gives you the total. If the field is numeric it will give you the sum. Otherwise it will give you a count of unique values.
 
