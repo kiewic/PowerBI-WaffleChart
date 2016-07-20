@@ -7,13 +7,9 @@ Your visual's capabilities are loaded from
 ```json
 {
     "dataRoles": [ ... ],
-    
     "dataViewMappings": [ ... ],
-    
     "objects":  { ... },
-    
     "supportsHighlight": true|false,
-    
     "sorting": { ... }
 }
 
