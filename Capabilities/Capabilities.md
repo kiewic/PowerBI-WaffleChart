@@ -1,6 +1,6 @@
 #Using Capabilities
 
-Capabilities are used to provide information to the host about your visual.
+Capabilities are used to provide information to the host about your visual. All properties on the Capabilities model are ```optional```
 
 Your visual's capabilities are loaded from
 
@@ -37,15 +37,15 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
 ###Example
 
 ```json
-[
+"dataRoles": [
     {
-        "displayName": "Category Data",
-        "name": "category",
+        "displayName": "My Category Data",
+        "name": "myCategory",
         "kind": 0
     },
     {
-        "displayName": "Measure Data",
-        "name": "measure",
+        "displayName": "My Measure Data",
+        "name": "myMeasure",
         "kind": 1
     }
 ]
@@ -53,7 +53,7 @@ To define fields that can be bound to data we use `dataRoles` which takes an arr
 
 The above data roles would create the following fields
 
-![](../images/dataRoleDisplay.png)
+![](../images/DataRoleDisplay.png)
 
 
 ##Define how you want the data mapped - `dataViewMappings`
@@ -63,17 +63,33 @@ A DataViewMapping describes how the data roles relate to each other and allows y
 Most visuals provide a single mapping, but you can provide multiple dataViewMappings. Each valid mapping will produce a DataView. 
 
 ```json
-[
+"dataViewMappings": [
     {
         "conditions": [ ... ],
-        "requiredProperties": [ ... ],
         "categorical": { ... },
-        "table": { ... }
+        "table": { ... },
+        "single": { ... },
+        "matrix": { ... }
     }
 ]
 ```
 
-[Learn more about dataViewMappings](dataViewMappings.md)
+[Learn more about DataViewMappings](DataViewMappings.md)
 
 
 ##Define property pane options - `objects`
+
+Objects describe customizable properties associated with the visual.
+Each object can have multiple properties and each property has a type associated with it.
+Types refer to what the property will be. See below for more information about types.
+
+```json
+"objects": {
+    "myCustomObject": {
+        "displayName": "My Object Name",
+        "properties": { ... }
+    }
+}
+```
+
+[Learn more about objects](Objects.md)
