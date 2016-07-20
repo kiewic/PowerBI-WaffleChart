@@ -15,13 +15,17 @@ This section is to provide you with a step by step tutorial of developing a Powe
 
 * Familiarlize yourself with PowerBI terminology that will be used. [PowerBI Glossary](Glossary.md)
 
+    **COMING SOON**
+
 ##Visual API Documentation
 
 * [Anatomy of a Visual Project](VisualProject.md)
 * [Visual Capabilities Definition](Capabilities/Capabilities.md)
     * [Data Mapping](Capabilities/DataViewMappings.md)
-* [IVisual API Definition](Visual/Visual.md)
-* [Handling Selection in Visuals](Visual/Selection.md)
+    * [Objects](Capabilities/Objects.md)
+* [Visual Documentation](Visual/Visual.md)
+    * [Visual/IVisual Api](Visual/IVisualApi.md)
+    * [Handling Selection in Visuals](Visual/Selection.md)
 * [PowerBI Glossary](Glossary.md)
 * [Change Log](ChangeLog.md)
 * [Roadmap](Roadmap/README.md)
