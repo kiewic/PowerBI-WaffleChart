@@ -15,7 +15,7 @@ This document contains basic information about the visual project structure
 * **.gitignore**
     * tells git to ignore files that shouldn't be tracked in the repository
 * **capabilities.json**
-    * used to define the capabilities of your visual [learn more about visual capabilities](Capabilities/readme.md)
+    * used to define the capabilities of your visual [learn more about visual capabilities](Capabilities/Capabilities.md)
 * **package.json**
     * Used by npm to manage modules [learn more about npm](https://www.npmjs.com/)
 * **pbiviz.json**

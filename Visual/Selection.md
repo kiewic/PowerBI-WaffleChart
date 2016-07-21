@@ -1,16 +1,16 @@
-#Handling Selection
+#Handling Visual Selection
 
-Most visuals allow users to select data points or categories by clicking them with the mouse. 
+Visuals can allow the user to select data points or categories by clicking them with the mouse.
 
 For example, in stacked column chart you can select a particular bar.
 
-![Stacked Column Chart Selection](images/stackedColumnSelected.png)
+![Stacked Column Chart Selection](../images/StackedColumnSelected.png)
 
 ##Creating Selection IDs `SelectionIdBuilder`
 
 In order for the visual host to track selected items for your visual and apply cross-filtering to other visuals, you have to generate and store a `SelectionId` for every selectable item. You can use the `SelectionIdBuilder` to generate selection ids.
 
-**Initialize a SelectionIdBuilder**
+###Initialize a SelectionIdBuilder
 
 First, you need to create a `SelectionIdBuilder` in your constructor and store it in a private variable in your visual class for later use.
 
@@ -25,26 +25,42 @@ class MyVisual implements IVisual {
 }
 ```
 
-**Generating Selection Ids**
+###Generating Selection Ids
 
 ```typescript
-var categoricalData = dataView[0].categorical;
-var category = categoricalData.categories[0];
-var categories = categoricalData.values;
-var item = categorical.values[i];
+let dataViews = options.dataViews //options: VisualUpdateOptions
+let categorical = dataViews[0].categorical;
+let dataValues = categorical.values;
+let selectionBuilder = host.createSelectionIdBuilder(); //host is from options: VisualConstructorOptions
 
-var selector: ISelectionId = this.selectionIdBuilder
-    .withSeries(cats, item)
-    .withMeasure(item.source.queryName)
-    .withCategory(categorical.categories[0], j)
-    .createSelectionId();
+for(let dataValue of dataValues) {
+    let values = dataValue.values;
+    for(let i = 0, len = dataValue.values.length; i < len; i++) {
+        let selectionId = selectionBuilder
+            .withCategory(categorical.categories[0], i) //You may need to loop through categorical.categories
+            .withMeasure(dataValue.source.queryName)
+            .withSeries(categorical.values, categorical.values[i])
+            .createSelectionId();
+    }
+}
 ```
+
+###SelectionIdBuilder Methods
+* **withCategory(categoryColumn: DataViewCategoryColumn, index: number)**
+    * Tells the builder to use a specific identity under the category provided.
+* **withMeasure(measureId: string)**
+    * Tells the builder to use the provided string as the measure.
+* **withSeries(seriesColumn: DataViewValueColumns, valueColumn: DataViewValueColumn | DataViewValueColumnGroup)**
+    * Tells the builder to use the grouped identity.
+    * [See groupings in categorical data mappings for more details](../Capabilities/DataViewMappings.md)
+* **createSelectionId()**
+    * Creates the selection id with the properties provided.
 
 ##Managing Selection `SelectionManager`
 
 You can use `SelectionManager` to notify the visual host of changes in the selection state. 
 
-**Initialize a SelectionManager**
+###Initialize a SelectionManager
 
 First, you need to create a `SelectionManager` in your constructor and store it in a private variable in your visual class for later use.
 
@@ -59,7 +75,9 @@ class MyVisual implements IVisual {
 }
 ```
 
-**Setting selection**
+###Setting Selection
+
+**Single selection**
 
 To select an item simply call `select` on the selectionManager passing in the `SelectionId` of the item you want to select. If there are any other items selected the selection manager will automatically deselect them.
 
