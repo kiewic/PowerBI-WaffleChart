@@ -43,33 +43,6 @@ In this example, one of two conditions are required. Either exactly 1 category d
 ]
 ```
 
-###Categorical Data Mapping
-
-Categorical is the most commonly used data mapping.
-
-```json
-
-"categorical": {
-    "categories": {
-        "for": {
-            "in": "category"
-        }
-    },
-    "values": {
-        "select": [
-            {
-                "bind": {
-                    "to": "measure"
-                }
-            }
-        ]
-    }
-}
-```
-
-* **for...in** - For all the items in this data role, include them in the data query.
-* **bind...to** - Produces the same result as for...in, but is optimized for a single data role.
-
 ##Single Data Mapping
 
 Single data mapping is the simplest form of data mapping. It accepts a single measure field and gives you the total. If the field is numeric it will give you the sum. Otherwise it will give you a count of unique values.
@@ -131,7 +104,9 @@ Now for the mapping:
 }
 ```
 This is a very simple example, in plain english it reads "Map my 'category' DataRole so that for every field I drag into 'category', its data is mapped to categorical.categories. Also map my 'measure' DataRole to categorical.values."
-Note: a "bind to" relationship expects that the DataRole will have a condition restricting it to a single field. 
+
+* **for...in** - For all the items in this data role, include them in the data query.
+* **bind...to** - Produces the same result as for...in, but expects that the DataRole will have a condition restricting it to a single field.
 
 **Example2**
 

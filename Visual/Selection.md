@@ -31,12 +31,11 @@ class MyVisual implements IVisual {
 let dataViews = options.dataViews //options: VisualUpdateOptions
 let categorical = dataViews[0].categorical;
 let dataValues = categorical.values;
-let selectionBuilder = host.createSelectionIdBuilder(); //host is from options: VisualConstructorOptions
 
 for(let dataValue of dataValues) {
     let values = dataValue.values;
     for(let i = 0, len = dataValue.values.length; i < len; i++) {
-        let selectionId = selectionBuilder
+        let selectionId = host.createSelectionIdBuilder()
             .withCategory(categorical.categories[0], i) //You may need to loop through categorical.categories
             .withMeasure(dataValue.source.queryName)
             .withSeries(categorical.values, categorical.values[i])
