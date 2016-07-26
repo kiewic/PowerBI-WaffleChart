@@ -1,23 +1,20 @@
 #Microsoft Power BI Visuals API
 
-This guide is meant to provide the quickest path to creating your first Power BI visual.
-
-##Developer Tools Setup and Usage
-
-The easiest way to create Power BI visuals is by using the Power BI Visuals CLI tools which can be easily to installed via NPM.
-
- * [Installation Guide](tools/README.md)
- * [Usage Guide](tools/usage.md)
+This guide is meant to provide insight on PowerBI visual APIs and act a a guild to creating your first PowerBI visual.
  
-##Developing a PowerBI Visual
+##Developing Your First PowerBI Visual
  
-This section is to provide you with a step by step tutorial of developing a PowerBI visual.
+This section is to provide you with a step by step tutorial of developing your first PowerBI visual. In our tutorial, we will be building a bar chart.
 
-* Familiarlize yourself with PowerBI terminology that will be used. [PowerBI Glossary](Glossary.md)
+1. Install PowerBI visuals CLI tool. [Installing PowerBI Visuals Tool](tools/README.md#installation)
+2. Install certifications to enable live preview of visuals. [Install SSL Certifications](tools/README.md#server-certificate-setup)
+3. Enable developer tools in PowerBI. [Enable developer tools](Tools/README.md#enable-developer-visual)
+4. Create new PowerBI visual project. [Creating a new visual](Tools/usage.md#creating-a-new-visual)
+5. Start development server for live update and incremental development. [Start developer server](Tools/usage.md#testing-your-visual-in-powerbi)
+6. Adding external libraries. []()
+7. Install typings for libraries [Installing Typings](Tutorial/Typings.md)
 
-    **COMING SOON**
-
-##Visual API Documentation
+##Table of Contents
 
 * [Anatomy of a Visual Project](VisualProject.md)
 * [Visual Capabilities Definition](Capabilities/Capabilities.md)
