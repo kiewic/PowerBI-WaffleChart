@@ -8,9 +8,9 @@ This section is to provide you with a step by step tutorial of developing your f
 
 1. Install PowerBI visuals CLI tool. [Installing PowerBI Visuals Tool](tools/README.md#installation)
 2. Install certifications to enable live preview of visuals. [Install SSL Certifications](tools/README.md#server-certificate-setup)
-3. Enable developer tools in PowerBI. [Enable developer tools](Tools/README.md#enable-developer-visual)
-4. Create new PowerBI visual project. [Creating a new visual](Tools/usage.md#creating-a-new-visual)
-5. Start development server for live update and incremental development. [Start developer server](Tools/usage.md#testing-your-visual-in-powerbi)
+3. Enable developer tools in PowerBI. [Enable Developer Tools](tools/README.md#enable-developer-visual)
+4. Create new PowerBI visual project. [Creating a new visual](tools/usage.md#creating-a-new-visual)
+5. Start development server for live update and incremental development. [Start developer server](tools/usage.md#testing-your-visual-in-powerbi)
 6. Adding external libraries. []()
 7. Install typings for libraries [Installing Typings](Tutorial/Typings.md)
 
