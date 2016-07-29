@@ -39,7 +39,10 @@ To run your visual navigate to the root of your visual project (the directory co
 This command will compile your [typescript](http://www.typescriptlang.org/) and [less](http://lesscss.org/) files and bundle them for testing. It also launches an https server that will serve your visual for testing in your favorite web browser.
 
 ####Viewing your visual in PowerBI
+To view your visual, go to your desired report and add the debug visual.  
+![](images/debugVisual.png)
 
+Once your server is started, you will see the default template as your visual.
 ![](images/portalEnable4.png) 
 
 ####Toolbar icons (left to right)
