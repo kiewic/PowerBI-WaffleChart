@@ -2,7 +2,7 @@
 
 PowerBI encourages you to use libraries of your choice.
 
-**NOTE:** We currently provide you with JQuery, d3, and lodash. However we plan to remove these libraries in the future.
+**NOTE:** We currently provide you with JQuery, d3, and lodash preloaded. However, we plan to remove these libraries in the future version.
 
 **Supplied Library Versions**  
 
