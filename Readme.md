@@ -11,8 +11,9 @@ This section is to provide you with a step by step tutorial of developing your f
 3. Enable developer tools in PowerBI. [Enable Developer Tools](tools/README.md#enable-developer-visual)
 4. Create new PowerBI visual project. [Creating a New Visual](tools/usage.md#creating-a-new-visual)
 5. Start development server for live update and incremental development. [Start Development Server](tools/usage.md#testing-your-visual-in-powerbi)
-6. Adding external libraries. [Adding External Libraries](Tutorial/ExternalLibraries.md)
-7. Install typings for libraries [Installing Typings](Tutorial/Typings.md)
+6. Add the debug visual from your visual well into your favorite report. [Viewing your Visual](tools/usage.md#viewing-your-visual-in-powerbi)
+7. Adding external libraries. [Adding External Libraries](Tutorial/ExternalLibraries.md)
+8. Install typings for libraries [Installing Typings](Tutorial/Typings.md)
 
 ##Table of Contents
 
