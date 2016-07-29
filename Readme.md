@@ -1,4 +1,4 @@
-#Microsoft Power BI Visuals API
+# ![Microsoft Power BI Visuals API](pbi.svg) Microsoft Power BI Visuals API
 
 This guide is meant to provide insight on PowerBI visual APIs and act a a guild to creating your first PowerBI visual.
  
