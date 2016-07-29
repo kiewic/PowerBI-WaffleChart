@@ -25,6 +25,7 @@ This section is to provide you with a step by step tutorial of developing your f
 * [Adding External Libraries](Tutorial/ExternalLibraries.md)
     * [Installing Typings for Libraries](Tutorial/Typings.md)
 * [Visual Capabilities Definition](Capabilities/Capabilities.md)
+    * [Data Roles](Capabilities/Capabilities.md#define-the-data-fields-your-visual-expects---dataroles)
     * [Data Mapping](Capabilities/DataViewMappings.md)
     * [Objects](Capabilities/Objects.md)
 * [Visual Documentation](Visual/Visual.md)
