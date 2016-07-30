@@ -1,6 +1,6 @@
 #Microsoft Power BI Visuals Documentation
 
-This guide is meant to provide insight on PowerBI visual APIs and act a a guild to creating your first PowerBI visual.
+This guide is meant to provide insight on PowerBI visual tools and APIs in addition to a tutorial to creating your first PowerBI visual.
  
 ##Developing Your First PowerBI Visual
  
@@ -15,6 +15,7 @@ This section is to provide you with a step by step tutorial of developing your f
 7. Adding external libraries. [Adding External Libraries](Tutorial/ExternalLibraries.md)
 8. Install typings for libraries [Installing Typings for Libraries](Tutorial/Typings.md)
 
+![](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
 ##Table of Contents
 
 * [Anatomy of a Visual Project](VisualProject.md)
