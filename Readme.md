@@ -1,6 +1,6 @@
-#Microsoft Power BI Visuals Documentation
+#Power BI Visuals Documentation
 
-This guide is meant to provide insight on PowerBI visual tools and APIs in addition to a tutorial to creating your first PowerBI visual.
+Learn how to build Power BI visuals. We're still working on these docs, but they should be ready by 8/2/2016.
  
 ##Developing Your First PowerBI Visual
  
