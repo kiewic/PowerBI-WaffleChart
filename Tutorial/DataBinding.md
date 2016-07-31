@@ -72,4 +72,6 @@ Defining visualTransform will allow you to convert DataView into a view model yo
 function visualTransform(options: VisualUpdateOptions, host: IVisualHost): BarChartViewModel {
     /*Convert dataView to your viewModel*/
 }
+
 ```
+See commit for what was added to visualTransform. [Visual Transform Logic](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709)
