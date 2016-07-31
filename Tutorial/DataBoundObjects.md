@@ -66,7 +66,7 @@ export function getCategoricalObjectValue<T>(category: DataViewCategoryColumn, i
 }
 ```
 
-See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/7602bb5c34aca97f02ea8e713f841a4ce19929c7) for object enumeration utility.
+See [objectEnumerationUtility.ts](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/objectEnumerationUtility.ts) for source code.
 
 ## Defining Default Color and Retrieving Categorical Object from DataView
 Each color is now associated with each category inside `dataView`. We will set each data point to its cooresponding color.
