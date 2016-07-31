@@ -1,4 +1,4 @@
-# External Libraries
+# Adding External Libraries
 
 PowerBI encourages you to use libraries of your choice.
 
