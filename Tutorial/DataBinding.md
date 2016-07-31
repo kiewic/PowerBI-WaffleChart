@@ -1,7 +1,8 @@
-# Adding Databinding
-Databinding can be done by dragging values into your field well. 
-See commit of what was added at this step. [Adding Databinding to your Visual](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709)
+# Adding Databinding to Bar Chart
+Databinding can be done by defining your visual capabilities.
+See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added at this step.
 
+Databinding can be done on the field well.
 ![](images/DataBinding.png)
 
 ## Adding Data Roles
@@ -51,13 +52,14 @@ Use the internal `name` defined in your dataRoles to reference each field.
     ]
 ```
 
-For  more information, see the section about [Data View Mapping](../Capabilities/DataViewMappings.md)
+For more information, see the section about [Data View Mapping](../Capabilities/DataViewMappings.md).
 
-## Defining and Using Visual Transform
+## Defining and Using `visualTransform`
 DataView is the structure that PowerBI provides to your visual and it contains the queried data to be visualized.
 However, DataView provides your data in different forms such as categorical and table forms. In this instance we're building a categorical visual and we will only need the use the categorical property on the DataView.
 
 Defining visualTransform will allow you to convert DataView into a view model your visual will use.
+IVisualHost is required because when defining individual data points, you will want to assign colors and selection to them.
 
 ```typescript
 /**
@@ -74,4 +76,4 @@ function visualTransform(options: VisualUpdateOptions, host: IVisualHost): BarCh
 }
 
 ```
-See commit for what was added to visualTransform. [Visual Transform Logic](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709)
+See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added to visualTransform
