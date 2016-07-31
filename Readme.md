@@ -18,7 +18,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 7. Adding external libraries. [Adding External Libraries](Tutorial/ExternalLibraries.md)
 8. Install typings for libraries. [Installing Typings for Libraries](Tutorial/Typings.md)
 9. Build a visual with static data. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
-10. Add Databinding to your Visual. [Adding Databinding](Tutorial/DataBinding.md)
+10. Add Databinding to your Visual. [Adding Databinding to your Visual](Tutorial/DataBinding.md)
 
 ![](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
 ##Table of Contents
