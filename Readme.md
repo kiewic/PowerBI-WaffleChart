@@ -24,7 +24,6 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 13. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
 14. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
 
-![](http://www.animatedgif.net/underconstruction/5consbar2_e0.gif)
 ##Table of Contents
 
 * [Anatomy of a Visual Project](VisualProject.md)
