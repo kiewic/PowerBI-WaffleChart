@@ -36,7 +36,7 @@ for(let dataValue of dataValues) {
     let values = dataValue.values;
     for(let i = 0, len = dataValue.values.length; i < len; i++) {
         let selectionId = host.createSelectionIdBuilder()
-            .withCategory(categorical.categories[0], i) //You may need to loop through categorical.categories
+            .withCategory(categorical.categories[0], i)
             .withMeasure(dataValue.source.queryName)
             .withSeries(categorical.values, categorical.values[i])
             .createSelectionId();
