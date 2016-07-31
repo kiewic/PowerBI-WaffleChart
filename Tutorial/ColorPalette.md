@@ -27,7 +27,7 @@ Color palette is a good abstraction for helping the visual pick a color for each
 
 **NOTE**: Color palette is not required, however it is a good way to manage your colors. Color palette can be used for your other visual projects.
 
-See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/a521bc6b9930f630861dc08e27330030766ae057) for color palette.
+See [colorPalette.ts](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/colorPalette.ts) for source code.
 
 ## Assigning Color to Data Points
 We defined `visualTransform` as a construct to convert `dataView` to a view model Bar Chart can use.
