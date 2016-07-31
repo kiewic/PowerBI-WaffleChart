@@ -3,6 +3,7 @@ Objects can be added to further customize what the visual can do. These customiz
 We will be using static objects to render an x axis for the Bar Chart.
 
 Objects can be toggled on the property pane.
+
 ![](images/PropertyPane.png)
 
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/7602bb5c34aca97f02ea8e713f841a4ce19929c7) for what was added at this step.
