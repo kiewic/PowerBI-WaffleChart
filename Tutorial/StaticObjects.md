@@ -95,7 +95,7 @@ export function getValue<T>(objects: DataViewObjects, objectName: string, proper
 }
 ```
 
-See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/7602bb5c34aca97f02ea8e713f841a4ce19929c7) for object enumeration utility.
+See [objectEnumerationUtility.ts](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/objectEnumerationUtility.ts) for source code.
 
 ## Retrieving Property Values from DataView
 `visualTransform` is the ideal place to manipulate the visual's viewmodel. We will continue this pattern and retrieve the object properties from the `dataView`.
