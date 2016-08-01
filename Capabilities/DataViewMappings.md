@@ -68,7 +68,7 @@ The resulting data view will still contain the other types (table, categorical, 
 
 ![](../images/DataViewMappingResultSingle.png)
 
-###Categorical Data Mapping
+##Categorical Data Mapping
 
 Categorical is the most commonly used data mapping. 
 
