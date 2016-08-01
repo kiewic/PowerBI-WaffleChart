@@ -18,14 +18,14 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 6. [Adding the Debug Visual from the Visual Well into your Favorite Report](tools/usage.md#viewing-your-visual-in-powerbi)
 7. [Adding External Libraries](Tutorial/ExternalLibraries.md)
 8. [Installing Typings for Libraries](Tutorial/Typings.md)
-9. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
 
 ### Building Bar Chart
-1. [Adding Databinding to the Bar Chart](Tutorial/DataBinding.md)
-2. [Adding Color to the Bar Chart](Tutorial/ColorPalette.md)
-3. [Adding Selection and Interaction with Other Visuals](Tutorial/Selection.md)
-4. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
-5. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
+1. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
+2. [Adding Databinding to the Bar Chart](Tutorial/DataBinding.md)
+3. [Adding Color to the Bar Chart](Tutorial/ColorPalette.md)
+4. [Adding Selection and Interaction with Other Visuals](Tutorial/Selection.md)
+5. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
+6. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
 
 ##Table of Contents
 
