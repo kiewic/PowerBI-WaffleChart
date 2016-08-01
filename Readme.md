@@ -9,6 +9,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 
 ![](Tutorial/images/SampleBarChart.png)
 
+### Setting Up Environment
 1. [Install PowerBI visuals CLI tool](tools/README.md#installation)
 2. [Install SSL certifications to enable live preview of visuals](tools/CertificateSetup.md)
 3. [Enable Developer Tools in PowerBI](tools/DebugVisualSetup.md)
@@ -18,11 +19,13 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 7. [Adding External Libraries](Tutorial/ExternalLibraries.md)
 8. [Installing Typings for Libraries](Tutorial/Typings.md)
 9. [Building a Visual with Static Data](Tutorial/StaticVisual.md)
-10. [Adding Databinding to the Bar Chart](Tutorial/DataBinding.md)
-11. [Adding Color to the Bar Chart](Tutorial/ColorPalette.md)
-12. [Adding Selection and Interaction with Other Visuals](Tutorial/Selection.md)
-13. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
-14. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
+
+### Building Bar Chart
+1. [Adding Databinding to the Bar Chart](Tutorial/DataBinding.md)
+2. [Adding Color to the Bar Chart](Tutorial/ColorPalette.md)
+3. [Adding Selection and Interaction with Other Visuals](Tutorial/Selection.md)
+4. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
+5. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
 
 ##Table of Contents
 
