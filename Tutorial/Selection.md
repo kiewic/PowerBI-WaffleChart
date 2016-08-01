@@ -71,7 +71,7 @@ bars.on('click', function(d) {
         });
     });
 
-    (<Event>d3.event).stopPropagation
+    (<Event>d3.event).stopPropagation();
 });
 ```
 
