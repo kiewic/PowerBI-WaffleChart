@@ -155,15 +155,3 @@ Now for the mapping:
 }
 ```
 Here the difference is in how we are mapping categorical.values. We are saying "Map my 'measure' and 'measure2' DataRoles to be grouped by the DataRole 'grouping'." 
-
-###Table Data Mapping
-
-```typescript
-//TODO
-```
-
-###Matrix Data Mapping
-
-```typescript
-//TODO
-```
