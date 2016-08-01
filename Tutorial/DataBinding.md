@@ -3,6 +3,7 @@ Databinding can be done by defining your visual capabilities.
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added at this step.
 
 Databinding can be done on the field well.
+
 ![](images/DataBinding.png)
 
 ## Adding Data Roles
