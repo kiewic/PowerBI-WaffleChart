@@ -32,3 +32,5 @@ Download the external library and put it in an external folder.
     ]
 }
 ```
+
+refer to [this](https://github.com/Microsoft/PowerBI-visuals-docs/blob/master/Tutorial/Typings.md) if you'd like to add typings for your JS file to get intellisense & compile time safety on them.
