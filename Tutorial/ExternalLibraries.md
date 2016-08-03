@@ -11,3 +11,24 @@ PowerBI encourages you to use libraries of your choice.
 * lodash - 3.6.0
 
 ## Adding External Libraries
+Download the external library and put it in an external folder.
+
+![](images/ExternalLibraries.png)
+
+```json
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "ES5",
+        "sourceMap": true,
+        "out": "./.tmp/build/visual.js"
+    },
+    "files": [
+        ".api/v1.1.0/PowerBI-visuals.d.ts",
+        "external/easeljs-0.8.2.min.js",
+        "src/visual.ts"
+    ]
+}
+```
