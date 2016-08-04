@@ -54,7 +54,7 @@ Note: This data mapping cannot be used in conjunction with any other data mappin
 **Example**
 
 ```json
-{
+"dataViewMappings": {
     "conditions": [
         { "Y": { "max": 1 } }
     ],
@@ -70,12 +70,12 @@ The resulting data view will still contain the other types (table, categorical, 
 
 ##Categorical Data Mapping
 
-Categorical is the most commonly used data mapping. 
+Categorical data mapping is used to get one or two independent grouping of data.
 
 **Example 1**
 Here is the definition from our previous example on DataRoles..
 ```json
-dataRole:[
+"dataRole":[
     {
         "displayName": "Category",
         "name": "category",
@@ -90,7 +90,7 @@ dataRole:[
 ```
 Now for the mapping:
 ```json
-{
+"dataViewMappings": {
     "categorical": {
         "categories": {
             "for": { "in": "category" }
@@ -112,7 +112,7 @@ This is a very simple example, in plain english it reads "Map my 'category' Data
 
 In this example, we will use the first two DataRoles from the previous example, additionally defining "grouping" and "measure2".
 ```json
-dataRole:[
+"dataRole":[
     {
         "displayName": "Category",
         "name": "category",
@@ -137,7 +137,7 @@ dataRole:[
 ```
 Now for the mapping: 
 ```json
-{
+"dataViewMappings":{
     "categorical": {
         "categories": {
             "for": { "in": "category" }
@@ -155,3 +155,102 @@ Now for the mapping:
 }
 ```
 Here the difference is in how we are mapping categorical.values. We are saying "Map my 'measure' and 'measure2' DataRoles to be grouped by the DataRole 'grouping'." 
+
+**Example3**
+```json
+Here are the dataRoles.
+"dataRoles": [
+    {
+        "displayName": "Categories",
+        "name": "category",
+        "kind": 0
+    },
+    {
+        "displayName": "Measures",
+        "name": "measure",
+        "kind": 1
+    },
+    {
+        "displayName": "Series",
+        "name": "series",
+        "kind": 0
+    }
+]
+```
+
+Here are the dataViewMappings.
+```json
+"dataViewMappings": [
+    {
+        "categorical": {
+            "categories": {
+                "for": {
+                    "in": "category"
+                }
+            },
+            "values": {
+                "group": {
+                    "by": "series",
+                    "select": [{
+                            "for": {
+                                "in": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+]
+```
+
+The categorical dataview could be visualized like this.
+![](images/CategoricalData.png)
+
+PowerBI will produce you this as the categorical dataview. This is the set of categories.
+![](images/CategoricalDataView.png)
+
+Each category maps to a set of values as well. Each of these values is grouped by series, which is years.
+For example, Canada sales in 2013 is null, Canada sales in 2014 is 50.
+![](images/CategoricalValuesDataView.png)
+
+
+##Table Data Mapping
+The table data view is a simple data mapping. Essentially, it is a list of data points, where numeric data points could be aggregated.
+
+**Example1**
+
+With the given capabilities:
+
+```json
+"dataRoles": [
+    {
+        "displayName": "Values",
+        "name": "values",
+        "kind": 2
+    }
+]
+```
+
+```json
+"dataViewMappings": [
+    {
+        "table": {
+            "rows": {
+                "for": {
+                    "in": "values"
+                }
+            }
+        }
+    }
+]
+```
+
+The table dataview could be visualized like this.
+![](images/TableData.png)
+
+PowerBI will produce you this as the table dataview. Do not assume there is an ordering.
+![](images/TableDataView.png)
+
+The data can be aggregated by selecting the desired field and clicking sum.
+![](images/DataAggregation.png)
