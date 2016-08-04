@@ -211,7 +211,7 @@ PowerBI will produce you this as the categorical dataview. This is the set of ca
 ![](images/CategoricalDataView.png)
 
 Each category maps to a set of values as well. Each of these values is grouped by series, which is years.
-For example, Canada sales in 2013 is null, Canada sales in 2014 is 50.
+For example, Canada sales in 2013 is null, Canada sales in 2014 is 50.  
 ![](images/CategoricalValuesDataView.png)
 
 
@@ -246,7 +246,7 @@ With the given capabilities:
 ]
 ```
 
-The table dataview could be visualized like this.
+The table dataview could be visualized like this.  
 ![](images/TableData.png)
 
 PowerBI will produce you this as the table dataview. Do not assume there is an ordering.
