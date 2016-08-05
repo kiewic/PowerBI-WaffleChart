@@ -1,4 +1,4 @@
-#Change Log
+#Change Log - Visuals API
 
 The page contains a quick summary of every version of the API.
 
