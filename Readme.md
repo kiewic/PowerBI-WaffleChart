@@ -1,6 +1,6 @@
 #Power BI Visuals Documentation
 
-Learn how to build Power BI visuals. We're still working on these docs, but they should be ready by 8/2/2016.
+Learn how to build Power BI visuals!
  
 ##Developing Your First PowerBI Visual
  
