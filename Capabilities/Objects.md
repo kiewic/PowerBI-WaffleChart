@@ -111,13 +111,6 @@ selector: {
     metadata: 'QueryName'
 }
 ```
-####scope identity 
-This object will be bound to particular values of a column. For example, if I had a column 'Months' with 12 values ("jan", ..., "dec") I could loop over this column's DataViewScopeIdentity[] and set each identity as the selector.
-```typescript
-selector: {
-    data: <DataViewScopeIdentity>identity
-}
-```
 ####selector 
 This object will be bound to the element we have created a selectionID for. In this example, we will assume that we have created selectionIDs for some dataPoints, and we are looping through them.
 
@@ -125,6 +118,13 @@ This object will be bound to the element we have created a selectionID for. In t
 for (let dataPoint in dataPoints) {
     ...
     selector: dataPoint.selectionID.getSelector()
+}
+```
+####scope identity 
+This object will be bound to particular values at the intersection of groups. For example, if I have categories ["Jan", "Feb", "March", ...] and series ["Small", "Medium", "Large"], I may want to have an object on the intersection of values matching "Feb" and "Large". To accomplish this I could get the DataViewScopeIdentity of both columns, push them to variable `identities`, and use this syntax with the selector.
+```typescript
+selector: {
+    data: <DataViewScopeIdentity[]>identities
 }
 ```
 
