@@ -4,12 +4,12 @@ This page shows some tips for debugging while building your visual.
 
 ##Using breakpoints
 
-Because the visuals JS is entirely reloaded every time the visual is updated any breakpoints you add will be lost when the debug visual is refreshed. To work around this use `debugger` statements in your code. It is recommended that you turn off auto-reload while useing `debugger` in your code.
+Because the visuals JS is entirely reloaded every time the visual is updated any breakpoints you add will be lost when the debug visual is refreshed. To work around this use `debugger` statements in your code. It is recommended that you turn off auto-reload while using `debugger` in your code.
 
 ```typescript
 public update(options: VisualUpdateOptions) {
     console.log('Visual update', options);
-    deugger;
+    debugger;
     this.target.innerHTML = `<p>Update count: <em>${(this.updateCount++)}</em></p>`;
 }
 ```
