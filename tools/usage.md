@@ -110,6 +110,10 @@ This would update your visual to api version 1.2.0 (replace 1.2.0 with whatever 
 
 -----------
 
+##Debugging
+
+For tips about debugging your custom visual in the developer tools see the [debugging guide](debugging.md).
+
 ##Troubleshooting 
 
 

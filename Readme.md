@@ -35,6 +35,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
     * [Install SSL Certifications](tools/CertificateSetup.md)
     * [Enable Developer Tools](tools/DebugVisualSetup.md)
     * [Tools Usage Guide](tools/usage.md)
+    * [Debugging Guide](tools/debugging.md)
 * [Adding External Libraries](Tutorial/ExternalLibraries.md)
     * [Installing Typings for Libraries](Tutorial/Typings.md)
 * [Visual Capabilities Definition](Capabilities/Capabilities.md)
