@@ -1,6 +1,7 @@
 #DataViewMappings
 
 A DataViewMapping describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
+There is a section for each of the `dataMappings`.
 
 Each valid mapping will produce a DataView, but currently we only support performing one query per visual so in most situations you will only get one DataView. However, you can provide multiple data mappings with different conditions which allow
 
@@ -249,8 +250,8 @@ With the given capabilities:
 The table dataview could be visualized like this.  
 ![](images/TableData.png)
 
-PowerBI will produce you this as the table dataview. Do not assume there is an ordering.
+PowerBI will produce you this as the table dataview. Do not assume there is an ordering.  
 ![](images/TableDataView.png)
 
-The data can be aggregated by selecting the desired field and clicking sum.
+The data can be aggregated by selecting the desired field and clicking sum.  
 ![](images/DataAggregation.png)
