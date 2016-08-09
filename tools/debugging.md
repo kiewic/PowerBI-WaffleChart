@@ -53,7 +53,7 @@ Then, you can use this decorator on any function to see error logging like this:
 public update(options: VisualUpdateOptions) {
 ```
 
-##break on exceptions
+##Break on exceptions
 
 You can also set the browser to break on caught exceptions which will stop code execution wherever an error happens and allow you to debug from there.
 
