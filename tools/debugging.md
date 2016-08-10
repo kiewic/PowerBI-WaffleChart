@@ -26,19 +26,18 @@ To log exceptions in your visual add the following code to your visual to define
 
 ```typescript
 module powerbi.extensibility.visual {
-    export function logExceptions() {
-        return function (target: any, key: string, value: any) {
+    export function logExceptions(): MethodDecorator {
+        return function (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<Function>)
+        : TypedPropertyDescriptor<Function> {
+            
             return {
                 value: function () {
-                    let p = window.performance.now();
-                    let result;
                     try {
-                        result = value.value.apply(this, arguments);
+                        return descriptor.value.apply(this, arguments);
                     } catch (e) {
                         console.error(e);
                         throw e;
                     }
-                    return result;
                 }
             }
         }
