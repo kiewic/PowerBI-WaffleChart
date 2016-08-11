@@ -10,6 +10,7 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Load more data](https://github.com/Microsoft/PowerBI-visuals-docs/issues/32) -- code complete
 * [Names for data roles kind](https://github.com/Microsoft/PowerBI-visuals-docs/issues/38) -- code complete
 * [Enum types for objects](https://github.com/Microsoft/PowerBI-visuals-docs/issues/39) -- code complete
+* [Export Dataview as JSON](https://github.com/Microsoft/PowerBI-visuals-docs/issues/54) -- code complete
 
 
 ## API Version 1.3
