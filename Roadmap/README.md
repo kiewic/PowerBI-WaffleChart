@@ -20,5 +20,7 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Axis Builder](https://github.com/Microsoft/PowerBI-visuals-docs/issues/36)
 * [Light weight sandbox](https://github.com/Microsoft/PowerBI-visuals-docs/issues/37)
 * [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals-docs/issues/50)
+* [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals-docs/issues/52)
+* [ViewMode to include inFocus](https://github.com/Microsoft/PowerBI-visuals-docs/issues/53)
 
 Note: 'code complete' means the code has been checked into the development branches and is making its way to production (typically 2-3 weeks)
