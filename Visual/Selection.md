@@ -6,7 +6,7 @@ For example, in stacked column chart you can select a particular bar.
 
 ![Stacked Column Chart Selection](../images/StackedColumnSelectedBetter.png)
 
-Its important to understand that the tooltip is illustrating the threee components of this visual's categorical selection id. Category is represented by Opportunity Size = Large, series is represented by Sales Stage = Quality, and the measure is Revenue. 
+Its important to understand that the tooltip is illustrating the threee components of this visual's categorical selection id. Category is represented by Opportunity Size = Large, series is represented by Sales Stage = Qualify, and the measure is Revenue. 
 
 ##Creating Selection IDs `SelectionIdBuilder`
 
