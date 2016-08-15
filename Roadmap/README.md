@@ -13,15 +13,15 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Export Dataview as JSON](https://github.com/Microsoft/PowerBI-visuals-docs/issues/54) -- code complete
 * [Persist Properties](https://github.com/Microsoft/PowerBI-visuals-docs/issues/33) -- code complete
 
-
 ## API Version 1.3
-
-* [Tooltips](https://github.com/Microsoft/PowerBI-visuals-docs/issues/34)
-* [Legend Builder](https://github.com/Microsoft/PowerBI-visuals-docs/issues/35)
-* [Axis Builder](https://github.com/Microsoft/PowerBI-visuals-docs/issues/36)
 * [Light weight sandbox](https://github.com/Microsoft/PowerBI-visuals-docs/issues/37) -- code complete
 * [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals-docs/issues/50)
 * [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals-docs/issues/52)
 * [ViewMode to include inFocus](https://github.com/Microsoft/PowerBI-visuals-docs/issues/53)
+
+## API Version 1.4
+* [Tooltips](https://github.com/Microsoft/PowerBI-visuals-docs/issues/34)
+* [Legend Builder](https://github.com/Microsoft/PowerBI-visuals-docs/issues/35)
+* [Axis Builder](https://github.com/Microsoft/PowerBI-visuals-docs/issues/36)
 
 Note: 'code complete' means the code has been checked into the development branches and is making its way to production (typically 2-3 weeks)
