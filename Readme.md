@@ -42,6 +42,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
     * [Data Roles](Capabilities/Capabilities.md#define-the-data-fields-your-visual-expects---dataroles)
     * [Data View Mappings](Capabilities/DataViewMappings.md)
     * [Objects](Capabilities/Objects.md)
+    * [Highlighting](Capabilities/Highlighting.md)
 * [Visual Documentation](Visual/Visual.md)
     * [Visual/IVisual Api](Visual/IVisualApi.md)
     * [Handling Selection in Visuals](Visual/Selection.md)

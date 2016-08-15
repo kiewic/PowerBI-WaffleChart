@@ -89,3 +89,9 @@ Types refer to what the property will be. See below for more information about t
 ```
 
 [Learn more about objects](Objects.md)
+
+##Handle partial highlighting - `supportsHighlight`
+
+By default this value is set to false which means your "Values" will be automatically filtered when something on the page is selected which will in turn update your visual to display just the selected value. If you want display the full data, but just highlight the selected items you need to set `supportsHighlight` to true in your capabilities.json.
+
+[Learn more about highlighting](Highlighting.md)
