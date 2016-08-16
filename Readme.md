@@ -1,6 +1,6 @@
 #Power BI Visuals
 
-> Note: this repository was recently moved from `powerbi-visuals-docs`. If you bookmarked it please update your link.
+> Note: this repository was recently moved from `powerbi-visuals-docs`.
 >
 > The old `powerbi-visuals` repository has been moved to [powerbi-visuals-core](https://github.com/Microsoft/PowerBI-visuals-core).
 
