@@ -53,3 +53,10 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 * [PowerBI Glossary](Glossary.md)
 * [Change Log](ChangeLog.md)
 * [Roadmap](Roadmap/README.md)
+
+##Reporting Issues
+
+If you have any issues with Power BI custom visuals or the command line tools please let us know. First, search the issues page to see if your issue has already been reported. If it already exists please contribute your experience to the comments otherwise create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
+
+* [PowerBI-visuals-tools issue page](https://github.com/Microsoft/PowerBI-visuals-tools/issues) - Issues related to the CLI tools specifically
+* [PowerBI-visuals issue page](https://github.com/Microsoft/PowerBI-visuals/issues) - Any other issues related to Power BI visuals
