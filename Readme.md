@@ -1,4 +1,6 @@
-#Power BI Visuals Documentation
+#Power BI Visuals
+
+> Note: this repo was recently moved from powerbi-visuals-docs. The old powerbi-visuals has been renamed [powerbi-visuals-core](https://github.com/Microsoft/PowerBI-visuals-core)
 
 Learn how to build Power BI visuals!
  
