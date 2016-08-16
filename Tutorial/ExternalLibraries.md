@@ -33,4 +33,4 @@ Download the external library and put it in an external folder.
 }
 ```
 
-Refer to [this](https://github.com/Microsoft/PowerBI-visuals-docs/blob/master/Tutorial/Typings.md) if you'd like to add typings for your JS file to get intellisense and compile time safety on them.
+Refer to [this](Typings.md) if you'd like to add typings for your JS file to get intellisense and compile time safety on them.
