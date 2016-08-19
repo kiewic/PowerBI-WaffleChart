@@ -4,7 +4,7 @@ This page contains a list upcoming features. Feel free to suggest features via t
 
 ## API Version 1.2
 * [Color palette](https://github.com/Microsoft/PowerBI-visuals/issues/28)
-* [Text utility](https://github.com/Microsoft/PowerBI-visuals/issues/29)
+* [Text utility](https://github.com/Microsoft/PowerBI-visuals/issues/29)                         -- code complete
 * [Dataview reader](https://github.com/Microsoft/PowerBI-visuals/issues/30)
 * [Selection manager multi-select](https://github.com/Microsoft/PowerBI-visuals/issues/31) 
 * [Load more data](https://github.com/Microsoft/PowerBI-visuals/issues/32)                       -- code complete
