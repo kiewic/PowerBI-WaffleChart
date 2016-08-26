@@ -65,3 +65,5 @@ This method is called for every object listed in capabilities. Using the options
 `public destroy(): void`
 
 The destroy function is called when your visual is unloaded and can be used to do clean up tasks such as removing event listeners.
+
+**Note:** Power BI generally doesn't call this function as it is faster just to remove the entire IFrame that contains the visual.
