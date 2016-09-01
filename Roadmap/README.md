@@ -3,7 +3,7 @@
 This page contains a list upcoming features. Feel free to suggest features via the [issue page](https://github.com/Microsoft/PowerBI-visuals/issues?q=is%3Aopen+is%3Aissue+label%3AFeature).
 
 ## API Version 1.2
-* [Color palette](https://github.com/Microsoft/PowerBI-visuals/issues/28)
+* [Color palette](https://github.com/Microsoft/PowerBI-visuals/issues/28)                        -- code complete
 * [Text utility](https://github.com/Microsoft/PowerBI-visuals/issues/29)                         -- code complete
 * [Dataview reader](https://github.com/Microsoft/PowerBI-visuals/issues/30)
 * [Selection manager multi-select](https://github.com/Microsoft/PowerBI-visuals/issues/31) 
@@ -12,10 +12,11 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Enum types for objects](https://github.com/Microsoft/PowerBI-visuals/issues/39)               -- code complete
 * [Export Dataview as JSON](https://github.com/Microsoft/PowerBI-visuals/issues/54)              -- code complete
 * [Persist Properties](https://github.com/Microsoft/PowerBI-visuals/issues/33)                   -- code complete
-
-## API Version 1.3
+* [Partial Highlight Support](https://github.com/Microsoft/PowerBI-visuals/issues/66)            -- code complete
 * [Light weight sandbox](https://github.com/Microsoft/PowerBI-visuals/issues/37)                 -- code complete
 * [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals/issues/50)
+
+## API Version 1.3
 * [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals/issues/52)
 * [ViewMode to include inFocus](https://github.com/Microsoft/PowerBI-visuals/issues/53)
 
