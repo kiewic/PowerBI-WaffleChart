@@ -11,7 +11,11 @@ PowerBI encourages you to use libraries of your choice.
 * lodash - 3.6.0
 
 ## Adding External Libraries
-Download the external library and put it in an external folder.
+Download the external library of your choice.
+
+Create an external folder in the root of your visual.
+
+![](images/MakeExternalsDirectory.png)
 
 ![](images/ExternalLibraries.png)
 
