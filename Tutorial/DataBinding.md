@@ -2,6 +2,8 @@
 Databinding can be done by defining your visual capabilities.
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/3c6e8186436b63bf0cf97d2cdd5dde8aa8d08709) for what was added at this step.
 
+To add databinding, all changes will be located in `capabilities.json`. A sample schema is already in place for you.
+
 Databinding can be done on the field well.
 
 ![](images/DataBinding.png)
