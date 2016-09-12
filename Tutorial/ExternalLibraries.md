@@ -17,6 +17,8 @@ Create an external folder in the root of your visual.
 
 ![](images/MakeExternalsDirectory.png)
 
+Copy your library into the external folder.
+
 ![](images/ExternalLibraries.png)
 
 Add the library to your `tsconfig.json` file.
