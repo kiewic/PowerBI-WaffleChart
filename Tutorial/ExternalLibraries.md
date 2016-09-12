@@ -15,6 +15,7 @@ Download the external library and put it in an external folder.
 
 ![](images/ExternalLibraries.png)
 
+Add the library to your `tsconfig.json` file.
 ```json
 {
     "compilerOptions": {
