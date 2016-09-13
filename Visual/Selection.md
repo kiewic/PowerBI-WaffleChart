@@ -92,7 +92,11 @@ this.selectionManager.select(selector).then((ids: ISelectionId[]) => {
 
 **Multiple selection**
 
-To support multi-selection you can provide the optional second parameter with a `true` value. When this is set it will not clear previous selection and just add the new selection to the list of selected ids. 
+selectionManager can accept an array of `SelectionId`.
+
+To support multi-selection you can provide the optional second parameter with a `true` value. When this is set it will not clear previous selection and just add the new selection to the list of selected ids.
+
+If the second parameter is set with a `false` value, it replaces the current selection with the new selection.
 
 ```typescript
 this.selectionManager.select(selector, true).then((ids: ISelectionId[]) => {
