@@ -14,7 +14,7 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Persist Properties](https://github.com/Microsoft/PowerBI-visuals/issues/33)                   -- code complete
 * [Partial Highlight Support](https://github.com/Microsoft/PowerBI-visuals/issues/66)            -- code complete
 * [Light weight sandbox](https://github.com/Microsoft/PowerBI-visuals/issues/37)                 -- code complete
-* [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals/issues/50)
+* [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals/issues/50)               -- code complete
 
 ## API Version 1.3
 * [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals/issues/52)
