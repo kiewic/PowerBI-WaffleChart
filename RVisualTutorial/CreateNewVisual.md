@@ -1,8 +1,8 @@
-# Building a new R Custom Visual
-In order to start a new R Custom Visual we will run the following command:
+# Building a new R Powered Custom Visual
+In order to create a new R Powered Custom Visual we will run the following command:
 
 ```
-pbiviz new sampleCorrPlotRVisual -t rvisual --api-version 1.2.0
+pbiviz new sampleCorrPlotRVisual -t rvisual
 ```
 
 This command will create a new folder stracture based on the template "rvisual"
@@ -13,7 +13,7 @@ This template includes a very basic ready to run R Visual which will actually ru
 plot(Values)
 ```
 
-This script will generate a very basic plot of whatever the user will drag to the Values data role
+This R script calls a generic function for plotting of R object. The data frame "Values" will contian columns in "Values" data role.
 
 ![Basic Plot Script Result](images/BasicPlot.png)
 

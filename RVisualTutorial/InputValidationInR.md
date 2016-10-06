@@ -1,5 +1,5 @@
 # Input Validation in R Script
-In order to write a real robust R Custom Visual, you should validate all the input you get before running some R function that expects specific values to be given.
+In order to write a truly robust R Powered Custom Visual, you should validate all the input you get before running some R function that expects specific values to be given.
 
 For example, the corrplot function needs to run on at least two columns and at least two rows.
 If the function gets one row, the function will fail.

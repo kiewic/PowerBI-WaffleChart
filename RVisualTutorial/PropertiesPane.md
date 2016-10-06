@@ -1,10 +1,9 @@
 # Controlling the R Script from the Property Pane
-In order to control the behavior of the R Script based on user input, one can add properties to the property pane.
-This way users will be able to play with the visual to get to the exact look and feel they want, or even control advanced
-algorithm properties for more complex visuals that will run forecasting or other algorithms
+In order to enhance the behavior of the R Script based on user input, one can add properties to the property pane.
+This way users will be able to control the visual to get to the exact look and feel they want
 
-## Adding enum property to control the look and feel of the visual
-Corrplot can be easily be configured using the `method` argument for the `corrplot` function.
+## Adding enumeration property
+Corrplot can be easily configured using the `method` argument for the `corrplot` function.
 Our default script just used `circle`, but we can expose this property to the user and have her choose between the options.
 
 ### Defining the enumeration property for controlling the `method` argument
@@ -56,12 +55,12 @@ and we will supply the valid values for this property
     }
 ```
 ### Exposing the property to the users in the property pane
-In order for the above property be exposed in the property pane, we will need to touch the TypeScript code as well.
+In order for the above property to be exposed in the property pane, we will need to change the TypeScript code as well.
 Open the `src/visual.ts` file and start editing it
 
  In the `visual.ts` file we have added several code snippets as comments, so you can start from there.
 
- First, let define a new interface to hold the property value. We will hold the enumeration value in this property
+ First, let's define a new interface to hold the property value. We will hold the enumeration value in this property
 
 ```
 interface VisualSettings {
@@ -109,7 +108,7 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 ```
 
 The last thing we need to take care of is the actual R script to start using this property
-We need to handle the case where we don't get any value for this property. This happens when the user didn't play with the property pane.
+We need to handle the case where we don't get any value for this property. This happens when the user makes no changes in the property pane.
 The naming convention of the R runtime variables for the properties is as follows:
 
 `<objectname>_<propertyname>`

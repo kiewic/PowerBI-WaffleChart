@@ -33,8 +33,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 6. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
 7. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
-### Building R Custom Visual (corrplot)
-1. [Creating a new R Custom Visual](RVisualTutorial/CreateNewVisual.md)
+### Building R Powered Custom Visual (corrplot)
+1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)
 2. [Starting a simple R Script](RVisualTutorial/CorrplotScript.md)
 3. [Adding a static property to the property pane](RVisualTutorial/PropertiesPane.md)
 4. [Validate input data in R Script](RVisualTutorial/InputValidationInR.md)
