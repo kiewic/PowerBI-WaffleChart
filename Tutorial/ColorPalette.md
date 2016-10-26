@@ -23,18 +23,14 @@ interface BarChartDataPoint {
 ```
 
 ## Color Palette
-Color palette is a good abstraction for helping the visual pick a color for each data point.
-
-**NOTE**: Color palette is not required, however it is a good way to manage your colors. Color palette can be used for your other visual projects.
-
-See [colorPalette.ts](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/src/colorPalette.ts) for source code.
+`colorPalette` is a service that manages the colors used on your visual. An instance of it is available on `IVisualHost`.
 
 ## Assigning Color to Data Points
 We defined `visualTransform` as a construct to convert `dataView` to a view model Bar Chart can use.
 Since we iterate through the data points in `visualTransform` it is also the ideal place to assign colors.
 
 ```typescript
-let colorPalette: IColorPalette = createColorPalette(host.colors).reset();
+let colorPalette: IColorPalette = host.colorPalette; // host: IVisualHost
 for (let i = 0, len = Math.max(category.values.length, dataValue.values.length); i < len; i++) {
     barChartDataPoints.push({
         category: category.values[i],
