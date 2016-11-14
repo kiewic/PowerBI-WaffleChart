@@ -1,6 +1,6 @@
 #HTTPS Certificate Setup
 
-To be access your visual through PowerBI you need to add a trusted certificate for localhost. This will allow PowerBI to load the visual assets in your browser without a security warning.
+To access your visual through PowerBI you need to add a trusted certificate for localhost. This will allow PowerBI to load the visual assets in your browser without a security warning.
 
 ##Adding Certificate
 
