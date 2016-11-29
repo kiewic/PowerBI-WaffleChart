@@ -31,7 +31,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 4. [Adding Selection and Interaction with Other Visuals](Tutorial/Selection.md)
 5. [Adding Static Objects to Property Pane](Tutorial/StaticObjects.md)
 6. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
-7. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
+7. [Adding Tooltips to the Bar Chart](Visual/Tooltips.md)
+8. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
 ### Building R Powered Custom Visual (corrplot)
 1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)
