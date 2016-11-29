@@ -35,7 +35,7 @@ Our sample aggregates this in a class called `TooltipServiceWrapper`
 ###`TooltipServiceWrapper`
 The basic idea behind this class is to hold the instance of the `TooltipService`, listen to D3 mouse events over relevant elements, and then make the calls to `show()`, `move()` and `hide()` when needed.
 The class holds and manages any relevant state and logic for these events, mostly geared at interfacing with the underlying D3 code. The D3 interfacing and conversion is out of scope for this document. 
-You can find the full sample code at [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/294775120a6ecf6f269364841d38a4ad96a35b89)
+You can find the full sample code at [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/981b021612d7b333adffe9f723ab27783c76fb14)
 
 ###Creating the `TooltipServiceWrapper`
 
@@ -135,7 +135,7 @@ as you can see `addTooltip` will exit with no action if the `tooltipService` is 
 * **this.visualHostTooltipService.show**
     * The call to displays the tooltip  
 
-Additional handling can be found in the sample for `mouseout` and `mousemove` events. Please see [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/294775120a6ecf6f269364841d38a4ad96a35b89) for the full code sample.
+Additional handling can be found in the sample for `mouseout` and `mousemove` events. Please see [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/981b021612d7b333adffe9f723ab27783c76fb14) for the full code sample.
 
 ###Populating the tooltip content: `getTooltipData`
 
