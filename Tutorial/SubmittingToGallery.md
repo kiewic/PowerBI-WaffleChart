@@ -29,7 +29,7 @@ After you have created and tested your custom visual, you may submit your visual
 - All links to supporting documentation are active and valid.  
 - See Minimum requirements for implementing a new visual.
 - All test cases (see "Test cases " under Testing your visual) are passed.
-- Items 1 through 8 in the “Common problems of custom visuals” above are addressed.
+- Items 1 through 8 in the [Common problems of custom visuals](./SubmissionCommonProblems.md) above are addressed.
 
 Submission Flow  
 Author submits a visual package and content.  
