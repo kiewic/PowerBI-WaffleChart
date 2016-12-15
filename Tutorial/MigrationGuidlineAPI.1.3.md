@@ -1,13 +1,6 @@
 
 The list of npm packages you could use instead of deprecated core Classes and Interfaces:
 
-- [interactivityutils](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils) - InteractivityUtils is a set of functions and classes in order to simplify implementation of cross-selection and cross-filtering for Power BI custom visuals
-- [testutils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) 
-- [tooltiputils](https://www.npmjs.com/package/powerbi-visuals-utils-tooltiputils) - TooltipUtils is a set of functions and classes in order to simplify usage of the Tooltip API for Power BI custom visuals
-- [colorutils](https://www.npmjs.com/package/powerbi-visuals-utils-colorutils) - ColorUtils is a set of functions and classes in order to simplify color manipulations for Power BI custom visuals
-- [chartutils](https://www.npmjs.com/package/powerbi-visuals-utils-chartutils) - ChartUtils is a set of interfaces for creating powerbi custom visuals
-
-
 ## TypeUtils
 [typeutils](https://www.npmjs.com/package/powerbi-visuals-utils-typeutils)
 
@@ -53,3 +46,66 @@ Deprecated Reference | NPM package namespace
  | powerbi.extensibility.utils.formatting.textMeasurementService
  | powerbi.extensibility.utils.formatting.stringExtensions
 powerbi.visuals.valueFormatter | powerbi.extensibility.utils.formatting.valueFormatter
+
+## InteractivityUtils
+
+[interactivityutils](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils)
+
+InteractivityUtils is a set of functions and classes in order to simplify implementation of cross-selection and cross-filtering for Power BI custom visuals
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+ | powerbi.extensibility.utils.interactivity
+ | powerbi.extensibility.utils.interactivity.interactivityUtils
+
+## TestUtils
+
+[testutils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) 
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+ | powerbi.extensibility.utils.test.mocks.MockIVisualHost
+ | powerbi.extensibility.utils.test.mocks.createVisualHost
+ | powerbi.extensibility.utils.test.mocks.MockIColorPalette
+ | powerbi.extensibility.utils.test.mocks.createColorPalette
+ | powerbi.extensibility.utils.test.mocks.MockISelectionId
+ | powerbi.extensibility.utils.test.mocks.createSelectionId
+ | powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder
+ | powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder
+ | powerbi.extensibility.utils.test.mocks.MockISelectionManager
+ | powerbi.extensibility.utils.test.mocks.createSelectionManager
+
+## TooltipUtils
+
+[tooltiputils](https://www.npmjs.com/package/powerbi-visuals-utils-tooltiputils)
+
+TooltipUtils is a set of functions and classes in order to simplify usage of the Tooltip API for Power BI custom visuals
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+ | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
+ | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
+ 
+## ColorUtils
+
+[colorutils](https://www.npmjs.com/package/powerbi-visuals-utils-colorutils)
+
+ColorUtils is a set of functions and classes in order to simplify color manipulations for Power BI custom visuals
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+ | powerbi.extensibility.utils.color.ColorHelper
+ | powerbi.extensibility.utils.color methods
+
+## ChartUtils
+
+[chartutils](https://www.npmjs.com/package/powerbi-visuals-utils-chartutils)
+
+ChartUtils is a set of interfaces for creating powerbi custom visuals
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+ | powerbi.extensibility.utils.chart.axis methods
+ | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
+ | powerbi.extensibility.utils.chart.dataLabel.utils methods
+
