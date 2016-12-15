@@ -2,8 +2,10 @@
 ## Submission and Publication  
 After you have created and tested your custom visual, you may submit your visual [here](https://app.powerbi.com/visuals/info#submit). Below are the acceptance criteria and submission workflow which the custom visual team will follow in order to get your visual published in the Power BI visuals gallery.  
 
+You can use [package validator tool](https://powerbi-validator-v-glpol.herokuapp.com) (TODO: fix to production link) for an artifact review of the your package.
+
 ### Visual Acceptance Criteria   
-- Images:  
+- Submission contains images:  
  - Screenshot for the visual details window - must be 410px (height) by 424px (width) (acceptable formats: png, jpg/jpeg or svg)  
  - Thumbnail for the gallery main page – must be 176px (height) by 220px (width) (acceptable formats: png, jpg/jpeg or svg)  
  - Icon (inside the pbiviz package) – must be 20px by 20px (acceptable formats: png, jpg/jpeg or svg)  
@@ -26,6 +28,10 @@ After you have created and tested your custom visual, you may submit your visual
  - Visual doesn’t contain code that changes parent DOM elements.    
  - Visual doesn't contain obfuscated code.   
  - There are no timed jobs that can continue after the destroy method of the visual is called.
+- CSS code review
+ - Visual doesn’t contain code that rewrites global powerbi rules 
+ - Visual doesn’t contain code that does suspicious rewrites of html tags rules 
+ - Visual doesn’t contain only classes or IDs as left selector part (does not have tag as left part)
 - All links to supporting documentation are active and valid.  
 - See [Minimum requirements for implementing a new visual](https://github.com/Microsoft/PowerBI-visuals-core/wiki/Minimum-requirements-for-implementing-a-new-visual).
 - All test cases (see [Test cases](./SubmissionTesting.md)) are passed.
