@@ -5,12 +5,13 @@ After you have created and tested your custom visual, you may submit your visual
 You can use [package validator tool](https://powerbi-validator-v-glpol.herokuapp.com) (TODO: fix to production link) for an artifact review of the your package.
 
 ### Visual Acceptance Criteria   
+- Submission contains valid and public link to GitHub repo with sources of your visual.
 - Submission contains images:  
- - Screenshot for the visual details window - must be 410px (height) by 424px (width) (acceptable formats: png, jpg/jpeg or svg)  
- - Thumbnail for the gallery main page – must be 176px (height) by 220px (width) (acceptable formats: png, jpg/jpeg or svg)  
- - Icon (inside the pbiviz package) – must be 20px by 20px (acceptable formats: png, jpg/jpeg or svg)  
- - Images are in good quality 
-- Privacy statement URL .  
+ - Screenshot for the visual details window - must be 424px (width) by 410px (height) (acceptable formats: png, jpg/jpeg or svg).
+ - Thumbnail for the gallery main page – must be 220px (width) by 176px (height) (acceptable formats: png, jpg/jpeg or svg).
+ - Icon (inside the pbiviz package) – must be 20px by 20px (acceptable formats: png, jpg/jpeg or svg).
+ - Images are in good quality.
+- Privacy statement URL.  
 - Legal (License) Terms URL. If not provided – confirm with the submitter that we will use our standard legal terms. We should send them a link to these standard legal terms.   
 - Package contains all meta-data.  
  - Name    
@@ -19,7 +20,8 @@ You can use [package validator tool](https://powerbi-validator-v-glpol.herokua
  - Description    
  - Publisher Name    
  - Contact Email    
- - Support URL      
+ - Support URL   
+ - GitHub repository URL
 - Submission contains a sample pbix file with examples of the visual features.  
 - JavaScript code review.    
  - The input data is validated before rendering.   
