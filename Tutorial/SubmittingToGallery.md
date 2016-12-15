@@ -29,7 +29,7 @@ After you have created and tested your custom visual, you may submit your visual
 - All links to supporting documentation are active and valid.  
 - See [Minimum requirements for implementing a new visual](https://github.com/Microsoft/PowerBI-visuals-core/wiki/Minimum-requirements-for-implementing-a-new-visual).
 - All test cases (see [Test cases](./SubmissionTesting.md)) are passed.
-- Items 1 through 8 in the [Common problems of custom visuals](./SubmissionCommonProblems.md) above are addressed.
+- All items the [Common problems of custom visuals](./SubmissionCommonProblems.md) are addressed.
 
 ## Submission Flow  
 1. Author submits a visual package and content.  
