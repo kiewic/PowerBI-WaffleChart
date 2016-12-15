@@ -1,3 +1,5 @@
+# Developer guide to building a professional custom visual for Power BI
+
 ## General  words about requirements of good-looking visual.
 
 ## Validation of the dataset (expect any type of data here) and supporting big datasets. Links to examples of proper validation.
