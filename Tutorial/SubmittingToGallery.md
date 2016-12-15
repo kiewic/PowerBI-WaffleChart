@@ -27,8 +27,8 @@ After you have created and tested your custom visual, you may submit your visual
  - Visual doesn't contain obfuscated code.   
  - There are no timed jobs that can continue after the destroy method of the visual is called.
 - All links to supporting documentation are active and valid.  
-- See Minimum requirements for implementing a new visual.
-- All test cases (see "Test cases " under Testing your visual) are passed.
+- See [Minimum requirements for implementing a new visual](https://github.com/Microsoft/PowerBI-visuals-core/wiki/Minimum-requirements-for-implementing-a-new-visual).
+- All test cases (see [Test cases](./SubmissionTesting.md)) are passed.
 - Items 1 through 8 in the [Common problems of custom visuals](./SubmissionCommonProblems.md) above are addressed.
 
 ## Submission Flow  
