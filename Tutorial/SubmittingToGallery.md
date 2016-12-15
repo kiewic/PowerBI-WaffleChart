@@ -30,7 +30,7 @@ You can use [package validator tool](https://powerbi-validator-v-glpol.herokua
  - Visual doesn’t contain code that changes parent DOM elements.    
  - Visual doesn't contain obfuscated code.   
  - There are no timed jobs that can continue after the destroy method of the visual is called.
-- CSS code review
+- CSS code review.
  - Visual doesn’t contain code that rewrites global powerbi rules 
  - Visual doesn’t contain code that does suspicious rewrites of html tags rules 
  - Visual contains only classes or IDs as left selector part (does not have tag as left part)
