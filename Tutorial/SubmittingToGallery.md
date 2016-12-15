@@ -31,7 +31,7 @@ You can use [package validator tool](https://powerbi-validator-v-glpol.herokua
 - CSS code review
  - Visual doesn’t contain code that rewrites global powerbi rules 
  - Visual doesn’t contain code that does suspicious rewrites of html tags rules 
- - Visual doesn’t contain only classes or IDs as left selector part (does not have tag as left part)
+ - Visual contains only classes or IDs as left selector part (does not have tag as left part)
 - All links to supporting documentation are active and valid.  
 - See [Minimum requirements for implementing a new visual](https://github.com/Microsoft/PowerBI-visuals-core/wiki/Minimum-requirements-for-implementing-a-new-visual).
 - All test cases (see [Test cases](./SubmissionTesting.md)) are passed.
