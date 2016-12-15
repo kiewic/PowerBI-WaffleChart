@@ -31,18 +31,19 @@ After you have created and tested your custom visual, you may submit your visual
 - All test cases (see "Test cases " under Testing your visual) are passed.
 - Items 1 through 8 in the [Common problems of custom visuals](./SubmissionCommonProblems.md) above are addressed.
 
-Submission Flow  
-Author submits a visual package and content.  
-The Microsoft custom visual team reviews the visual and contents and provides a written report to the author identifying blocking and non-blocking issues.  
-Author corrects any issues and re-submits the visual package.  
-Once all blocking issues have been resolved, author provides a sample report, blog post and video highlighting the features and functions of the visual.  
-Microsoft publishes the visual to the Power BI visual gallery.  
+## Submission Flow  
+1. Author submits a visual package and content.  
+2. The Microsoft custom visual team reviews the visual and contents and provides a written report to the author identifying blocking and non-blocking issues.  
+3. Author corrects any issues and re-submits the visual package.  
+4. Once all blocking issues have been resolved, author provides a sample report, blog post and video highlighting the features and functions of the visual.  
+5. Microsoft publishes the visual to the Power BI visual gallery.  
  
-Submission Tracking  
+### Submission Tracking  
 The custom visual team will stay in contact with you, via email, on the status of your visual submission. The team will provide you with feedback on the visual, blocking issues which will prevent the visual from being published, requests for any missing content, notification when your visual is ready to publish, and when the visual publication is complete.  
-You could always check current status of your submission with this service (TODO: fix to production link). 
+
+You could always check current status of your submission with [this service](https://powerbi-validator-v-glpol.herokuapp.com) (TODO: fix to production link). 
  
-Support for custom visuals  
+## Support for custom visuals  
 Microsoft’s goal for the Power BI gallery is to provide high-quality visuals to enhance the use of Power BI for a rich user reporting experience. From time to time, we are notified that a visual in the gallery is not working properly or at all.  
 Microsoft reserves the right to make emergency fixes to visuals from the community to ensure a positive user experience. If we make an emergency fix to a visual you have published, we will provide you with all coding changes so that they may be included in your next version release.  
  
