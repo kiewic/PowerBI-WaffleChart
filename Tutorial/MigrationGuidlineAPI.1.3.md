@@ -34,7 +34,7 @@ powerbi.data.DataRoleHelper | powerbi.extensibility.utils.dataview.DataRoleHelpe
 powerbi.DataViewObjects | powerbi.extensibility.utils.dataview.DataViewObjects
 powerbi.DataViewObject  | powerbi.extensibility.utils.dataview.DataViewObject
 powerbi.visuals.converterHelper | powerbi.extensibility.utils.dataview.converterHelper
-*powerbi.DataViewObjectsParser* | powerbi.extensibility.utils.dataview.DataViewObjectsParser
+none | powerbi.extensibility.utils.dataview.DataViewObjectsParser
 
 ## FormattingUtils
 [formattingutils](https://www.npmjs.com/package/powerbi-visuals-utils-formattingutils)
@@ -43,8 +43,8 @@ FormattingUtils is a set of functions and classes in order to format values for 
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.formatting.textMeasurementService
- | powerbi.extensibility.utils.formatting.stringExtensions
+powerbi.TextMeasurementService | powerbi.extensibility.utils.formatting.textMeasurementService
+powerbi.visuals.jsCommon.StringExtensions | powerbi.extensibility.utils.formatting.stringExtensions
 powerbi.visuals.valueFormatter | powerbi.extensibility.utils.formatting.valueFormatter
 
 ## InteractivityUtils
@@ -55,25 +55,27 @@ InteractivityUtils is a set of functions and classes in order to simplify implem
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.interactivity
- | powerbi.extensibility.utils.interactivity.interactivityUtils
+powerbi.visuals.InteractivityOptions | powerbi.extensibility.utils.interactivity
+powerbi.visuals.InteractivityUtils | powerbi.extensibility.utils.interactivity.interactivityUtils
 
 ## TestUtils
 
 [testutils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) 
 
+TestUtils is a set of mocks and fakes in order to simplify unit testing for Power BI custom visuals
+
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.test.mocks.MockIVisualHost
- | powerbi.extensibility.utils.test.mocks.createVisualHost
- | powerbi.extensibility.utils.test.mocks.MockIColorPalette
- | powerbi.extensibility.utils.test.mocks.createColorPalette
- | powerbi.extensibility.utils.test.mocks.MockISelectionId
- | powerbi.extensibility.utils.test.mocks.createSelectionId
- | powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder
- | powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder
- | powerbi.extensibility.utils.test.mocks.MockISelectionManager
- | powerbi.extensibility.utils.test.mocks.createSelectionManager
+none | powerbi.extensibility.utils.test.mocks.MockIVisualHost
+none | powerbi.extensibility.utils.test.mocks.createVisualHost
+none | powerbi.extensibility.utils.test.mocks.MockIColorPalette
+none | powerbi.extensibility.utils.test.mocks.createColorPalette
+none | powerbi.extensibility.utils.test.mocks.MockISelectionId
+none | powerbi.extensibility.utils.test.mocks.createSelectionId
+none | powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder
+none | powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder
+none | powerbi.extensibility.utils.test.mocks.MockISelectionManager
+none | powerbi.extensibility.utils.test.mocks.createSelectionManager
 
 ## TooltipUtils
 
@@ -83,8 +85,8 @@ TooltipUtils is a set of functions and classes in order to simplify usage of the
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
- | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
+powerbi.common.createTooltipService | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
+powerbi.common.ITooltipService | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
  
 ## ColorUtils
 
@@ -94,8 +96,8 @@ ColorUtils is a set of functions and classes in order to simplify color manipula
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.color.ColorHelper
- | powerbi.extensibility.utils.color methods
+powerbi.visuals.ColorHelper | powerbi.extensibility.utils.color.ColorHelper
+powerbi.visuals.jsCommon.Color | powerbi.extensibility.utils.color methods
 
 ## ChartUtils
 
@@ -105,7 +107,7 @@ ChartUtils is a set of interfaces for creating powerbi custom visuals
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
- | powerbi.extensibility.utils.chart.axis methods
- | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
- | powerbi.extensibility.utils.chart.dataLabel.utils methods
+powerbi.visuals.AxisHelper methods | powerbi.extensibility.utils.chart.axis methods
+powerbi.DataLabelManager | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
+powerbi.visuals.dataLabelUtils methods | powerbi.extensibility.utils.chart.dataLabel.utils methods
 
