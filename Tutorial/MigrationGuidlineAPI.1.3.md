@@ -14,7 +14,7 @@ powerbi.visuals.jsCommon.PixelConverter | powerbi.extensibility.utils.type.Pixel
 
 ## SVGUtils
 
-[SVGUtils](https://www.npmjs.com/package/powerbi-visuals-utils-svgutils) is a set of functions and classes in order to simplify SVG manipulations for Power BI custom visuals
+[SVGUtils](https://www.npmjs.com/package/powerbi-visuals-utils-svgutils) is a set of functions and classes in order to simplify SVG manipulations for Power BI custom visuals.
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
@@ -25,7 +25,7 @@ powerbi.visuals.shapes.Rect | powerbi.extensibility.utils.svg.shapes.Rect
 
 ## DataViewUtils
 
-[DataViewUtils](https://www.npmjs.com/package/powerbi-visuals-utils-dataviewutils) is a set of functions and classes in order to simplify parsing of the DataView object for Power BI custom visuals
+[DataViewUtils](https://www.npmjs.com/package/powerbi-visuals-utils-dataviewutils) is a set of functions and classes in order to simplify parsing of the DataView object for Power BI custom visuals.
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
@@ -38,7 +38,7 @@ none | powerbi.extensibility.utils.dataview.DataViewObjectsParser
 
 ## FormattingUtils
 
-[FormattingUtils](https://www.npmjs.com/package/powerbi-visuals-utils-formattingutils) is a set of functions and classes in order to format values for Power BI custom visuals
+[FormattingUtils](https://www.npmjs.com/package/powerbi-visuals-utils-formattingutils) is a set of functions and classes in order to format values for Power BI custom visuals.
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
@@ -49,7 +49,7 @@ powerbi.visuals.valueFormatter | powerbi.extensibility.utils.formatting.valueFor
 
 ## InteractivityUtils
 
-[InteractivityUtils](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils) is a set of functions and classes in order to simplify implementation of cross-selection and cross-filtering for Power BI custom visuals
+[InteractivityUtils](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils) is a set of functions and classes in order to simplify implementation of cross-selection and cross-filtering for Power BI custom visuals.
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
@@ -57,9 +57,40 @@ powerbi.visuals.InteractivityOptions | powerbi.extensibility.utils.interactivity
 powerbi.visuals.InteractivityUtils | powerbi.extensibility.utils.interactivity.interactivityUtils
 
 
+## TooltipUtils
+
+[TooltipUtils](https://www.npmjs.com/package/powerbi-visuals-utils-tooltiputils) is a set of functions and classes in order to simplify usage of the Tooltip API for Power BI custom visuals.
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+powerbi.common.createTooltipService | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
+powerbi.common.ITooltipService | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
+ 
+
+## ColorUtils
+
+[ColorUtils](https://www.npmjs.com/package/powerbi-visuals-utils-colorutils) is a set of functions and classes in order to simplify color manipulations for Power BI custom visuals.
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+powerbi.visuals.ColorHelper | powerbi.extensibility.utils.color.ColorHelper
+powerbi.visuals.jsCommon.Color | powerbi.extensibility.utils.color methods
+
+
+## ChartUtils
+
+[ChartUtils](https://www.npmjs.com/package/powerbi-visuals-utils-chartutils) is a set of interfaces for creating powerbi custom visuals.
+
+Deprecated Reference | NPM package namespace
+--------------|----------------------
+powerbi.visuals.AxisHelper methods | powerbi.extensibility.utils.chart.axis methods
+powerbi.DataLabelManager | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
+powerbi.visuals.dataLabelUtils methods | powerbi.extensibility.utils.chart.dataLabel.utils methods
+
+
 ## TestUtils
 
-[TestUtils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) is a set of mocks and fakes in order to simplify unit testing for Power BI custom visuals
+[TestUtils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) is a set of mocks and fakes in order to simplify unit testing for Power BI custom visuals. 100% new library could help you in creation of unit tests.
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
@@ -73,35 +104,4 @@ none | powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder
 none | powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder
 none | powerbi.extensibility.utils.test.mocks.MockISelectionManager
 none | powerbi.extensibility.utils.test.mocks.createSelectionManager
-
-
-## TooltipUtils
-
-[TooltipUtils](https://www.npmjs.com/package/powerbi-visuals-utils-tooltiputils) is a set of functions and classes in order to simplify usage of the Tooltip API for Power BI custom visuals
-
-Deprecated Reference | NPM package namespace
---------------|----------------------
-powerbi.common.createTooltipService | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
-powerbi.common.ITooltipService | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
- 
-
-## ColorUtils
-
-[ColorUtils](https://www.npmjs.com/package/powerbi-visuals-utils-colorutils) is a set of functions and classes in order to simplify color manipulations for Power BI custom visuals
-
-Deprecated Reference | NPM package namespace
---------------|----------------------
-powerbi.visuals.ColorHelper | powerbi.extensibility.utils.color.ColorHelper
-powerbi.visuals.jsCommon.Color | powerbi.extensibility.utils.color methods
-
-
-## ChartUtils
-
-[ChartUtils](https://www.npmjs.com/package/powerbi-visuals-utils-chartutils) is a set of interfaces for creating powerbi custom visuals
-
-Deprecated Reference | NPM package namespace
---------------|----------------------
-powerbi.visuals.AxisHelper methods | powerbi.extensibility.utils.chart.axis methods
-powerbi.DataLabelManager | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
-powerbi.visuals.dataLabelUtils methods | powerbi.extensibility.utils.chart.dataLabel.utils methods
 
