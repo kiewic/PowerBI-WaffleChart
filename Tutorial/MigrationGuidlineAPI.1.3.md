@@ -1,4 +1,3 @@
-
 The list of npm packages you could use instead of deprecated core Classes and Interfaces:
 
 ## TypeUtils
@@ -7,9 +6,9 @@ The list of npm packages you could use instead of deprecated core Classes and In
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.Double | powerbi.extensibility.utils.type.Double
-powerbi.Prototype | powerbi.extensibility.utils.type.Prototype
-powerbi.visuals.jsCommon.PixelConverter | powerbi.extensibility.utils.type.PixelConverter
+powerbi.Double | [powerbi.extensibility.utils.type.Double](https://github.com/Microsoft/powerbi-visuals-utils-typeutils/blob/master/docs/api/double.md)
+powerbi.Prototype | [powerbi.extensibility.utils.type.Prototype](https://github.com/Microsoft/powerbi-visuals-utils-typeutils/blob/master/docs/api/prototype.md)
+powerbi.visuals.jsCommon.PixelConverter | [powerbi.extensibility.utils.type.PixelConverter](https://github.com/Microsoft/powerbi-visuals-utils-typeutils/blob/master/docs/api/pixelconverter.md)
 
 
 ## SVGUtils
@@ -18,9 +17,10 @@ powerbi.visuals.jsCommon.PixelConverter | powerbi.extensibility.utils.type.Pixel
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.visuals.jsCommon.CssConstants | powerbi.extensibility.utils.svg.CssConstants
-powerbi.visuals.SVGUtils methods | powerbi.extensibility.utils.svg methods
-powerbi.visuals.shapes.Rect | powerbi.extensibility.utils.svg.shapes.Rect
+powerbi.visuals.jsCommon.CssConstants | [powerbi.extensibility.utils.svg.CssConstants](https://github.com/Microsoft/powerbi-visuals-utils-svgutils/blob/master/docs/api/cssConstants.md)
+powerbi.visuals.SVGUtils methods | [powerbi.extensibility.utils.svg methods](https://github.com/Microsoft/powerbi-visuals-utils-svgutils/blob/master/docs/api/manipulatation.md)
+powerbi.visuals.shapes.Rect | [powerbi.extensibility.utils.svg.shapes.Rect](https://github.com/Microsoft/powerbi-visuals-utils-svgutils/blob/master/docs/api/rect.md)
+powerbi.visuals.getCoordinates | [powerbi.extensibility.utils.svg.getCoordinates](https://github.com/Microsoft/powerbi-visuals-utils-svgutils/blob/master/docs/api/pointer.md)
 
 
 ## DataViewUtils
@@ -29,11 +29,11 @@ powerbi.visuals.shapes.Rect | powerbi.extensibility.utils.svg.shapes.Rect
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.data.DataRoleHelper | powerbi.extensibility.utils.dataview.DataRoleHelper
-powerbi.DataViewObjects | powerbi.extensibility.utils.dataview.DataViewObjects
-powerbi.DataViewObject  | powerbi.extensibility.utils.dataview.DataViewObject
-powerbi.visuals.converterHelper | powerbi.extensibility.utils.dataview.converterHelper
-none | powerbi.extensibility.utils.dataview.DataViewObjectsParser
+powerbi.data.DataRoleHelper | [powerbi.extensibility.utils.dataview.DataRoleHelper](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-role-helper.md)
+powerbi.DataViewObjects | [powerbi.extensibility.utils.dataview.DataViewObjects](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-view-objects.md)
+powerbi.DataViewObject  | [powerbi.extensibility.utils.dataview.DataViewObject](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-view-object.md)
+powerbi.visuals.converterHelper | [powerbi.extensibility.utils.dataview.converterHelper](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/converter-helper.md)
+none | [powerbi.extensibility.utils.dataview.DataViewObjectsParser](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-view-objects-parser.md)
 
 
 ## FormattingUtils
@@ -41,10 +41,10 @@ none | powerbi.extensibility.utils.dataview.DataViewObjectsParser
 [FormattingUtils](https://www.npmjs.com/package/powerbi-visuals-utils-formattingutils) is a set of functions and classes in order to format values for Power BI custom visuals.
 
 Deprecated Reference | NPM package namespace
---------------|----------------------
-powerbi.TextMeasurementService | powerbi.extensibility.utils.formatting.textMeasurementService
-powerbi.visuals.jsCommon.StringExtensions | powerbi.extensibility.utils.formatting.stringExtensions
-powerbi.visuals.valueFormatter | powerbi.extensibility.utils.formatting.valueFormatter
+---------------------|----------------------
+powerbi.TextMeasurementService | [powerbi.extensibility.utils.formatting.textMeasurementService](https://github.com/Microsoft/powerbi-visuals-utils-formattingutils/blob/master/docs/api/text-measurement-service.md)
+powerbi.visuals.jsCommon.StringExtensions | [powerbi.extensibility.utils.formatting.stringExtensions](https://github.com/Microsoft/powerbi-visuals-utils-formattingutils/blob/master/docs/api/string-extensions.md)
+powerbi.visuals.valueFormatter | [powerbi.extensibility.utils.formatting.valueFormatter](https://github.com/Microsoft/powerbi-visuals-utils-formattingutils/blob/master/docs/api/value-formatter.md)
 
 
 ## InteractivityUtils
@@ -53,8 +53,8 @@ powerbi.visuals.valueFormatter | powerbi.extensibility.utils.formatting.valueFor
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.visuals.InteractivityOptions | powerbi.extensibility.utils.interactivity
-powerbi.visuals.InteractivityUtils | powerbi.extensibility.utils.interactivity.interactivityUtils
+powerbi.visuals.InteractivityOptions | [powerbi.extensibility.utils.interactivity](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityService.md)
+powerbi.visuals.InteractivityUtils | [powerbi.extensibility.utils.interactivity.interactivityUtils](https://github.com/Microsoft/powerbi-visuals-utils-interactivityutils/blob/master/docs/api/interactivityUtils.md)
 
 
 ## TooltipUtils
@@ -63,8 +63,8 @@ powerbi.visuals.InteractivityUtils | powerbi.extensibility.utils.interactivity.i
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.common.createTooltipService | powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper
-powerbi.common.ITooltipService | powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper
+powerbi.common.createTooltipService | [powerbi.extensibility.utils.tooltip.createTooltipServiceWrapper](https://github.com/Microsoft/powerbi-visuals-utils-tooltiputils/blob/master/docs/api/tooltipservice.md)
+powerbi.common.ITooltipService | [powerbi.extensibility.utils.tooltip.ITooltipServiceWrapper](https://github.com/Microsoft/powerbi-visuals-utils-tooltiputils/blob/master/docs/api/tooltipservice.md#itooltipservicewrapper)
  
 
 ## ColorUtils
@@ -73,8 +73,8 @@ powerbi.common.ITooltipService | powerbi.extensibility.utils.tooltip.ITooltipSer
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.visuals.ColorHelper | powerbi.extensibility.utils.color.ColorHelper
-powerbi.visuals.jsCommon.Color | powerbi.extensibility.utils.color methods
+powerbi.visuals.ColorHelper | [powerbi.extensibility.utils.color.ColorHelper](https://github.com/Microsoft/powerbi-visuals-utils-colorutils/blob/master/docs/api/colorHelper.md)
+powerbi.visuals.jsCommon.Color | [powerbi.extensibility.utils.color methods](https://github.com/Microsoft/powerbi-visuals-utils-colorutils/blob/master/docs/api/colorUtils.md)
 
 
 ## ChartUtils
@@ -83,9 +83,9 @@ powerbi.visuals.jsCommon.Color | powerbi.extensibility.utils.color methods
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-powerbi.visuals.AxisHelper methods | powerbi.extensibility.utils.chart.axis methods
-powerbi.DataLabelManager | powerbi.extensibility.utils.chart.dataLabel.DataLabelManager
-powerbi.visuals.dataLabelUtils methods | powerbi.extensibility.utils.chart.dataLabel.utils methods
+powerbi.visuals.AxisHelper methods | [powerbi.extensibility.utils.chart.axis methods](https://github.com/Microsoft/powerbi-visuals-utils-chartutils/blob/master/docs/api/axis-helper.md)
+powerbi.DataLabelManager | [powerbi.extensibility.utils.chart.dataLabel.DataLabelManager](https://github.com/Microsoft/powerbi-visuals-utils-chartutils/blob/master/docs/api/data-label-manager.md)
+powerbi.visuals.dataLabelUtils methods | [powerbi.extensibility.utils.chart.dataLabel.utils methods](https://github.com/Microsoft/powerbi-visuals-utils-chartutils/blob/master/docs/api/data-label-utils.md)
 
 
 ## TestUtils
@@ -94,14 +94,14 @@ powerbi.visuals.dataLabelUtils methods | powerbi.extensibility.utils.chart.dataL
 
 Deprecated Reference | NPM package namespace
 --------------|----------------------
-none | powerbi.extensibility.utils.test.mocks.MockIVisualHost
-none | powerbi.extensibility.utils.test.mocks.createVisualHost
-none | powerbi.extensibility.utils.test.mocks.MockIColorPalette
-none | powerbi.extensibility.utils.test.mocks.createColorPalette
-none | powerbi.extensibility.utils.test.mocks.MockISelectionId
-none | powerbi.extensibility.utils.test.mocks.createSelectionId
-none | powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder
-none | powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder
-none | powerbi.extensibility.utils.test.mocks.MockISelectionManager
-none | powerbi.extensibility.utils.test.mocks.createSelectionManager
+none | [powerbi.extensibility.utils.test.mocks.MockIVisualHost](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-ivisual-host.md)
+none | [powerbi.extensibility.utils.test.mocks.createVisualHost](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-ivisual-host.md#createvisualhost)
+none | [powerbi.extensibility.utils.test.mocks.MockIColorPalette](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-icolor-palette.md)
+none | [powerbi.extensibility.utils.test.mocks.createColorPalette](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-icolor-palette.md#createcolorpalette)
+none | [powerbi.extensibility.utils.test.mocks.MockISelectionId](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselectionid.md)
+none | [powerbi.extensibility.utils.test.mocks.createSelectionId](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselectionid.md#createselectionid)
+none | [powerbi.extensibility.utils.test.mocks.MockISelectionIdBuilder](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselection-idbuilder.md)
+none | [powerbi.extensibility.utils.test.mocks.createSelectionIdBuilder](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselection-idbuilder.md#createselectionidbuilder)
+none | [powerbi.extensibility.utils.test.mocks.MockISelectionManager](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselection-manager.md)
+none | [powerbi.extensibility.utils.test.mocks.createSelectionManager](https://github.com/Microsoft/powerbi-visuals-utils-testutils/blob/master/docs/api/mock-iselection-manager.md#createselectionmanager)
 
