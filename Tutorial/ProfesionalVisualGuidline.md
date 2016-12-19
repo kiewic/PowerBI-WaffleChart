@@ -7,7 +7,7 @@ Power BI gallery users expect the visuals to contain a minimum set of features a
 Check Bar Chart [tutorial](https://github.com/Microsoft/PowerBI-visuals#building-bar-chart). This's a great example of professionaly maden Power BI custom visual.
 
 ## Dataset support
-Make the visual's usage barrier of entry lower. 
+Make the visual's barrier of entry lower. 
 
 It's better to add dataset validation and to support large and various datasets.
 
@@ -17,7 +17,9 @@ It's better to add dataset validation and to support large and various datasets.
 
 [DataViewUtils](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/usage/usage-guide.md) NPM package can help you with reaching those three.
 
-## Support wide variety of formatting options
+## Formatting options
+
+Support wide variety of formatting options.
 
 Add this list of expected Formating Panel options, which let users to specify "look and feel" of the visual:
 
@@ -57,10 +59,6 @@ Provide cross-filtering or cross-highlighting, if appropriate, for your visual.
 This gives a better presentation integration with any report and helps users to use your visual as Selection control for their data the report.
 
 Check the [document](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Selection.md) with Selection functionality description. Also check the [example](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/Selection.md) of using Selection.
-
-## Tips and tricks
-
-Check [Common problems of custom visuals](./SubmissionCommonProblems.md)
 
 ## Versioning
 
@@ -108,5 +106,7 @@ Use these items planing your visual:
 5. Set min/max fields of your data roles to limit the number of fields that can be dropped into the specific field bucket.
 
 6. Add unit tests that will validate your visual ensuring that new changes do not break your visual.
+
+Check [Common problems of custom visuals](./SubmissionCommonProblems.md).
 
 Also check our [test cases and acceptable web browsers](./SubmissionTesting.md).
