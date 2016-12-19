@@ -1,6 +1,8 @@
-We are happy to announce that Power BI Custom Visuals API has now been upgraded to v1.3.  Check PowerBi roadmap document with current and upcomming feature https://github.com/Microsoft/PowerBI-visuals/tree/master/Roadmap.
- 
-Power BI Custom Visuals API v1 will reach the end of the half-year deprecation window on 1 February, 2017 (TODO check date). If you've already upgraded your code to call API v1.3, your visual shouldn't be affected by these changes. 
+We are happy to announce that Power BI Custom Visuals API has now been upgraded to v1.3.
+
+With change of API we updated the [development environment](https://github.com/Microsoft/PowerBI-visuals#setting-up-environment). PowerBI visuals CLI tools bring next level of degugging and development to your visual with its [project generator](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/usage.md#creating-a-new-visual) and [livereload feature](https://github.com/Microsoft/PowerBI-visuals/blob/master/tools/usage.md#testing-your-visual-in-powerbi)
+
+To migrate to the new API you can easily use [PowerBI visuals CLI tools](https://github.com/Microsoft/PowerBI-visuals#setting-up-environment) and [new NPM API packages](/Microsoft/PowerBI-visuals/blob/master/Tutorial/MigrationGuidlineAPI.1.3.md#typeutils). Check PowerBi roadmap document with current and upcomming feature https://github.com/Microsoft/PowerBI-visuals/tree/master/Roadmap. Power BI Custom Visuals API v1 will reach the end of the half-year deprecation window on 1 February, 2017 (TODO check date). If you've already upgraded your code to call API v1.3, your visual shouldn't be affected by these changes. 
 
 The list of npm packages you could use instead of deprecated core Classes and Interfaces (check linked install and usage document):
 
