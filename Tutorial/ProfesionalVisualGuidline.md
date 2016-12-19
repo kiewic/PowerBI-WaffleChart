@@ -50,6 +50,9 @@ Add this list of expected Formating Panel options, which let users to specify "l
   - Sort
 
 These options could be implemented with [Capabilities](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md) of the visual.
+
+For convinient and reliable options parsing and validataion use [DataViewObjectsParser](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/api/data-view-objects-parser.md) from [DataViewUtils](https://www.npmjs.com/package/powerbi-visuals-utils-dataviewutils) NPM package.
+
 Use the Power BI color palette for all color choices (TODO: add reference to PowerBI palette [example from the search](https://dataveld.wordpress.com/2016/02/13/microsoft-power-bi-color-reference/)).
 
 ## Support cross-filtering when available.
