@@ -1,4 +1,8 @@
-The list of npm packages you could use instead of deprecated core Classes and Interfaces:
+We are happy to announce that Power BI Custom Visuals API has now been upgraded to v1.3.  Check PowerBi roadmap document with current and upcomming feature https://github.com/Microsoft/PowerBI-visuals/tree/master/Roadmap.
+ 
+Power BI Custom Visuals API v1 will reach the end of the half-year deprecation window on 1 February, 2017 (TODO check date). If you've already upgraded your code to call API v1.3, your visual shouldn't be affected by these changes. 
+
+The list of npm packages you could use instead of deprecated core Classes and Interfaces (check linked install and usage document):
 
 ## TypeUtils
 
