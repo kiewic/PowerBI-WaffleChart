@@ -1,13 +1,10 @@
 # Developer guide. Building a professional custom visual for Power BI
 
 ## General  words about requirements of good-looking visual.
+
 Power BI gallery users expect the visuals to contain a minimum set of features and work properly in their Power BI reports. A full-featured visual should include formatting options for the user, selection and filtering, exception handling, and responsive rendering.
 
-### General
-
-1. See Adhering to common themes and styles.
-2. Use the Power BI color palette for all color choices.
-3. Provide cross-filtering or cross-highlighting, if appropriate, for your visual.
+Check Bar Chart creation [tutorial](https://github.com/Microsoft/PowerBI-visuals#building-bar-chart). This's a great example of professionaly maden Power BI custom visual.
 
 ### Fields/Data
 
@@ -15,7 +12,11 @@ Power BI gallery users expect the visuals to contain a minimum set of features a
 2. Provide validation for all data types in the Field well.
 3. Provide error handling for unexpected data values.
 
-### Format
+## Validation of the dataset (expect any type of data here) and supporting big datasets. Links to examples of proper validation.
+
+## Supporting wide variety of formatting options. 
+
+List of expected Formating Panel options which let users to specify "look and feel" of the visual:
 
 1. Data labels – support the following properties as applicable.
   - Color
@@ -43,21 +44,21 @@ Power BI gallery users expect the visuals to contain a minimum set of features a
   - Tooltips
   - Sort
 
-## Validation of the dataset (expect any type of data here) and supporting big datasets. Links to examples of proper validation.
-
-## Supporting wide variety of formatting options. 
-
-Less hardcoded settings/more options for user to specify.
+These options could be easily implemented with [Capabilities](https://github.com/Microsoft/PowerBI-visuals/blob/master/Capabilities/Capabilities.md) of the visual.
+For colors use the Power BI color palette for all color choices (TODO: add reference to PowerBI palette [example from the search](https://dataveld.wordpress.com/2016/02/13/microsoft-power-bi-color-reference/)).
 
 ## Supporting cross-filtering when available.
-Check the [document](/Microsoft/PowerBI-visuals/blob/master/Visual/Selection.md) with Selection functionality description.
+
+Provide cross-filtering or cross-highlighting, if appropriate, for your visual. This gives a better presentation integration with any report and helps users to use your visual as Selection control for their data the report.
+
+Check the [document](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Selection.md) with Selection functionality description. Also check the [example](https://github.com/Microsoft/PowerBI-visuals/blob/master/Tutorial/Selection.md) of using Selection.
 
 ## Tips and tricks
 
 Check [Common problems of custom visuals](./SubmissionCommonProblems.md)
 
 
-## Versioning.
+## Versioning
 
 Current versioning has the following format: **xx.xx.xx**. The first number is major version, second is minor, third is patch/hotfix.
 
