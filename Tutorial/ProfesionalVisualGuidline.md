@@ -1,12 +1,56 @@
-# Developer guide to building a professional custom visual for Power BI
+# Developer guide. Building a professional custom visual for Power BI
 
 ## General  words about requirements of good-looking visual.
+Power BI gallery users expect the visuals to contain a minimum set of features and work properly in their Power BI reports. A full-featured visual should include formatting options for the user, selection and filtering, exception handling, and responsive rendering.
+
+### General
+
+1. See Adhering to common themes and styles.
+2. Use the Power BI color palette for all color choices.
+3. Provide cross-filtering or cross-highlighting, if appropriate, for your visual.
+
+### Fields/Data
+
+1. Support large data sets.
+2. Provide validation for all data types in the Field well.
+3. Provide error handling for unexpected data values.
+
+### Format
+
+1. Data labels – support the following properties as applicable.
+  - Color
+  - Font size
+  - Label style
+  - Display unit
+  - Decimal places
+  - Density
+  - Position
+
+2. Legend – support the following properties as applicable.
+  - Font size
+  - Color
+  - Title
+  - Position
+  
+3. Axis (X-Axis, Y-Axis, or both) properties.
+  - Title
+  - Color
+  - Display unit
+
+4. Data points – support the following properties as applicable.
+  - Font size
+  - Fill
+  - Tooltips
+  - Sort
 
 ## Validation of the dataset (expect any type of data here) and supporting big datasets. Links to examples of proper validation.
 
-## Supporting wide variety of formatting options. Less hardcoded settings/more options for user to specify.
+## Supporting wide variety of formatting options. 
 
-## Supporting cross-filtering when available. Links to new API documentation.
+Less hardcoded settings/more options for user to specify.
+
+## Supporting cross-filtering when available.
+Check the [document](/Microsoft/PowerBI-visuals/blob/master/Visual/Selection.md) with Selection functionality description.
 
 ## Tips and tricks
 
