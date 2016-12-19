@@ -4,7 +4,7 @@
 
 Power BI gallery users expect the visuals to contain a minimum set of features and work properly in their Power BI reports. A full-featured visual should include formatting options for the user, selection and filtering, exception handling, and responsive rendering.
 
-Check Bar Chart [tutorial](https://github.com/Microsoft/PowerBI-visuals#building-bar-chart). This's a great example of professionaly maden Power BI custom visual.
+Check Bar Chart [tutorial](https://github.com/Microsoft/PowerBI-visuals#building-bar-chart). This's a great example of professionally maden Power BI custom visual.
 
 ## Dataset support
 Make the visual's barrier of entry lower. 
@@ -84,15 +84,15 @@ Current versioning has the following format: **xx.xx.xx**. The first number is m
 Every package submission needs to have different version.
 
 
-## Unit tests and manual tests.
+## Testing.
 
-Test your visual, automaticaly if possible. 
+Test your visual, automatically if possible. Unit tests and manual tests are куйгшкувю
 
 To provide high-quality visuals to the Power BI community, it is important to fully test your visual before submission to the gallery. Upon receipt of your visual submission, the Power BI custom visual team will use these test cases and acceptance criteria to validate your submission.
 
 Use package [validator tool](https://powerbi-validator-v-glpol.herokuapp.com/) (TODO: fix to production link) for an artifact review of the your package.
 
-Also check great [TestUtils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) NPM package, it can help you with creation of unit test.
+Also check great [TestUtils](https://www.npmjs.com/package/powerbi-visuals-utils-testutils) NPM package, it can help you with creation of unit tests.
 
 ### Best Practices
 
