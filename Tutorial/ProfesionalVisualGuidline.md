@@ -15,7 +15,7 @@ It's better to add dataset validation and to support large and various datasets.
 2. Provide validation for all data types in the Field well (expect any type of data).
 3. Provide error handling for unexpected data values.
 
-[DataViewUtils](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils/blob/master/docs/usage/usage-guide.md) NPM package can help you with reaching those three.
+[DataViewUtils](https://www.npmjs.com/package/powerbi-visuals-utils-dataviewutils) NPM package can help you with reaching those three.
 
 ## Formatting options
 
