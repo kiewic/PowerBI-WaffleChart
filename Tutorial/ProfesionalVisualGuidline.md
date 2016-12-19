@@ -1,6 +1,6 @@
 # Developer guide. Building a professional custom visual for Power BI
 
-## Requirements of professional custom visual.
+## Requirements of professional custom visual
 
 Power BI gallery users expect the visuals to contain a minimum set of features and work properly in their Power BI reports. A full-featured visual should include formatting options for the user, selection and filtering, exception handling, and responsive rendering.
 
