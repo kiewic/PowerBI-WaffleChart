@@ -1,6 +1,6 @@
 #Getting Locale in Custom Visuals 
 
-Visuals can now know PowerBI's locale, so they can display localized information.
+Visuals can now know PowerBI's locale, so they can display localized information
 (read more about [Supported languages and countries/regions for Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-supported-languages/))
 
 For example, getting locale in the sample BarChart.
@@ -9,7 +9,7 @@ For example, getting locale in the sample BarChart.
 
 Each of these bar charts was created under different locale (English, Basque and Hindi), and it is displayed in the tooltip.
 
-##Getting the 'locale'
+##Getting the `locale`
 
 The 'locale' is passed as a string during the initialization of the visual. If a locale is changed in PowerBI the visual will be generated again with the new locale.
 You can find the full sample code at [SampleBarChart with Locale - UPDATE LINK!!!](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/981b021612d7b333adffe9f723ab27783c76fb14)
@@ -17,9 +17,9 @@ You can find the full sample code at [SampleBarChart with Locale - UPDATE LINK!!
 The BarChart contructor now has a `locale` member which is instantiated in the constructor with the host `locale` instance.
 
 ```typescript
-        private locale: string;
-
-        this.locale = options.host.locale;
+    private locale: string;
+    ...
+    this.locale = options.host.locale;
 ```
 
 ### Supported Locales
@@ -69,4 +69,3 @@ uk-UA | український (Ukrainian)
 vi-VN | tiếng Việt (Vietnamese)
 zh-CN | 中国 (Chinese-Simplified)
 zh-TW | 中國 (Chinese-Tranditional)
-        
