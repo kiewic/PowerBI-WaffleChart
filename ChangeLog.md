@@ -2,7 +2,7 @@
 
 The page contains a quick summary of the API versions.
 
-Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](roadmap/README.md)
+Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](./Roadmap/README.md)
 
 ##Utility libraries
 * [Color Utils](https://github.com/Microsoft/powerbi-visuals-utils-colorutils)
@@ -15,6 +15,9 @@ Versions listed on this page are considered stable and should not change. For in
 * [Chart Utils](https://github.com/Microsoft/powerbi-visuals-utils-chartutils)
 * [Test Utils](https://github.com/Microsoft/powerbi-visuals-utils-testutils)
 
+##API Version v1.4.0
+* **[locale](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Locale.md)** - support for locale
+
 ##API Version 1.3.0
 * **[tooltips](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Tooltips.md)** - support for tooltips
 
@@ -24,6 +27,8 @@ Versions listed on this page are considered stable and should not change. For in
 * **[R visuals](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial)** - support for custom visuals using R scripts
 
 ##API Version 1.1.0
+* Debug visual in iFrame
+* Light weight sandbox - faster initialization of the iFrame
 
 * Visual Host Addtions
     * **createSelectionIdBuilder** - allows for creation of unique identifiers used for data selection
