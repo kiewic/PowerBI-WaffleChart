@@ -28,7 +28,8 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 6. [Adding Databound Objects to Property Pane](Tutorial/DataBoundObjects.md)
 7. [Adding Tooltips to the Bar Chart](Tutorial/ToolTips.md)
 8. [Adding A Slider control to the Bar Chart](Tutorial/SliderControl.md)
-9. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
+9. [Adding Locale support to the Bar Chart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/blob/master/Tutorial/Locale.md)
+10. [Finally Package for Distribution ... Done!](tools/usage.md#packaging-your-visual-for-distribution)
 
 ### Building R Powered Custom Visual (corrplot)
 1. [Creating a new R Powered Custom Visual](RVisualTutorial/CreateNewVisual.md)
