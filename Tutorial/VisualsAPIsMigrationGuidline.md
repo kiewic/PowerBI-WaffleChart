@@ -3,6 +3,7 @@
 To migrate from the legacy APIs to the new versioned Visuals API, use [PowerBI visuals CLI tools](https://github.com/Microsoft/PowerBI-visuals#setting-up-environment) and [NPM API packages](#utility-libraries-using-npm-packages).
 Check the [Power BI visuals API roadmap](https://github.com/Microsoft/PowerBI-visuals/tree/master/Roadmap) for current and upcomming features.
 
+
 ## Utility libraries using NPM packages
 The npm packages are intended to provide utility libraries for common functionlaity that is required by custom visuals, and to align it with Power BI's core visuals look & feel. 
 Use the npm packages instead of the legacy APIs that were used in the past to achieve those common functionalities. Replace "Legacy Reference" in your code with the relevant "NPM package", as described below.
