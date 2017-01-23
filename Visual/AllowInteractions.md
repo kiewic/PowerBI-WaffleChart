@@ -1,8 +1,9 @@
 #Enabling and Disabling Interactivity in Custom Visuals 
 
-Visuals can query the value of the 'allowInteractions' hint, suggesting whether to allow interactions within the visual.
-For example, visuals should not be interactive when rendered as a tile in a dashboard.
-In this case - the 'allowInteractions' flag will be set to false, allowing the visual to block interactions and render in a "View only" mode.
+Visuals can query the value of the 'allowInteractions' flag, that indicate whether the visual should allow visual interactions.
+For example, visuals should be interactive during report viewing or editing, but not interactive when viewed in a dashboard.
+These interactions are click, pan, zoom, selection, etc.
+Note, that tooltips are expected be enabled in all scenarios, regardless of this flag.
 
 ##Getting the 'allowInteractions' value
 
