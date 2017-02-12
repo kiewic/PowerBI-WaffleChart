@@ -1,35 +1,60 @@
+
 {
     "dataRoles": [
         {
             "displayName": "Category Data",
-            "name": "category",
+            "name": "Category",
             "kind": "Grouping"
         },
         {
-            "displayName": "Measure Data",
-            "name": "measure",
-            "kind": "Measure"
+            "displayName": "Paths",
+            "name": "Paths",
+            "kind": "Grouping",
+            "description": "The value used to customize the shape of the data points",
+            "requiredTypes": [{ "text": true }]
+        },
+        {
+            "displayName": "Values",
+            "name": "Values",
+            "kind": "Measure",
+            "requiredTypes": [{ "numeric": true }, { "integer": true }]
+        },
+        {
+            "displayName": "MinValue",
+            "name": "MinValue",
+            "kind": "Measure",
+            "requiredTypes": [{ "numeric": true }, { "integer": true }]
+        },
+        {
+            "displayName": "MaxValue",
+            "name": "MaxValue",
+            "kind": "Measure",
+            "requiredTypes": [{ "numeric": true }, { "integer": true }]
         }
     ],
     "dataViewMappings": [
         {
             "categorical": {
                 "categories": {
-                    "for": {
-                        "in": "category"
+                    "for": { 
+                        "in": "Category"
                     },
-                    "dataReductionAlgorithm": {
+                    "dataReductionAlgorithm": { 
                         "top": {}
                     }
                 },
                 "values": {
-                    "select": [
-                        {
-                            "bind": {
-                                "to": "measure"
-                            }
+                    "group": {
+                        "by": "Paths",
+                        "select": [
+                            { "bind": { "to": "Values" } },
+                            { "bind": { "to": "MinValue" } },
+                            { "bind": { "to": "MaxValue" } }
+                        ],
+                        "dataReductionAlgorithm": {
+                            "top": {}
                         }
-                    ]
+                    }
                 }
             }
         }
