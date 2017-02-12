@@ -9,6 +9,9 @@
   },
   "files": [
     "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.d.ts",
+    "node_modules/powerbi-visuals-utils-typeutils/lib/index.d.ts",
+    "node_modules/powerbi-visuals-utils-colorutils/lib/index.d.ts",
+    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.d.ts",
     "typings/index.d.ts",
     "node_modules/powerbi-visuals-utils-typeutils/lib/index.d.ts",
     "node_modules/powerbi-visuals-utils-svgutils/lib/index.d.ts",

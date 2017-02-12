@@ -1,6 +1,7 @@
 {
   "name": "visual",
   "dependencies": {
+    "powerbi-visuals-utils-colorutils": "^0.2.1",
     "powerbi-visuals-utils-dataviewutils": "^1.0.1",
     "powerbi-visuals-utils-formattingutils": "^0.4.0"
   }
