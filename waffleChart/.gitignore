@@ -1,0 +1,5 @@
+# PowerBI auto-generated files
+/.tmp
+
+# NPM downloaded files
+/node_modules
