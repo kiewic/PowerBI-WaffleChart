@@ -80,48 +80,6 @@ module powerbi.extensibility.visual {
         paths: 'Paths'
     };
 
-    //// DevTools do not support yet `export const waffleChartCapabilities: VisualCapabilities`.
-    //var waffleChartCapabilities: VisualCapabilities = {
-    //    objects: {
-    //        general: {
-    //            displayName: data.createDisplayNameGetter('Visual_General'),
-    //            properties: {
-    //                formatString: {
-    //                    type: { formatting: { formatString: true } },
-    //                },
-    //            },
-    //        },
-    //        dataPoint: {
-    //            displayName: data.createDisplayNameGetter('Visual_DataPoint'),
-    //            description: data.createDisplayNameGetter('Visual_DataPointDescription'),
-    //            properties: {
-    //                defaultColor: {
-    //                    displayName: data.createDisplayNameGetter('Visual_DefaultColor'),
-    //                    type: { fill: { solid: { color: true } } }
-    //                },
-    //                fill: {
-    //                    displayName: data.createDisplayNameGetter('Visual_Fill'),
-    //                    type: { fill: { solid: { color: true } } }
-    //                },
-    //                fillRule: {
-    //                    displayName: data.createDisplayNameGetter('Visual_Gradient'),
-    //                    type: { fillRule: {} },
-    //                    rule: {
-    //                        inputRole: 'Gradient',
-    //                        output: {
-    //                            property: 'fill',
-    //                            selector: ['Category'],
-    //                        },
-    //                    },
-    //                }
-    //            }
-    //        }
-    //    },
-    //    sorting: {
-    //      default: {},
-    //    },
-    //};
-
     // DevTools do not support yet `export const waffleChartProps`.
     var waffleChartProps = {
         dataPoint: {
@@ -452,7 +410,7 @@ module powerbi.extensibility.visual {
                 selectionManager.clear().then(() => selection.style('opacity', 1))
             });
 
-            //selection.on('click', function (d) {
+            //selection.on('click', function (d) {  
             //    //selectionManager.select(selectionIdBuilder.createWithId(d)).then((ids) => {
             //    selectionManager.select(selectionIdBuilder.withCategory(d).createSelectionId()).then((ids) => {
             //        if (ids.length > 0) {
@@ -546,42 +504,60 @@ module powerbi.extensibility.visual {
             };
         }
 
-        //public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
-        //    var enumeration = new ObjectEnumerationBuilder();
-        //    
-        //    switch (options.objectName) {
-        //        case 'dataPoint':
-        //            this.enumerateDataPoints(enumeration);
-        //            break;
-        //    }
-        //    
-        //    return enumeration.complete();
-        //}
+        /**
+         * Enumerates through the objects defined in the capabilities and adds the properties to the format pane
+         *
+         * @function
+         * @param {EnumerateVisualObjectInstancesOptions} options - Map of defined objects
+         */
+        public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
+            let objectEnumeration: VisualObjectInstance[] = [];
 
-        //private enumerateDataPoints(enumeration: ObjectEnumerationBuilder): void {
-        //    enumeration.pushInstance({
-        //        objectName: 'dataPoint',
-        //        selector: null,
-        //        properties: {
-        //            defaultColor: { solid: { color: this.defaultDataPointColor } }
-        //        },
-        //    });
-        //    
-        //    if (this.singleWaffleChartArray) {
-        //        for (var i = 0; i < this.singleWaffleChartArray.length; i++) {
-        //            var singleWaffle = this.singleWaffleChartArray[i]; 
-        //
-        //            enumeration.pushInstance({
-        //                objectName: 'dataPoint',
-        //                displayName: singleWaffle.getText(),
-        //                selector: ColorHelper.normalizeSelector(SelectionId.createWithId(singleWaffle.getIdentity()).getSelector(), false),
-        //                properties: {
-        //                    fill: { solid: { color: singleWaffle.getColor() } }
-        //                },
-        //            });
-        //        } 
-        //    }
-        //}
+            switch (options.objectName) {
+                case 'dataPoint':
+                    this.enumerateDataPoints(objectEnumeration);
+                    break;
+            }
+
+            return objectEnumeration;
+        }
+
+        private enumerateDataPoints(objectEnumeration: VisualObjectInstance[]): void {
+            objectEnumeration.push({
+                objectName: 'dataPoint',
+                selector: null,
+                properties: {
+                    defaultColor: {
+                        solid: {
+                            color: this.defaultDataPointColor
+                        }
+                    }
+                },
+            });
+
+            if (this.singleWaffleChartArray) {
+                for (var i = 0; i < this.singleWaffleChartArray.length; i++) {
+                    var singleWaffle = this.singleWaffleChartArray[i]; 
+
+                    objectEnumeration.push({
+                        objectName: 'dataPoint',
+                        displayName: singleWaffle.getText(),
+                        selector: {
+                            data: [
+                                singleWaffle.getIdentity()
+                            ]
+                        },
+                        properties: {
+                            fill: {
+                                solid: {
+                                    color: singleWaffle.getColor()
+                                }
+                            }
+                        },
+                    });
+                } 
+            }
+        }
 
         public destroy(): void {
             console.log("Call to destroy()");

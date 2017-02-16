@@ -20,13 +20,13 @@
             "requiredTypes": [{ "numeric": true }, { "integer": true }]
         },
         {
-            "displayName": "MinValue",
+            "displayName": "Min Values",
             "name": "MinValue",
             "kind": "Measure",
             "requiredTypes": [{ "numeric": true }, { "integer": true }]
         },
         {
-            "displayName": "MaxValue",
+            "displayName": "Max Values",
             "name": "MaxValue",
             "kind": "Measure",
             "requiredTypes": [{ "numeric": true }, { "integer": true }]
@@ -58,5 +58,35 @@
                 }
             }
         }
-    ]
+    ],
+    "objects":  {
+        "dataPoint": {
+            "displayName": "Data Point",
+            "properties": {
+                "defaultColor": {
+                    "displayName": "Default Color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fill": {
+                    "displayName": "Fill",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sorting": {
+        "default": {}
+    }
 }
