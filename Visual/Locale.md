@@ -75,7 +75,9 @@ zh-TW | 中國 (Chinese-Tranditional)
 The different property pane fields you entered in your capabilities can now be localized to provide a more integrated experience,
 making your custom visual seem like any other core visual.
 
-For example, a non-localized custom visual created using the "pbiviz new" command will show the following fields in the property pane:
+For example a non-localized custom visual created by using the "pbiviz new" command,
+will show the following fields in the property pane:
+
 ![not Localized Property Pane](../images/notLocalizedPropertyPane.png)
 
 both the Category Data and the Measure Data are defined in the capabilities.json file as displayName.
@@ -86,6 +88,7 @@ both the Category Data and the Measure Data are defined in the capabilities.json
 
 First add a display name key to every display name you want to localize in your capabilities.
 in our example:
+
 ![Adding Display Name Keys](../images/displayNameKey.png)
 
 Then add a directory called "stringResources", this directory will contain all your different string resource files based on the locales you want your visual to support.
@@ -93,16 +96,20 @@ under this directory you'll need to add a JSON file for every locale you want to
 
 In our example, lets say we want to support Arabic and Hebrew.
 we will need to add two JSON files in the following way:
+
 ![Adding String Resources](../images/stringResourcesFiles.png)
 
 Every JSON file we add will define the locale (this has to be one of the locales from the supported list above),
 and the string values for the wanted display name keys.
 In our example the Hebrew string resource file will look like this:
+
 ![Hebrew String Resource](../images/hebrewStringResource.png)
 
 After adding all the string resource files you'll need to add the path to your files in the pbiviz.json:
+
 ![Adding StringResources Paths](../images/stringResourcePath.png)
 
 The resulting property pane will contain the displayName according to the string resources files you defined
 in our example in case we change the language to Hebrew we will get the following property pane:
-![Localized Property Pane](../images/localizedPropertyPane)
+
+![Localized Property Pane](../images/localizedPropertyPane.png)
