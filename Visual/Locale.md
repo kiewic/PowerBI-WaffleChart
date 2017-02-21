@@ -1,13 +1,13 @@
-#Getting Locale in Custom Visuals 
+#Getting the locale in Power BI for custom visuals 
 
-Visuals can now know PowerBI's locale, so they can display localized information
+Visuals can retrieve the PowerBI locale, in order to localize their content to the relevant language.
 (read more about [Supported languages and countries/regions for Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-supported-languages/))
 
 For example, getting locale in the sample BarChart.
 
 ![Sample BarChart with Locale](../images/LocaleInSampleBarChart.png)
 
-Each of these bar charts was created under different locale (English, Basque and Hindi), and it is displayed in the tooltip.
+Each of these bar charts was created under a different locale (English, Basque and Hindi), and it is displayed in the tooltip.
 
 ##Getting the `locale`
 
@@ -70,11 +70,11 @@ vi-VN | tiếng Việt (Vietnamese)
 zh-CN | 中国 (Chinese-Simplified)
 zh-TW | 中國 (Chinese-Tranditional)
 
-#Localizing the property pane in Custom Visuals
+#Localizing the property pane for custom visuals
 
-The different property pane fields you entered in your capabilities can now be localized to provide a more integrated and coherent experience, making your custom visual behave like any other PowerBI core visual.
+The fields in the property pane (that are defined in the capabilities) can be localized to provide a more integrated and coherent experience, making your custom visual behave like any other PowerBI core visual.
 
-For example a non-localized custom visual created by using the 'pbiviz new' command,
+For example, a non-localized custom visual created by using the 'pbiviz new' command,
 will show the following fields in the property pane:
 
 ![not Localized Property Pane](../images/notLocalizedPropertyPane.png)
@@ -83,7 +83,7 @@ both the Category Data and the Measure Data are defined in the capabilities.json
 
 
 
-#How To Localize your capabilities
+#How to localize capabilities
 
 First add a display name key to every display name you want to localize in your capabilities.
 In this example:
@@ -98,8 +98,8 @@ we will need to add two JSON files in the following way:
 
 ![Adding String Resources](../images/stringResourcesFiles.png)
 
-Every JSON file we add will define the locale (this has to be one of the locales from the supported list above),
-and the string values for the desired display name keys.
+Every JSON file defines a single locale (this has to be one of the locales from the supported list above),
+with the string values for the desired display name keys.
 In our example the Hebrew string resource file will look as follows:
 
 ![Hebrew String Resource](../images/hebrewStringResource.png)
@@ -108,7 +108,7 @@ After adding all the string resource files you'll need to add the path to your f
 
 ![Adding StringResources Paths](../images/stringResourcePath.png)
 
-The resulting property pane will contain the displayName according to the string resource files you defined
-in our example in case we change the language to Hebrew we will get the following property pane:
+The resulting property pane will contain the displayName according to the string resource files you defined.
+In our example, in case we change the language to Hebrew we will get the following property pane:
 
 ![Localized Property Pane](../images/localizedPropertyPane.png)
