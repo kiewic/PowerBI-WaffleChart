@@ -25,4 +25,7 @@ This page contains a list upcoming features. Feel free to suggest features via t
 ## API Version 1.4
 * [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals/issues/52)
 
+## API Version 1.5
+* [Allow Interactions](https://github.com/Microsoft/PowerBI-visuals/issues/126)
+
 **Note**: 'code complete' means the code has been checked into the development branches and is making its way to production (typically 2-3 weeks)

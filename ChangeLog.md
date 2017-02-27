@@ -15,6 +15,9 @@ Versions listed on this page are considered stable and should not change. For in
 * [Chart Utils](https://github.com/Microsoft/powerbi-visuals-utils-chartutils)
 * [Test Utils](https://github.com/Microsoft/powerbi-visuals-utils-testutils)
 
+##API Version v1.5.0
+* **[allowInteractions](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/AllowInteractions.md)** - support for visual interactivity
+
 ##API Version v1.4.0
 * **[locale](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Locale.md)** - support for locale
 
