@@ -1,13 +1,13 @@
-#Getting Locale in Custom Visuals 
+#Getting the locale in Power BI for custom visuals 
 
-Visuals can now know PowerBI's locale, so they can display localized information
+Visuals can retrieve the PowerBI locale, in order to localize their content to the relevant language.
 (read more about [Supported languages and countries/regions for Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-supported-languages/))
 
 For example, getting locale in the sample BarChart.
 
 ![Sample BarChart with Locale](../images/LocaleInSampleBarChart.png)
 
-Each of these bar charts was created under different locale (English, Basque and Hindi), and it is displayed in the tooltip.
+Each of these bar charts was created under a different locale (English, Basque and Hindi), and it is displayed in the tooltip.
 
 ##Getting the `locale`
 
@@ -69,3 +69,46 @@ uk-UA | український (Ukrainian)
 vi-VN | tiếng Việt (Vietnamese)
 zh-CN | 中国 (Chinese-Simplified)
 zh-TW | 中國 (Chinese-Tranditional)
+
+#Localizing the property pane for custom visuals
+
+The fields in the property pane (that are defined in the capabilities) can be localized to provide a more integrated and coherent experience, making your custom visual behave like any other PowerBI core visual.
+
+For example, a non-localized custom visual created by using the 'pbiviz new' command,
+will show the following fields in the property pane:
+
+![not Localized Property Pane](../images/notLocalizedPropertyPane.png)
+
+both the Category Data and the Measure Data are defined in the capabilities.json file as 'displayName'.
+
+
+
+#How to localize capabilities
+
+First add a display name key to every display name you want to localize in your capabilities.
+In this example:
+
+![Adding Display Name Keys](../images/displayNameKey.png)
+
+Then add a directory called 'stringResources', this directory will contain all your different string resource files based on the locales you want your visual to support.
+Under this directory you'll need to add a JSON file for every locale you want to support that contains the locale information and the localized strings values for every displayNameKey you want to replace.
+
+In our example, lets say we want to support Arabic and Hebrew.
+we will need to add two JSON files in the following way:
+
+![Adding String Resources](../images/stringResourcesFiles.png)
+
+Every JSON file defines a single locale (this has to be one of the locales from the supported list above),
+with the string values for the desired display name keys.
+In our example the Hebrew string resource file will look as follows:
+
+![Hebrew String Resource](../images/hebrewStringResource.png)
+
+After adding all the string resource files you'll need to add the path to your files in the pbiviz.json:
+
+![Adding StringResources Paths](../images/stringResourcePath.png)
+
+The resulting property pane will contain the displayName according to the string resource files you defined.
+In our example, in case we change the language to Hebrew we will get the following property pane:
+
+![Localized Property Pane](../images/localizedPropertyPane.png)
