@@ -13,7 +13,7 @@ Below are the acceptance criteria and submission workflow which the custom visua
  - Screenshot for the visual details window - must be 424px (width) by 410px (height) (acceptable formats: png, jpg/jpeg or svg).
  - Thumbnail for the gallery main page – must be 220px (width) by 176px (height) (acceptable formats: png, jpg/jpeg or svg).
  - Icon (inside the pbiviz package) – must be 20px by 20px (acceptable formats: png, jpg/jpeg or svg).
- - Privacy statement URL.  
+- Privacy statement URL.  
 - Legal (License) Terms URL. If not provided – we will use our [standard legal terms](https://powerbi.microsoft.com/en-us/visuals-gallery-terms/).   
 - Package contains all meta-data:
  - Visual Name, as it will appear in the gallery and the visualization pane once user imports it into the report
