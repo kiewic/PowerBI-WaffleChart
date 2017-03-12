@@ -49,7 +49,10 @@ All visuals must implement a public update method. It is called whenever there i
     * your visual will typically use the categorical property under DataView.
 * `type: VisualUpdateType` - flags that indicate the type(s) of this update. (Data | Resize | ViewMode | Style | ResizeEnd)
 * `viewMode: ViewMode` - flags that indicate the view mode of the visual. (View | Edit)
-
+* `editMode: EditMode` - a flag that indicates the edit mode of the visual. (Default | Advanced).
+    * If the visual supports AdvancedEditMode, it should render its advanced UI controls only when editMode is set to 'Advanced'.
+	* [Learn more about AdvancedEditMode](../Capabilities/AdvancedEditMode.md)
+	
 ##enumerateObjectInstances `optional`
 
 `enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration`

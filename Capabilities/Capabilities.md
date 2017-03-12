@@ -10,6 +10,7 @@ Your visual's capabilities are loaded from
     "dataViewMappings": [ ... ],
     "objects":  { ... },
     "supportsHighlight": true|false,
+	"advancedEditModeSupport": 0|1|2
     "sorting": { ... }
 }
 
@@ -95,3 +96,9 @@ Types refer to what the property will be. See below for more information about t
 By default this value is set to false which means your "Values" will be automatically filtered when something on the page is selected which will in turn update your visual to display just the selected value. If you want display the full data, but just highlight the selected items you need to set `supportsHighlight` to true in your capabilities.json.
 
 [Learn more about highlighting](Highlighting.md)
+
+##Handle Advanced Edit Mode - `advancedEditModeSupport`
+
+A visual can declare its support of Advanced Edit Mode.
+By default, a visual doesn't support Advanced Edit Mode, unless stated otherwise in the capabilities json.
+[Learn more about advancedEditModeSupport](AdvancedEditMode.md)
