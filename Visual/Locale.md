@@ -70,6 +70,8 @@ vi-VN | tiếng Việt (Vietnamese)
 zh-CN | 中国 (Chinese-Simplified)
 zh-TW | 中國 (Chinese-Tranditional)
 
+#### Note: In the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) the 'locale' property will contain the language of the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) installed.
+
 #Localizing the property pane for custom visuals
 
 The fields in the property pane (that are defined in the capabilities) can be localized to provide a more integrated and coherent experience, making your custom visual behave like any other PowerBI core visual.
@@ -77,11 +79,9 @@ The fields in the property pane (that are defined in the capabilities) can be lo
 For example, a non-localized custom visual created by using the 'pbiviz new' command,
 will show the following fields in the property pane:
 
-![not Localized Property Pane](../images/notLocalizedPropertyPane.png)
+![non-Localized Property Pane](../images/propertyPane.png)
 
 both the Category Data and the Measure Data are defined in the capabilities.json file as 'displayName'.
-
-
 
 #How to localize capabilities
 
