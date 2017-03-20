@@ -10,7 +10,7 @@ Our default script just used `circle`, but we can expose this property to the us
 First, we need to define the object and property in the `capabilities.json` file.
 We need to define the object named `settings` and in this object we will define a property named `method` with the type `enumeration`
 and we will supply the valid values for this property
-```
+```json
     "settings": {
       "displayName": "Visual Settings",
       "description": "Settings to control the look and feel of the visual",
@@ -62,7 +62,7 @@ Open the `src/visual.ts` file and start editing it
 
  First, let's define a new interface to hold the property value. We will hold the enumeration value in this property
 
-```
+```typescript
 interface VisualSettings {
     method: string;
 }
@@ -70,13 +70,13 @@ interface VisualSettings {
 
 Now, let's define a member property with this type
 
-```
+```typescript
 private settings: VisualSettings;
 ```
 
 Now, change the `updateObjects` method to get the value of the enumeration:
 
-```
+```typescript
 public updateObjects(objects: DataViewObjects) {
     this.settings = <VisualSettings>{
         method: getValue<string>(objects, 'settings', 'method', "circle")
@@ -86,12 +86,12 @@ public updateObjects(objects: DataViewObjects) {
 
 Now, we need to write the code in `enumerateObjectInstances` to let the system know that we want to show the property in the property pane:
 
-```
+```typescript
 public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
-    let objectName = options.objectName;
-    let objectEnumeration = [];
+    let objectName: string = options.objectName;
+    let objectEnumeration: VisualObjectInstance[] = [];
 
-    switch( objectName ){
+    switch( objectName ) {
         case 'settings':
             objectEnumeration.push({
                 objectName: objectName,
@@ -115,7 +115,7 @@ The naming convention of the R runtime variables for the properties is as follow
 
 In our case, the name will be `settings_method`
 
-```
+```r
 if (!exists("settings_method"))
 {
     settings_method = "circle";

@@ -1,10 +1,10 @@
-#Developer Visual Setup
+# Developer Visual Setup
 
 To enable live preview of your custom visual follow these steps
 
 ----------
 
-###Step 1
+## Step 1
 
 ![](images/portalEnable1.png)
 
@@ -12,7 +12,7 @@ To enable live preview of your custom visual follow these steps
 
 ----------
 
-###Step 2
+## Step 2
 
 ![](images/portalEnable2.png)
 
@@ -21,7 +21,7 @@ To enable live preview of your custom visual follow these steps
 
 ----------
 
-###Step 3
+## Step 3
 
 ![](images/portalEnable3.png)
 
@@ -29,7 +29,7 @@ To enable live preview of your custom visual follow these steps
 
 ----------
 
-###Step 4
+## Step 4
 
 ![](images/portalEnable4.png)
 

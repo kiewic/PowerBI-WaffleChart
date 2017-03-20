@@ -1,6 +1,20 @@
-#Roadmap - Visuals API
+# Roadmap - Visuals API
 
 This page contains a list upcoming features. Feel free to suggest features via the [issue page](https://github.com/Microsoft/PowerBI-visuals/issues?q=is%3Aopen+is%3Aissue+label%3AFeature).
+
+> **Note**: `code complete`  means the code has been checked into the development branches and is making its way to production (typically 2-3 weeks)
+
+## API Version 1.5
+* [Allow Interactions](https://github.com/Microsoft/PowerBI-visuals/issues/126)
+
+## API Version 1.4
+* [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals/issues/52)
+
+## API Version 1.3
+* [Tooltips](https://github.com/Microsoft/PowerBI-visuals/issues/34)
+* [Legend Builder](https://github.com/Microsoft/PowerBI-visuals/issues/35)
+* [Axis Builder](https://github.com/Microsoft/PowerBI-visuals/issues/36)
+* [ViewMode to include inFocus](https://github.com/Microsoft/PowerBI-visuals/issues/53)
 
 ## API Version 1.2
 * [Color palette](https://github.com/Microsoft/PowerBI-visuals/issues/28)
@@ -15,17 +29,3 @@ This page contains a list upcoming features. Feel free to suggest features via t
 * [Partial Highlight Support](https://github.com/Microsoft/PowerBI-visuals/issues/66)
 * [Light weight sandbox](https://github.com/Microsoft/PowerBI-visuals/issues/37)
 * [Debug Visual in iFrame](https://github.com/Microsoft/PowerBI-visuals/issues/50)
-
-## API Version 1.3
-* [Tooltips](https://github.com/Microsoft/PowerBI-visuals/issues/34)
-* [Legend Builder](https://github.com/Microsoft/PowerBI-visuals/issues/35)
-* [Axis Builder](https://github.com/Microsoft/PowerBI-visuals/issues/36)
-* [ViewMode to include inFocus](https://github.com/Microsoft/PowerBI-visuals/issues/53)
-
-## API Version 1.4
-* [Navigation to URL](https://github.com/Microsoft/PowerBI-visuals/issues/52)
-
-## API Version 1.5
-* [Allow Interactions](https://github.com/Microsoft/PowerBI-visuals/issues/126)
-
-**Note**: 'code complete' means the code has been checked into the development branches and is making its way to production (typically 2-3 weeks)

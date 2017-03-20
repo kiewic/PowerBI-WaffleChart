@@ -1,8 +1,8 @@
-#Visual class / IVisual
+# Visual class / IVisual
 
 All visuals start with a class that implements the `IVisual` interface. You can name the class whatever you'd like, but there must be *exactly one* class that implements the `IVisual` interface.
 
-**Note:** your visual class name must match what is defined in your `pbiviz.json` file.
+> **Note:** your visual class name must match what is defined in your `pbiviz.json` file.
 
 ```typescript
 class MyVisual implements IVisual {
@@ -25,7 +25,7 @@ class MyVisual implements IVisual {
 }
 
 ```
-##Constructor
+## Constructor
 
 `constructor(options: VisualConstructorOptions)`
 
@@ -36,7 +36,7 @@ The constructor of the visual class is called when the visual is instantiated. I
 * `element: HTMLElement` - a reference to the DOM element that will contain your visual.
 * `host: IVisualHost` - a collection of properties and services that can be used to interact with the visual host (Power BI). [Learn more about IVisualHost](IVisualHost.md) 
 
-##update
+## update
 
 `public update(options: VisualUpdateOptions): void`
 
@@ -53,7 +53,7 @@ All visuals must implement a public update method. It is called whenever there i
     * If the visual supports AdvancedEditMode, it should render its advanced UI controls only when editMode is set to 'Advanced'.
 	* [Learn more about AdvancedEditMode](../Capabilities/AdvancedEditMode.md)
 	
-##enumerateObjectInstances `optional`
+## enumerateObjectInstances `optional`
 
 `enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration`
 
@@ -63,10 +63,10 @@ This method is called for every object listed in capabilities. Using the options
 
 * `objectName: string` - the name of the object
 
-##destroy `optional`
+## destroy `optional`
 
 `public destroy(): void`
 
 The destroy function is called when your visual is unloaded and can be used to do clean up tasks such as removing event listeners.
 
-**Note:** Power BI generally doesn't call this function as it is faster just to remove the entire IFrame that contains the visual.
+> **Note:** Power BI generally doesn't call this function as it is faster just to remove the entire IFrame that contains the visual.

@@ -30,7 +30,7 @@ Use the following table in order to choose the correct event name at mobile devi
 ## Nice-to-Have requirements
 Consider implementing requirements below to provide the best experience for mobile users.
 
-###Rendering
+### Rendering
 Visual should be mobile-friendly in Focus mode – it should be optimized for the mobile screen size and looks good both in portrait and landscape orientations. 
 
 Support small sizes of the visual.  Add new formatting options so a user will be able to change the size of visual elements (for example, of labels). Such improvement will allow users to customize visual for their reports or dashboards on mobile devices. Note that the same settings will be applied to the visual in desktop browsers. If needed, you can override user formatting settings in order to adapt your visual to the small sizes of the visual.

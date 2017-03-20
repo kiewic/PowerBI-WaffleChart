@@ -1,8 +1,8 @@
-#Visual Project
+# Visual Project
 
 This document contains basic information about the visual project structure
 
-##File Structure
+## File Structure
 
 * **assets/**
     * Used to store visual assets (icon, screenshots, etc)
@@ -24,7 +24,7 @@ This document contains basic information about the visual project structure
     * Typescript compiler settings [learn more about tsconfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 
     
-##pbiviz.json
+## pbiviz.json
 
 This file is the main configuration file for your visual. It contains metadata as well as information about the files needed to build your visual.
 
@@ -54,7 +54,7 @@ This file is the main configuration file for your visual. It contains metadata a
 ```
 
 
-##Visual source (TypeScript)
+## Visual source (TypeScript)
 
 Visual code should be written in TypeScript which is a superset of JavaScript that supports some advanced features and early access to ES6/ES7 functionality.
  
@@ -67,7 +67,7 @@ Feel free to create as many files and classes as you need to create your visual.
 [Learn more about TypeScript](http://www.typescriptlang.org/)
 
 
-##Visual style (Less)
+## Visual style (Less)
 
 Visual styling is handled using css. For your convinence, we use the Less pre-compiler which supports some advanced features such as nesting, variables, mixins, conditions, loops, etc. If you don't want to use any of these features you can just write plain css in the less file and it will work perfectly fine.
 

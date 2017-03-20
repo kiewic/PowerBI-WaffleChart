@@ -1,8 +1,8 @@
-#Power BI Visuals
+# Power BI Visuals
 
 Learn how to build Power BI visuals!
  
-##Developing Your First PowerBI Visual
+## Developing Your First PowerBI Visual
  
 This section is to provide you with a step by step tutorial of developing your first PowerBI visual.
 In this tutorial, you will be building a simple bar chart. The source code is located here in the [Sample Bar Chart Repo](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart).
@@ -37,7 +37,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 3. [Adding a static property to the property pane](RVisualTutorial/PropertiesPane.md)
 4. [Validate input data in R Script](RVisualTutorial/InputValidationInR.md)
 
-##Table of Contents
+## Table of Contents
 
 * [Anatomy of a Visual Project](VisualProject.md)
 * [Installing PowerBI Visuals Tool](tools/README.md#installation)
@@ -62,7 +62,7 @@ In this tutorial, you will be building a simple bar chart. The source code is lo
 * [Change Log](ChangeLog.md)
 * [Roadmap](Roadmap/README.md)
 
-##Reporting Issues
+## Reporting Issues
 
 If you have any issues with Power BI custom visuals or the command line tools please let us know. First, search the issues page to see if your issue has already been reported. If it already exists please contribute your experience to the comments otherwise create a new issue. Be sure to be as detailed as possible about exactly what you were doing when the issue occured and how we can reproduce it.
 

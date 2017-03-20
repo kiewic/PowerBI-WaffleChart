@@ -1,4 +1,4 @@
-#Objects
+# Objects
 
 Objects describe customizable properties associated with the visual.
 Each object can have multiple properties and each property has a type associated with it.
@@ -70,16 +70,16 @@ export interface StructuralTypeDescriptor {
 }
 ```
 
-#enumerateObjectInstances
+## enumerateObjectInstances
 To use objects effectively you will need a function in your custom visual called `enumerateObjectInstances`. This function will populate the propery pane with objects and will also determine where your objects should be bound within the dataView.  
 
 Here is what a typical setup looks like:
 ```typescript
-public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration{
-    let objectName = options.objectName;
-    let objectEnumeration = VisualObjectInstance[] = [];
+public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstanceEnumeration {
+    let objectName: string = options.objectName;
+    let objectEnumeration: VisualObjectInstance[] = [];
 
-    switch( objectName ){
+    switch( objectName ) {
         case 'myCustomObject':
             objectEnumeration.push({
                 objectName: objectName,
@@ -93,26 +93,26 @@ public enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions):
 }
 ```
 
-##properties
+## properties
 The properties in `enumerateObjectInstances` will reflect the properties you defined in your capabilities. See example at bottom of page. 
 
-##selector
+## selector
 The selector in `enumerateObjectInstances` determines where each object will be bound in the dataView. There are four distinct options. 
 
-####static 
+#### static 
 This object will be bound to metadata `dataviews[index].metadata.objects`
 ```typescript
 selector: null 
 ```
-####columns 
-This object will be bound to columns with the matching QueryName. 
+#### columns 
+This object will be bound to columns with the matching `QueryName`. 
 ```typescript
 selector: {
     metadata: 'QueryName'
 }
 ```
-####selector 
-This object will be bound to the element we have created a selectionID for. In this example, we will assume that we have created selectionIDs for some dataPoints, and we are looping through them.
+#### selector 
+This object will be bound to the element we have created a `selectionID` for. In this example, we will assume that we have created `selectionID`'s for some dataPoints, and we are looping through them.
 
 ```typescript
 for (let dataPoint in dataPoints) {
@@ -120,16 +120,17 @@ for (let dataPoint in dataPoints) {
     selector: dataPoint.selectionID.getSelector()
 }
 ```
-####scope identity 
-This object will be bound to particular values at the intersection of groups. For example, if I have categories ["Jan", "Feb", "March", ...] and series ["Small", "Medium", "Large"], I may want to have an object on the intersection of values matching "Feb" and "Large". To accomplish this I could get the DataViewScopeIdentity of both columns, push them to variable `identities`, and use this syntax with the selector.
+#### scope identity 
+This object will be bound to particular values at the intersection of groups. For example, if I have categories `["Jan", "Feb", "March", ...]` and series `["Small", "Medium", "Large"]`, I may want to have an object on the intersection of values matching `Feb` and `Large`. To accomplish this I could get the `DataViewScopeIdentity` of both columns, push them to variable `identities`, and use this syntax with the selector.
+
 ```typescript
 selector: {
     data: <DataViewScopeIdentity[]>identities
 }
 ```
 
-##Example:
-In this example, we show what one objectEnumeration would look like for a customColor object with one property 'fill'. We want this object bound statically to `dataViews[index].metadata.objects`
+## Example:
+In this example, we show what one objectEnumeration would look like for a customColor object with one property `fill`. We want this object bound statically to `dataViews[index].metadata.objects`
 ```typescript
 objectEnumeration.push({
     objectName: "customColor",

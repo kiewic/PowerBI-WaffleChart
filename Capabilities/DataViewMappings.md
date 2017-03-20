@@ -1,6 +1,6 @@
-#DataViewMappings
+# DataViewMappings
 
-A DataViewMapping describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
+A `DataViewMappings` describes how the data roles relate to each other and allows you to specify conditional requirements for the them.
 There is a section for each of the `dataMappings`.
 
 Each valid mapping will produce a DataView, but currently we only support performing one query per visual so in most situations you will only get one DataView. However, you can provide multiple data mappings with different conditions which allow
@@ -17,11 +17,12 @@ Each valid mapping will produce a DataView, but currently we only support perfor
 ]
 ```
 
-##Conditions
+## Conditions
 
 Describes conditions for a particular data mapping. You can provide multiple sets of conditions and if the data matches one of the described sets of conditions the visual will accept the data as valid.
 
-Currently, for each field you can specify a min and max value. This represents the number of fields that can be bound to that data role. Note: if a data role is omitted in the condition, it can have any number of fields.
+Currently, for each field you can specify a min and max value. This represents the number of fields that can be bound to that data role. 
+> Note: if a data role is omitted in the condition, it can have any number of fields.
 
 **Example 1**
 
@@ -44,13 +45,13 @@ In this example, one of two conditions are required. Either exactly 1 category d
 ]
 ```
 
-##Single Data Mapping
+## Single Data Mapping
 
 Single data mapping is the simplest form of data mapping. It accepts a single measure field and gives you the total. If the field is numeric it will give you the sum. Otherwise it will give you a count of unique values.
 
 To use single data mapping you simply define the name of the data role you want to map. This will only work with a single measure field. If a second field is assigned no data view will be generated so it is also good practice to include a condition that limits the data to a single field.
 
-Note: This data mapping cannot be used in conjunction with any other data mapping. It is meant to reduce data into a single numeric value.
+> **Note**: This data mapping cannot be used in conjunction with any other data mapping. It is meant to reduce data into a single numeric value.
 
 **Example**
 
@@ -69,12 +70,12 @@ The resulting data view will still contain the other types (table, categorical, 
 
 ![](../images/DataViewMappingResultSingle.png)
 
-##Categorical Data Mapping
+## Categorical Data Mapping
 
 Categorical data mapping is used to get one or two independent grouping of data.
 
 **Example 1**
-Here is the definition from our previous example on DataRoles..
+Here is the definition from our previous example on DataRoles.
 ```json
 "dataRole":[
     {
@@ -104,14 +105,14 @@ Now for the mapping:
     }
 }
 ```
-This is a very simple example, in plain english it reads "Map my 'category' DataRole so that for every field I drag into 'category', its data is mapped to categorical.categories. Also map my 'measure' DataRole to categorical.values."
+This is a very simple example, in plain english it reads "Map my `category` DataRole so that for every field I drag into `category`, its data is mapped to `categorical.categories`. Also map my `measure` DataRole to `categorical.values`."
 
 * **for...in** - For all the items in this data role, include them in the data query.
 * **bind...to** - Produces the same result as for...in, but expects that the DataRole will have a condition restricting it to a single field.
 
 **Example2**
 
-In this example, we will use the first two DataRoles from the previous example, additionally defining "grouping" and "measure2".
+In this example, we will use the first two DataRoles from the previous example, additionally defining `grouping` and `measure2`.
 ```json
 "dataRole":[
     {
@@ -155,11 +156,11 @@ Now for the mapping:
     }
 }
 ```
-Here the difference is in how we are mapping categorical.values. We are saying "Map my 'measure' and 'measure2' DataRoles to be grouped by the DataRole 'grouping'." 
+Here the difference is in how we are mapping categorical.values. We are saying "Map my `measure` and `measure2` DataRoles to be grouped by the DataRole `grouping`." 
 
 **Example3**
-```json
 Here are the dataRoles.
+```json
 "dataRoles": [
     {
         "displayName": "Categories",
@@ -216,7 +217,7 @@ For example, Canada sales in 2013 is null, Canada sales in 2014 is 50.
 ![](images/CategoricalValuesDataView.png)
 
 
-##Table Data Mapping
+## Table Data Mapping
 The table data view is a simple data mapping. Essentially, it is a list of data points, where numeric data points could be aggregated.
 
 **Example1**

@@ -1,4 +1,4 @@
-#Tooltips in Custom Visuals 
+# Tooltips in Custom Visuals 
 
 Visuals can now make use of PowerBI's tooltip support. PowerBI tooltips handle the following interactions:
 
@@ -14,7 +14,7 @@ For example, tooltips in the sample BarChart .
 
 The tooltip above illustrates a single bar category and value. This can be extended to display multiple values within a single tooltip. This is totally at the developer's control. 
 
-##Handling Tooltips `TooltipService`
+## Handling Tooltips `TooltipService`
 
 The interface through which you manage tooltips is the 'ITooltipService'. This interface is used to notify the host that a tooltip needs to be displayed, removed or moved.
 
@@ -32,12 +32,12 @@ Your visual will need to listen to the mouse events within your visual and call 
 Because the calling these methods would involve user events such as mouse moves or touch events, a good idea would be to create listeners for these events which would in turn invoke the `TooltipService` members.
 Our sample aggregates this in a class called `TooltipServiceWrapper` 
 
-###`TooltipServiceWrapper`
+### `TooltipServiceWrapper`
 The basic idea behind this class is to hold the instance of the `TooltipService`, listen to D3 mouse events over relevant elements, and then make the calls to `show()`, `move()` and `hide()` when needed.
 The class holds and manages any relevant state and logic for these events, mostly geared at interfacing with the underlying D3 code. The D3 interfacing and conversion is out of scope for this document. 
 You can find the full sample code at [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/981b021612d7b333adffe9f723ab27783c76fb14)
 
-###Creating the `TooltipServiceWrapper`
+### Creating the `TooltipServiceWrapper`
 
 The BarChart contructor now has a `tooltipServiceWrapper` member which is instantiated in the constructor with the host `tooltipService` instance.
 
@@ -69,7 +69,7 @@ The `TooltipServiceWrapper` class holds the `tooltipService` instance,  as well 
 
 The single entry point for this class to register event listeners is the `addTooltip` method.
 
-###`addTooltip` members
+### `addTooltip` members
 ```typescript
         public addTooltip<T>(
             selection: d3.Selection<Element>,
@@ -95,7 +95,7 @@ The single entry point for this class to register event listeners is the `addToo
 
 as you can see `addTooltip` will exit with no action if the `tooltipService` is disabled or there is no real selection.
 
-###`addTooltip` showing a tooltip 
+### `addTooltip` showing a tooltip 
 
 `addTooltip` next listens to the D3 `mouseover` event. 
 
@@ -137,7 +137,7 @@ as you can see `addTooltip` will exit with no action if the `tooltipService` is 
 
 Additional handling can be found in the sample for `mouseout` and `mousemove` events. Please see [tooltips for the SampleBarChart](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/981b021612d7b333adffe9f723ab27783c76fb14) for the full code sample.
 
-###Populating the tooltip content: `getTooltipData`
+### Populating the tooltip content: `getTooltipData`
 
 The `BarChart` was added with a member `getTooltipData` which simply extracts the category, value and color of the datapoint into a VisualTooltipDataItem[] element.
 
@@ -154,7 +154,7 @@ The `BarChart` was added with a member `getTooltipData` which simply extracts th
 
 In the above implementation the `header` member is constant but can be used for more complex implementations which require dynamic values. Please note that you can populate the `VisualTooltipDataItem[]` with more than one elements which will add multiple lines to the tooltip. This Can be useful in visuals such as stacked barcharts where the tooltip may display data from more than a single datapoint.
 
-###Calling `addTooltip`
+### Calling `addTooltip`
 
 The final step is to call `addTooltip` when the actual data may change. This would take place in the `BarChart.update()` method. So a call is made to monitor selection of all the 'bar' elements, passing only the `BarChart.getTooltipData()` as mentioned above. 
 ```typescript

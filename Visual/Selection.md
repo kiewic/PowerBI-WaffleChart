@@ -1,4 +1,4 @@
-#Handling Visual Selection
+# Handling Visual Selection
 
 Visuals can allow the user to select data points or categories by clicking them with the mouse.
 
@@ -8,11 +8,11 @@ For example, in stacked column chart you can select a particular bar.
 
 Its important to understand that the tooltip is illustrating the three components of this visual's categorical selection id. Category is represented by Opportunity Size = Large, series is represented by Sales Stage = Qualify, and the measure is Revenue. 
 
-##Creating Selection IDs `SelectionIdBuilder`
+## Creating Selection IDs `SelectionIdBuilder`
 
 In order for the visual host to track selected items for your visual and apply cross-filtering to other visuals, you have to generate and store a `SelectionId` for every selectable item. You can use the `SelectionIdBuilder` to generate selection ids.
 
-###Initialize a SelectionIdBuilder
+### Initialize a SelectionIdBuilder
 
 First, you need to create a `SelectionIdBuilder` in your constructor and store it in a private variable in your visual class for later use.
 
@@ -27,7 +27,7 @@ class MyVisual implements IVisual {
 }
 ```
 
-###Generating Selection Ids
+### Generating Selection Ids
 
 ```typescript
 let dataViews = options.dataViews //options: VisualUpdateOptions
@@ -46,7 +46,7 @@ for(let dataValue of dataValues) {
 }
 ```
 
-###SelectionIdBuilder Methods
+### SelectionIdBuilder Methods
 * **withCategory(categoryColumn: DataViewCategoryColumn, index: number)**
     * Tells the builder to use a specific identity under the category provided.
 * **withMeasure(measureId: string)**
@@ -57,11 +57,11 @@ for(let dataValue of dataValues) {
 * **createSelectionId()**
     * Creates the selection id with the properties provided.
 
-##Managing Selection `SelectionManager`
+## Managing Selection `SelectionManager`
 
 You can use `SelectionManager` to notify the visual host of changes in the selection state. 
 
-###Initialize a SelectionManager
+### Initialize a SelectionManager
 
 First, you need to create a `SelectionManager` in your constructor and store it in a private variable in your visual class for later use.
 
@@ -76,7 +76,7 @@ class MyVisual implements IVisual {
 }
 ```
 
-###Setting Selection
+### Setting Selection
 
 **Single selection**
 

@@ -10,9 +10,9 @@ Below are the acceptance criteria and submission workflow which the custom visua
 
 - Submission contains a valid and public link to GitHub repo with sources of your visual and sample data in it.
 - Submission contains good quality images:
- - Screenshot for the visual details window - must be 424px (width) by 410px (height) (acceptable formats: png, jpg/jpeg or svg).
- - Thumbnail for the gallery main page – must be 220px (width) by 176px (height) (acceptable formats: png, jpg/jpeg or svg).
- - Icon (inside the pbiviz package) – must be 20px by 20px (acceptable formats: png, jpg/jpeg or svg).
+ - Screenshot for the visual details window - must be `424px` (width) by `410px` (height) (acceptable formats: `png`, `jpg/jpeg` or `svg`).
+ - Thumbnail for the gallery main page – must be `220px` (width) by `176px` (height) (acceptable formats: `png`, `jpg/jpeg` or `svg`).
+ - Icon (inside the pbiviz package) – must be `20px` by `20px` (acceptable formats: `png`, `jpg/jpeg` or `svg`).
 - Privacy statement URL.  
 - Legal (License) Terms URL. If not provided – we will use our [standard legal terms](https://powerbi.microsoft.com/en-us/visuals-gallery-terms/).   
 - Package contains all meta-data:
@@ -24,7 +24,7 @@ Below are the acceptance criteria and submission workflow which the custom visua
  - Contact Email
  - Support URL, where users will go to get support for the visuals
  - GitHub repository URL
-- Submission contains a sample report pbix file with examples of the visual features
+- Submission contains a sample report `.pbix` file with examples of the visual features
 - JavaScript code review:
  - The input data is validated before rendering
  - Visual doesn’t contain code that does unexpected network calls
@@ -49,7 +49,7 @@ Below are the acceptance criteria and submission workflow which the custom visua
 4. Once all blocking issues have been resolved, author provides a sample report, blog post and video highlighting the features and functions of the visual.
 5. Microsoft publishes the visual to the Power BI visual gallery.
 
-***NOTE:** once published to the gallery, the custom visual goes through deployment rings to ensure the quality of the visual by exposing it to a limited set of users that gradually goes wider as the visuals goes through the different rings. It will take about 3 weeks for the custom visual to appear in the public gallery, if there was no breaking change detected in any of the deployment rings.*
+> ***NOTE:** once published to the gallery, the custom visual goes through deployment rings to ensure the quality of the visual by exposing it to a limited set of users that gradually goes wider as the visuals goes through the different rings. It will take about 3 weeks for the custom visual to appear in the public gallery, if there was no breaking change detected in any of the deployment rings.
 
 ### Submission tracking
 

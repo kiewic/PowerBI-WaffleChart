@@ -1,4 +1,4 @@
-#Getting the locale in Power BI for custom visuals 
+# Getting the locale in Power BI for custom visuals 
 
 Visuals can retrieve the PowerBI locale, in order to localize their content to the relevant language.
 (read more about [Supported languages and countries/regions for Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-supported-languages/))
@@ -9,7 +9,7 @@ For example, getting locale in the sample BarChart.
 
 Each of these bar charts was created under a different locale (English, Basque and Hindi), and it is displayed in the tooltip.
 
-##Getting the `locale`
+## Getting the `locale`
 
 The 'locale' is passed as a string during the initialization of the visual. If a locale is changed in PowerBI the visual will be generated again with the new locale.
 You can find the full sample code at [SampleBarChart with Locale](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/388670c71a873bf7412e771164ea3cbb8522a63e)
@@ -70,9 +70,9 @@ vi-VN | tiếng Việt (Vietnamese)
 zh-CN | 中国 (Chinese-Simplified)
 zh-TW | 中國 (Chinese-Tranditional)
 
-#### Note: In the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) the 'locale' property will contain the language of the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) installed.
+> **Note**: In the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) the `locale` property will contain the language of the [PowerBI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331) installed.
 
-#Localizing the property pane for custom visuals
+# Localizing the property pane for custom visuals
 
 The fields in the property pane (that are defined in the capabilities) can be localized to provide a more integrated and coherent experience, making your custom visual behave like any other PowerBI core visual.
 
@@ -83,14 +83,14 @@ will show the following fields in the property pane:
 
 both the Category Data and the Measure Data are defined in the capabilities.json file as 'displayName'.
 
-#How to localize capabilities
+# How to localize capabilities
 
 First add a display name key to every display name you want to localize in your capabilities.
 In this example:
 
 ![Adding Display Name Keys](../images/displayNameKey.png)
 
-Then add a directory called 'stringResources', this directory will contain all your different string resource files based on the locales you want your visual to support.
+Then add a directory called `stringResources`, this directory will contain all your different string resource files based on the locales you want your visual to support.
 Under this directory you'll need to add a JSON file for every locale you want to support that contains the locale information and the localized strings values for every displayNameKey you want to replace.
 
 In our example, lets say we want to support Arabic and Hebrew.

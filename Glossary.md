@@ -1,4 +1,4 @@
-#Glossary
+# Glossary
 
 * **DataRole** - DataRole(s) are used to define data bindings for your visual. They are displayed as fields in the Power BI interface.
 * **DataView** - DataView is a JavaScript object model for canonical representations of data. The lifeblood of Power BI visuals.
