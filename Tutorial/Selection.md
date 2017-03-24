@@ -4,7 +4,7 @@ Selection provides the ability for the user to interact with your visual and als
 See [commit](https://github.com/Microsoft/PowerBI-visuals-sampleBarChart/commit/b765940e9b9a14b3360cded30b329224ab572475) for what was added at this step.
 
 ## Adding Selection to Each Data Point
-Since each data point is unique, selection must be added to each data point. Add a property for selection on BarChartDataPoint interface.
+Since each data point is unique, selection must be added to each data point. Add a property for selection on `BarChartDataPoint` interface.
 
 ```typescript
 /**
@@ -32,7 +32,7 @@ The host variable is a `IVisualHost`, which contains services that the visual ma
 Use the selection builder factory method on `IVisualHost` to create a new selection id.
 Since we're making selection only based on the category, we only need to define selection `withCategory`.
 
-**NOTE**: A new selection builder must be created per data point.
+> **NOTE**: A new selection builder must be created per data point.
 
 ```typescript
 for (let i = 0, len = Math.max(category.values.length, dataValue.values.length); i < len; i++) {

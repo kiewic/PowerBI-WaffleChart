@@ -1,10 +1,10 @@
-#Visual
+# Visual
 
 This document contains a high level overview of the most basic custom visual implementation with links to documents that contain more detailed information about each component.
 
 The basic structure of a visual is a class that implements `IVisual` wrapped in a module that is namespaced to allow access to the APIs interfaces. The API version utilized by your visual depends on the version of the d.ts file referenced in your project. 
 
-##Module
+## Module
 
 To ensure access to all of the correct api interfaces your visual must be created in the `powerbi.extensiblity.visual` namespace.
 
@@ -14,11 +14,11 @@ module powerbi.extensiblity.visual {
 }
 ```
 
-##Visual class / IVisual
+## Visual class / IVisual
 
 All visuals start with a class that implements the `IVisual` interface. You can name the class whatever you'd like, but there must be *exactly one* class that implements the `IVisual` interface.
 
-**Note:** your visual class name must match what is defined in your `pbiviz.json` file.
+> **Note:** your visual class name must match what is defined in your `pbiviz.json` file.
 
 ```typescript
 class MyVisual implements IVisual {

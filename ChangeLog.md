@@ -1,10 +1,10 @@
-#Change Log - Visuals API
+# Change Log - Visuals API
 
 The page contains a quick summary of the API versions.
 
 Versions listed on this page are considered stable and should not change. For information about upcoming versions and features see the [Roadmap](./Roadmap/README.md)
 
-##Utility libraries
+## Utility libraries
 * [Color Utils](https://github.com/Microsoft/powerbi-visuals-utils-colorutils)
 * [Formatting Utils](https://github.com/Microsoft/powerbi-visuals-utils-formattingutils)
 * [Dataview Utils](https://github.com/Microsoft/powerbi-visuals-utils-dataviewutils)
@@ -15,18 +15,21 @@ Versions listed on this page are considered stable and should not change. For in
 * [Chart Utils](https://github.com/Microsoft/powerbi-visuals-utils-chartutils)
 * [Test Utils](https://github.com/Microsoft/powerbi-visuals-utils-testutils)
 
-##API Version v1.4.0
+## API Version v1.5.0
+* **[allowInteractions](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/AllowInteractions.md)** - support for visual interactivity
+
+## API Version v1.4.0
 * **[locale](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Locale.md)** - support for locale
 
-##API Version 1.3.0
+## API Version 1.3.0
 * **[tooltips](https://github.com/Microsoft/PowerBI-visuals/blob/master/Visual/Tooltips.md)** - support for tooltips
 
-##API Version 1.2.0
+## API Version 1.2.0
 * **colorPallette** - manage the colors used on your visual.
 * **Multiple selection** - selectionManager can accept an array of `SelectionId`.
 * **[R visuals](https://github.com/Microsoft/PowerBI-visuals/tree/master/RVisualTutorial)** - support for custom visuals using R scripts
 
-##API Version 1.1.0
+## API Version 1.1.0
 * Debug visual in iFrame
 * Light weight sandbox - faster initialization of the iFrame
 
@@ -35,6 +38,6 @@ Versions listed on this page are considered stable and should not change. For in
     * **createSelectionManager** - manages the selection state of the visual and communicates changes to the visual host
     * **colors** - an array of default colors to use in your visual
 
-##API Version v1.0.0
+## API Version v1.0.0
 
 * Initial API release

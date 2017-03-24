@@ -17,4 +17,4 @@ Power BI utils are set of tools that allow developer of Power BI visual to easil
 You can simply install npm package of specific util and start using it. Please check Installation Guide provided in each GitHub repository  for more information.
 
 ## Contributing
-You are welcome to contribute and help us to improve Power BI utils. See Contributing guideline in each GitHub repository.
+You are welcome to contribute and help us to improve Power BI utils. See `CONTRIBUTING.md` in each GitHub repository.

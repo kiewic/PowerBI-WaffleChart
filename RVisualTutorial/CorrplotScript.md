@@ -3,10 +3,10 @@ When creating a R Powered Custom Visual, the template "rvisual" creates a file i
 This file will hold the R script you want to execute to generate the image the user will see.
 
 In this stage, we will change the default R script to start using the Corrplot package.
-We will follow the corrplot [introduction](https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html) from cran.r-project.org
+We will follow the corrplot [introduction](https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html) from [cran.r-project.org](https://cran.r-project.org/)
 
 ## Editing the R Script
-Open the "script.r" file and paste the following code:
+Open the `script.r` file and paste the following code:
 
 ```r
 library(corrplot)
@@ -27,7 +27,7 @@ Now add the `corrplot` package to the CRAN dependencies of this visual in the `d
 }
 ```
 
-Now you can package the visual and try it out (or you can use the `pbiviz start` feature to debug the visual in PowerBI.com)
+Now you can package the visual and try it out (or you can use the `pbiviz start` feature to debug the visual in [PowerBI.com](https://powerbi.microsoft.com/))
 
 ![Basic Corrplot Visual](./images/BasicCorrplot.png)
 

@@ -6,7 +6,7 @@ For a more indepth details about typings, visit their repo. [Typings Documentati
 
 ## Install Typings CLI
 In order to use typings in your project, you must first install typings to your computer. This is a one time installation.
-```javascript
+```
 // install typings globally
 npm install typings -g
 ```
@@ -16,7 +16,7 @@ To have types for a specific library, run the following command.
 * **save** - Persists the types within this project.
 * **global** - Tells typings that we want this dependency to be globally available.
 
-```javascript
+```
 // install d3 typings 
 typings install --save --global dt~d3
 ```

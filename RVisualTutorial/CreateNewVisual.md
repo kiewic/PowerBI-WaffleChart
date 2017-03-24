@@ -5,11 +5,11 @@ In order to create a new R Powered Custom Visual we will run the following comma
 pbiviz new sampleCorrPlotRVisual -t rvisual
 ```
 
-This command will create a new folder stracture based on the template "rvisual"
+This command will create a new folder stracture based on the template `rvisual`
 
 This template includes a very basic ready to run R Visual which will actually run the following R script:
 
-```
+```r
 plot(Values)
 ```
 

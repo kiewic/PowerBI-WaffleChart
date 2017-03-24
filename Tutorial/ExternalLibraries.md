@@ -1,43 +1,54 @@
 # Adding External Libraries
+* [Including JavaScript files](#including-javascript-files)
+* [Including CSS files](#including-css-files)
 
-PowerBI encourages you to use libraries of your choice.
+## Including JavaScript files
+1. Install an external JavaScript library by using any package manager (npm, yarn, etc.)
+2. Include a path of the library to the ```externalJS``` property of the ```pbiviz.json```
 
-**NOTE:** We currently provide you with JQuery, d3, and lodash preloaded. However, we plan to remove these libraries in the future version.
+Please pay attention to [this](Typings.md) if you'd like to add typings for your JavaScript file to get intellisense and compile time safety on them.
 
-**Supplied Library Versions**  
+### Example
+* Installing [d3](https://www.npmjs.com/package/d3) by using [npm](https://www.npmjs.com/)
 
-* JQuery - 2.2.0
-* d3 - 3.5.5
-* lodash - 3.6.0
+```bash
+npm install d3@3.5.5 --save
+```
 
-## Adding External Libraries
-Download the external library of your choice.
+* Including ```d3``` to the ```pbiviz.json```
 
-Create an external folder in the root of your visual.
-
-![](images/MakeExternalsDirectory.png)
-
-Copy your library into the external folder.
-
-![](images/ExternalLibraries.png)
-
-Add the library to your `tsconfig.json` file.
 ```json
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "target": "ES5",
-        "sourceMap": true,
-        "out": "./.tmp/build/visual.js"
-    },
-    "files": [
-        ".api/v1.1.0/PowerBI-visuals.d.ts",
-        "external/easeljs-0.8.2.min.js",
-        "src/visual.ts"
-    ]
+  "visual": {...},
+  "apiVersion": ...,
+  "author": {...},
+  "assets": {...},
+  "externalJS": [
+    "node_modules/d3/d3.min.js"
+  ],
+  "style": ...,
+  "capabilities": ...,
+  "dependencies": ...
 }
 ```
 
-Refer to [this](Typings.md) if you'd like to add typings for your JS file to get intellisense and compile time safety on them.
+Please visit [this](https://github.com/Microsoft/powerbi-visuals-sankey/blob/c8200da56913cd8b253be949a35fad0f4472b6de/pbiviz.json#L22) page to find the real example.
+
+## Including CSS files
+1. Install an external CSS framework by using any package manager (npm, yarn, etc.)
+2. Include the ```import``` statement to the ```.less``` file of the visual
+
+### Example
+* Installing [bootstrap](https://www.npmjs.com/package/bootstrap) by using [npm](https://www.npmjs.com/)
+
+```bash
+npm install bootstrap --save
+```
+
+* Include the ```import``` statement to the ```visual.less```
+
+```less
+@import (less) "node_modules/bootstrap/dist/css/bootstrap.css";
+```
+
+Please visit [this](https://github.com/Microsoft/powerbi-visuals-sankey/blob/c8200da56913cd8b253be949a35fad0f4472b6de/style/visual.less#L32) page to find the real example.

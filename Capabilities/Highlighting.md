@@ -1,12 +1,12 @@
-#Highlighting
+# Highlighting
 
 By default whenever an element is selected the `values` array in the `dataView` object will be filtered to just the selected values. This will cause all other visuals on the page to display just the selected data.
 
 ![highlight dataview default behavior](images/highlightDataView.png)
 
-##supportsHighlight
+## supportsHighlight
 
-If you set the `supportsHighlight` property in your capabilities.json to true you will receive the full unfiltered `vaules` array along with a `highlights` array. The `highlights` array will be the same length as the values array and any non-selected values will be set to `null`. With this property enabled it is the visual's responsiblity to highlight the appropriate data by comparing the `values` array to the `highlights` array.
+If you set the `supportsHighlight` property in your `capabilities.json` to `true` you will receive the full unfiltered `values` array along with a `highlights` array. The `highlights` array will be the same length as the values array and any non-selected values will be set to `null`. With this property enabled it is the visual's responsiblity to highlight the appropriate data by comparing the `values` array to the `highlights` array.
 
 ![highlight dataview supportsHighlight](images/highlightDataViewSupports.png)
 

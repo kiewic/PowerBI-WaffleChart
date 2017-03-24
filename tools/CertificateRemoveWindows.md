@@ -1,10 +1,10 @@
-#Remove Certificate (Windows)
+# Remove Certificate (Windows)
 
 If you are no longer using the PowerBI Custom Visual CLI tools you should remove the certificate from your system.
 
 ----------
 
-###Step 1
+## Step 1
 
 ![](images/windowsRemove1.png)
 
@@ -14,7 +14,7 @@ If you are no longer using the PowerBI Custom Visual CLI tools you should remove
 
 ----------
 
-###Step 2
+## Step 2
 
 ![](images/windowsRemove2.png)
 
@@ -23,7 +23,7 @@ If you are no longer using the PowerBI Custom Visual CLI tools you should remove
 
 ----------
 
-###Step 3
+## Step 3
 
 ![](images/windowsRemove3.png)
 
@@ -32,7 +32,7 @@ If you are no longer using the PowerBI Custom Visual CLI tools you should remove
 
 ----------
 
-###Step 4
+## Step 4
 
 ![](images/windowsRemove4.png)
 
@@ -41,7 +41,7 @@ If you are no longer using the PowerBI Custom Visual CLI tools you should remove
 
 ----------
 
-###Step 5
+## Step 5
 
 ![](images/windowsRemove5.png)
 
@@ -51,7 +51,7 @@ If you are no longer using the PowerBI Custom Visual CLI tools you should remove
 
 ----------
 
-###Step 6
+## Step 6
 
 **Close all open browsers**
 
