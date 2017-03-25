@@ -41,8 +41,7 @@ module powerbi.extensibility.visual {
     export interface WaffleChartViewModel {
         count: number;
         labelsArray: Array<string>;
-        identities: DataViewScopeIdentity[];
-        objects: DataViewObjects[];
+        category: DataViewCategoryColumn;
         values: Array<number>;
         paths: Array<string>;
     }
@@ -61,7 +60,8 @@ module powerbi.extensibility.visual {
         fontFamily: string;
         value: number;
         text: string;
-        identity: DataViewScopeIdentity;
+        category: DataViewCategoryColumn;
+        categoryIndex: number;
         color: string;
     }
 
@@ -92,8 +92,8 @@ module powerbi.extensibility.visual {
 
     export class Visual implements IVisual {
         private target: HTMLElement;
+        private host: IVisualHost;
         private updateCount: number;
-        // end of class predefined properties
 
         //public static capabilities: VisualCapabilities = waffleChartCapabilities;
 
@@ -105,18 +105,16 @@ module powerbi.extensibility.visual {
         private count: number;
         private defaultDataPointColor: string;
         private selectionManager: ISelectionManager;
-        private selectionIdBuilder: ISelectionIdBuilder;
         private colorPalette: IColorPalette;
 
         constructor(options: VisualConstructorOptions) {
             console.log('Visual constructor', options);
             this.target = options.element;
+            this.host = options.host;
             this.updateCount = 0;
-            // end of predefined content
 
             this.defaultDataPointColor = 'Coral';
 
-            //this.selectionManager = new SelectionManager({ hostServices: options.host });
             this.selectionManager = options.host.createSelectionManager();
 
             //this.root = d3.select(options.element.get(0))
@@ -125,8 +123,6 @@ module powerbi.extensibility.visual {
 
             //this.debug = new DebugChart();
             //this.debug.init(options);
-
-            this.selectionIdBuilder = options.host.createSelectionIdBuilder();
 
             this.colorPalette = options.host.colorPalette;
         }
@@ -147,7 +143,7 @@ module powerbi.extensibility.visual {
 
                 var viewModel: WaffleChartViewModel = Visual.converter(dataView);
                 this.initWaffles(viewModel.count, viewModel.paths);
-                this.initSelectionManager(viewModel.identities);
+                this.initSelectionManager(viewModel.category);
             }
             catch (err) {
                 console.log(err);
@@ -179,6 +175,7 @@ module powerbi.extensibility.visual {
                 var localX = globalX + waffleViewport.width  * (i % bestLayout.columns);
                 var localY = globalY + waffleViewport.height * Math.floor(i / bestLayout.columns);
 
+                let objects = viewModel.category.objects;
                 this.singleWaffleChartArray[i].update({
                     x: localX,
                     y: localY,
@@ -187,8 +184,9 @@ module powerbi.extensibility.visual {
                     fontFamily: 'tahoma',
                     value: viewModel.values && viewModel.values[i] ? viewModel.values[i] : 0,
                     text: viewModel.labelsArray && viewModel.labelsArray[i] ? viewModel.labelsArray[i] : '(Blank)',
-                    identity: viewModel.identities && viewModel.identities[i] ? viewModel.identities[i] : null,
-                    color: viewModel.objects && viewModel.objects[i] ? this.getColor(viewModel.objects[i], this.defaultDataPointColor) : this.defaultDataPointColor,
+                    category: viewModel.category,
+                    categoryIndex: i,
+                    color: objects && objects[i] ? this.getColor(objects[i], this.defaultDataPointColor) : this.defaultDataPointColor,
                 });
             }
         }
@@ -196,16 +194,14 @@ module powerbi.extensibility.visual {
         public static converter(dataView: DataView): WaffleChartViewModel {
             var labelsArray: Array<PrimitiveValue>;
             var dataType: ValueTypeDescriptor;
-            var identities: DataViewScopeIdentity[];
-            var objects: DataViewObjects[];
+            var category: DataViewCategoryColumn;
 
             if (dataView.categorical.categories && dataView.categorical.categories.length > 0) {
                 var category0 = dataView.categorical.categories[0]; 
 
                 // Copy arrays.
                 labelsArray = category0.values.slice();
-                identities = category0.identity.slice();
-                objects = category0.objects ? category0.objects.slice() : null;
+                category = category0;
 
                 dataType = category0.source.type;
             }
@@ -359,8 +355,7 @@ module powerbi.extensibility.visual {
 
             var viewModel: WaffleChartViewModel = {
                 labelsArray: <Array<string>>labelsArray,
-                identities: identities,
-                objects: objects,
+                category: category,
                 values: totals,
                 paths: paths,
                 count: count,
@@ -392,37 +387,39 @@ module powerbi.extensibility.visual {
             }
         }
 
-        private initSelectionManager(identities: DataViewScopeIdentity[]) {
+        private initSelectionManager(category: DataViewCategoryColumn) {
             var selection = this.root.selectAll('g.singleWaffle');
 
-            if (!identities) {
+            if (!category) {
                 return;
             }
 
             // Bound data with join-by-index.
-            selection.data(identities);
+            selection.data(category.identity);
 
             // Using a local variable to avoid errors later when using 'this'.
             var selectionManager = this.selectionManager;
-            var selectionIdBuilder = this.selectionIdBuilder;
+            var host = this.host;
 
             this.root.on('click', function() {
                 selectionManager.clear().then(() => selection.style('opacity', 1))
             });
 
-            //selection.on('click', function (d) {  
-            //    //selectionManager.select(selectionIdBuilder.createWithId(d)).then((ids) => {
-            //    selectionManager.select(selectionIdBuilder.withCategory(d).createSelectionId()).then((ids) => {
-            //        if (ids.length > 0) {
-            //            selection.style('opacity', 0.5);
-            //            d3.select(this).style('opacity', 1);
-            //        } else {
-            //            selection.style('opacity', 1);
-            //        }
-            //    });
-            //
-            ////    d3.event.stopPropagation();
-            //});
+            selection.on('click', function (d) {
+                let index = category.identity.indexOf(d);
+                let selectionId = host.createSelectionIdBuilder().withCategory(category, index).createSelectionId();
+
+                selectionManager.select(selectionId).then(ids => {
+                    if (ids.length > 0) {
+                        selection.style('opacity', 0.5);
+                        d3.select(this).style('opacity', 1);
+                    } else {
+                        selection.style('opacity', 1);
+                    }
+                });
+
+                (<Event>d3.event).stopPropagation();
+            });
         }
         
         private getColor(objects: DataViewObjects, defaultDataPointColor: string): string {
@@ -764,9 +761,9 @@ module powerbi.extensibility.visual {
         public getText(): string {
             return this.options.text;
         }
-        
+
         public getIdentity(): DataViewScopeIdentity {
-            return this.options.identity;
+            return this.options.category.identity[this.options.categoryIndex];
         }
         
         public getColor(): string {
