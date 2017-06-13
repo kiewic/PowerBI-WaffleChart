@@ -108,7 +108,6 @@ module powerbi.extensibility.visual {
         private colorPalette: IColorPalette;
 
         constructor(options: VisualConstructorOptions) {
-            console.log('Visual constructor', options);
             this.target = options.element;
             this.host = options.host;
             this.updateCount = 0;
@@ -128,26 +127,19 @@ module powerbi.extensibility.visual {
         }
 
         public update(options: VisualUpdateOptions) {
-            //console.log('Visual update', options);
             //this.target.innerHTML = `<p>Update count: <em>${(this.updateCount++)}</em></p>`;
             // end of predefined content
 
             var debugMessage = undefined;
 
-            // Adding try, because something started failing after upgrading Desktop client to January 2016 version.
-            try {
-                if (!options.dataViews || !options.dataViews[0]) return;
-                var dataView = this.dataView = options.dataViews[0];
-                debugMessage = JSON.stringify(dataView.categorical.categories);
-                var viewport = options.viewport;
+            if (!options.dataViews || !options.dataViews[0]) return;
+            var dataView = this.dataView = options.dataViews[0];
+            debugMessage = JSON.stringify(dataView.categorical ? dataView.categorical.categories : null);
+            var viewport = options.viewport;
 
-                var viewModel: WaffleChartViewModel = Visual.converter(dataView);
-                this.initWaffles(viewModel.count, viewModel.paths);
-                this.initSelectionManager(viewModel.category);
-            }
-            catch (err) {
-                console.log(err);
-            }
+            var viewModel: WaffleChartViewModel = Visual.converter(dataView);
+            this.initWaffles(viewModel.count, viewModel.paths);
+            this.initSelectionManager(viewModel.category);
 
             //this.debug.update(options, debugMessage);
 
@@ -175,7 +167,7 @@ module powerbi.extensibility.visual {
                 var localX = globalX + waffleViewport.width  * (i % bestLayout.columns);
                 var localY = globalY + waffleViewport.height * Math.floor(i / bestLayout.columns);
 
-                let objects = viewModel.category.objects;
+                let objects = viewModel.category && viewModel.category.objects;
                 this.singleWaffleChartArray[i].update({
                     x: localX,
                     y: localY,
@@ -266,7 +258,7 @@ module powerbi.extensibility.visual {
                     else if (DataRoleHelper.hasRole(categoricalValues[i].source, waffleChartRoleNames.minValue)) {
                         if (!minTotals) {
                             minTotals = new Array(localValues.length);
-                            for (var j = 0; j < maxTotals.length; j++) {
+                            for (var j = 0; j < minTotals.length; j++) {
                                 minTotals[j] = 0;
                             }
                         }
@@ -314,9 +306,6 @@ module powerbi.extensibility.visual {
                     labelsArray.push(firstDisplayName);
                 }
             }
-            else {
-                console.log('No categories or values.');
-            }
 
             // If there are no values so far, create an array full of zeros.
             if (totals === undefined) {
@@ -346,7 +335,6 @@ module powerbi.extensibility.visual {
                 }
                 else if (maxValue > 100) {
                     // Do cross multiplication.
-                    console.log("maxValue: " + maxValue);
                     for (var i = 0; i < totals.length; i++) {
                         totals[i] = Math.round(totals[i] * 100 / maxValue);
                     }
@@ -557,7 +545,6 @@ module powerbi.extensibility.visual {
         }
 
         public destroy(): void {
-            console.log("Call to destroy()");
             this.root = null;
             for (var i = 0; i < this.count; i++) {
                 this.singleWaffleChartArray[i].destroy();

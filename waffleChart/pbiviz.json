@@ -1,18 +1,18 @@
 {
   "visual": {
     "name": "waffleChart",
-    "displayName": "Waffle Chart",
-    "guid": "PBI_CV_96D3456B_E8B3_46AC_8626_105DB47BFC7C",
+    "displayName": "Waffle chart",
+    "guid": "WaffleChart1453776852267",
     "visualClassName": "Visual",
-    "version": "1.0.0",
-    "description": "",
+    "version": "2.0.1",
+    "description": "A Waffle Chart uses a 10x10 grid of dots to visually show a percentage value. Each dot represents one percentage point, so a block of 43 highlighted dots would represent 43%. Multiple Waffle Charts can be used to visually compare multiple percentage values.",
     "supportUrl": "",
-    "gitHubUrl": ""
+    "gitHubUrl": "https://github.com/kiewic/PowerBI-WaffleChart"
   },
   "apiVersion": "1.4.0",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Gilberto Stankiewicz",
+    "email": "hello@kiewic.com"
   },
   "assets": {
     "icon": "assets/icon.png"
