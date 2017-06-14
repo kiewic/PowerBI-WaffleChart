@@ -34,6 +34,30 @@
     ],
     "dataViewMappings": [
         {
+            "conditions": [
+                {
+                    "Category": {
+                        "min": 0,
+                        "max": 4
+                    },
+                    "Paths": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "Values": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "MinValue": {
+                        "min": 0,
+                        "max": 1
+                    },
+                    "MaxValue": {
+                        "min": 0,
+                        "max": 1
+                    }
+                }
+            ],
             "categorical": {
                 "categories": {
                     "for": { 

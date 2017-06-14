@@ -183,33 +183,38 @@ module powerbi.extensibility.visual {
             }
         }
 
-        public static converter(dataView: DataView): WaffleChartViewModel {
-            var labelsArray: Array<PrimitiveValue>;
-            var dataType: ValueTypeDescriptor;
-            var category: DataViewCategoryColumn;
+        private static formatCategoryValue(value: PrimitiveValue, type: ValueTypeDescriptor): string {
+            if (type.dateTime)
+            {
+                let formatter : IValueFormatter;
+                formatter = valueFormatter.create({
+                    format: 'O',
+                    value: value,
+                    value2: value,
+                    tickCount: 6
+                });
 
-            if (dataView.categorical.categories && dataView.categorical.categories.length > 0) {
-                var category0 = dataView.categorical.categories[0]; 
-
-                // Copy arrays.
-                labelsArray = category0.values.slice();
-                category = category0;
-
-                dataType = category0.source.type;
+                return formatter.format(value);
             }
 
-            if (dataType && dataType.dateTime)
-            {
-                var formatter : IValueFormatter;
-                for (var i = 0; i < labelsArray.length; i++) {
-                    formatter = valueFormatter.create({
-                        format: 'O',
-                        value: labelsArray[i],
-                        value2: labelsArray[i],
-                        tickCount: 6
-                    });
+            return value.toString();
+        }
 
-                    labelsArray[i] = formatter.format(labelsArray[i]);
+        public static converter(dataView: DataView): WaffleChartViewModel {
+            var labelsArray: Array<string> = [];
+            var category0: DataViewCategoryColumn;
+
+            if (dataView.categorical.categories && dataView.categorical.categories.length > 0) {
+                let categories = dataView.categorical.categories;
+                category0 = categories[0];
+                var rowsCount = category0.values.length;
+                labelsArray = [];
+                for (let i = 0; i < rowsCount; i++) {
+                    let labelPieces: Array<string> = [];
+                    for (let j = 0; j < categories.length; j++) {
+                        labelPieces.push(this.formatCategoryValue(categories[j].values[i], categories[j].source.type));
+                    }
+                    labelsArray.push(labelPieces.join(" "));
                 }
             }
 
@@ -342,8 +347,8 @@ module powerbi.extensibility.visual {
             }
 
             var viewModel: WaffleChartViewModel = {
-                labelsArray: <Array<string>>labelsArray,
-                category: category,
+                labelsArray: labelsArray,
+                category: category0,
                 values: totals,
                 paths: paths,
                 count: count,
