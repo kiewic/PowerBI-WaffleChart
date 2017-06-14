@@ -338,12 +338,6 @@ module powerbi.extensibility.visual {
                         totals[i] = Math.round((totals[i] - localMinValue) * 100 / range);
                     }
                 }
-                else if (maxValue > 100) {
-                    // Do cross multiplication.
-                    for (var i = 0; i < totals.length; i++) {
-                        totals[i] = Math.round(totals[i] * 100 / maxValue);
-                    }
-                }
             }
 
             var viewModel: WaffleChartViewModel = {
