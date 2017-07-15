@@ -183,7 +183,7 @@ module powerbi.extensibility.visual {
             }
         }
 
-        private static formatCategoryValue(value: PrimitiveValue, type: ValueTypeDescriptor): string {
+        private static formatCategoryValue(value: PrimitiveValue | null, type: ValueTypeDescriptor): string {
             if (type.dateTime)
             {
                 let formatter : IValueFormatter;
@@ -197,7 +197,7 @@ module powerbi.extensibility.visual {
                 return formatter.format(value);
             }
 
-            return value.toString();
+            return value && value.toString();
         }
 
         public static converter(dataView: DataView): WaffleChartViewModel {
