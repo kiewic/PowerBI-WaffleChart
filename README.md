@@ -21,5 +21,5 @@ The shape of the Waffle Chart data points can be customizable. [Learn more.][cus
     cd waffleChart
     pbiviz package
 
-[youtube-video]: https://youtu.be/7z-UZKkbJaI
+[youtube-video]: https://www.youtube.com/watch?v=1vRqYUsm3Vk&t=11s
 [custom-shapes]: http://kiewic.com/custom-shapes-in-the-power-bi-waffle-chart
