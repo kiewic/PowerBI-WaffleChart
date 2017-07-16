@@ -1,2 +1,10 @@
-# PowerBI-visuals-docs
-Documentation for creating visuals for Power BI
+## Developer guide
+
+### Compile and test
+
+    pbiviz start
+
+### Ready to submit
+
+    cd waffleChart
+    pbiviz package
