@@ -404,7 +404,7 @@ module powerbi.extensibility.visual {
 
                 selectionManager.select(selectionId).then(ids => {
                     if (ids.length > 0) {
-                        selection.style('opacity', 0.5);
+                        selection.style('opacity', 0.4);
                         d3.select(this).style('opacity', 1);
                     } else {
                         selection.style('opacity', 1);
@@ -638,6 +638,7 @@ module powerbi.extensibility.visual {
             this.backgroundRect
                 .style({
                     //'fill': 'LightCyan',
+                    //'opacity': 0.33,
                     fill: 'transparent',
                     'width': options.width,
                     'height': options.height,
@@ -666,7 +667,7 @@ module powerbi.extensibility.visual {
             });
 
             var percentage = options.value;
-            var percentageString = percentage.toString() + '%';
+            var percentageString = _.round(percentage, 2) + '%';
 
             var dataPointSide = chartSide / 10;
             var radio: number = null;
