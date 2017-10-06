@@ -14,6 +14,8 @@ The shape of the Waffle Chart data points can be customizable. [Learn more.][cus
 
 ### Compile and manually test
 
+    npm install -g powerbi-visuals-tools
+    npm install
     pbiviz start
 
 ### Ready to submit
