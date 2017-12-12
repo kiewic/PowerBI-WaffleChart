@@ -402,10 +402,16 @@ module powerbi.extensibility.visual {
                 let index = category.identity.indexOf(d);
                 let selectionId = host.createSelectionIdBuilder().withCategory(category, index).createSelectionId();
 
-                selectionManager.select(selectionId).then(ids => {
+                let event = <MouseEvent>d3.event;
+                selectionManager.select(selectionId, event.ctrlKey || event.metaKey).then(ids => {
+                    let selectedElements = selection.filter(d => {
+                        let localIndex = category.identity.indexOf(d);
+                        let localId = host.createSelectionIdBuilder().withCategory(category, localIndex).createSelectionId();
+                        return ids.some((id: ISelectionId) => (<visuals.ISelectionId>id).equals(localId));
+                    });
                     if (ids.length > 0) {
                         selection.style('opacity', 0.4);
-                        d3.select(this).style('opacity', 1);
+                        selectedElements.style('opacity', 1);
                     } else {
                         selection.style('opacity', 1);
                     }
